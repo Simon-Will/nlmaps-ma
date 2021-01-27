@@ -24,7 +24,8 @@ def get_output_path(output_dir, path):
 
 def main(config_path, results_file, nlmaps_dir,
          relative_prefixes=RELATIVE_PREFIXES):
-    config = yaml.load('config_path')
+    with open(config_path) as f:
+        config = yaml.safe_load(f)
     model_dir = config['training']['model_dir']
     output_dir = os.path.join(model_dir, 'test-outputs')
     os.makedirs(output_dir, exist_ok=True)
