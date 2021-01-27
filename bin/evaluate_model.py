@@ -61,7 +61,8 @@ def main(config_path, results_file, nlmaps_dir,
             gold_lines = [line.strip() for line in lin_file]
         with open(output_path) as hyp_file:
             hyp_lines = [line.strip() for line in hyp_file]
-        accuracy = sum(gold == hyp for gold, hyp in zip(gold_lines, hyp_lines))
+        correct = sum(gold == hyp for gold, hyp in zip(gold_lines, hyp_lines))
+        accuracy = correct / len(gold_lines)
         print('Accuracy: {:.3f}'.format(accuracy))
 
         results[config_basename][relative_prefix] = accuracy
