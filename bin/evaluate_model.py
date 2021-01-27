@@ -68,7 +68,7 @@ def main(config_path, results_file, nlmaps_dir,
         results[config_basename][relative_prefix] = accuracy
 
     with open(results_file, 'w') as f:
-        json.dump(results, f)
+        json.dump(results, f, indent=2, sort_keys=True)
 
 
 def parse_args():
