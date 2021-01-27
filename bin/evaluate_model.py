@@ -39,7 +39,7 @@ def main(config_path, results_file, nlmaps_dir,
         for prefix in relative_prefixes
     ]
 
-    config_basename = os.path.basename('config_path')
+    config_basename = os.path.basename(config_path)
     if os.path.isfile(results_file):
         with open(results_file) as f:
             results = json.load(f)
