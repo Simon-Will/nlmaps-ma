@@ -16,6 +16,7 @@ RELATIVE_PREFIXES = {
     'nlmaps_web_2to1/nlmaps.web.test',
 }
 
+
 def get_output_path(output_dir, path):
     basename = path.replace('/', '-') + '-hypotheses.txt'
     return os.path.join(output_dir, basename)
@@ -72,7 +73,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('config_path')
     parser.add_argument('results_file')
-    parser.add_argument('--nlmaps-dir', default=str(Path.home()))
+    parser.add_argument('--nlmaps-dir', default=str(Path.home() / 'ma/data'))
     args = parser.parse_args()
     return args
 
