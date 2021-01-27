@@ -10,9 +10,9 @@ import subprocess
 import yaml
 
 RELATIVE_PREFIXES = {
-    #'nlmaps_v2delta/nlmaps.v2.test',
-    #'nlmaps_v3delta/v3delta.normal/nlmaps.v3delta.test',
-    #'nlmaps_v3delta/v3delta.normal.plusv2/nlmaps.v3delta.test',
+    'nlmaps_v2delta/nlmaps.v2.test',
+    'nlmaps_v3delta/v3delta.normal/nlmaps.v3delta.test',
+    'nlmaps_v3delta/v3delta.normal.plusv2/nlmaps.v3delta.test',
     'nlmaps_web_2to1/nlmaps.web.test',
 }
 
