@@ -1,0 +1,96 @@
+\documentclass[12pt,a4paper,oneside,openright]{scrbook}
+\usepackage[onehalfspacing]{setspace}
+
+\usepackage[left=4cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+\usepackage[ngerman,english]{babel}
+\usepackage{fontspec}
+\usepackage[autopunct]{csquotes}
+\usepackage[useregional]{datetime2}
+
+\usepackage[%
+style=authoryear-icomp,
+ibidtracker=strict,
+backend=biber,
+]{biblatex}
+\addbibresource{thesis.bib}
+
+\usepackage{mystyle}
+
+% Open questions
+%
+% - NLMaps vs NLmaps
+
+\begin{document}
+
+\begin{titlepage}
+  \centering\large
+  {\scshape\LARGE
+    Heidelberg University\par
+    Faculty of Modern Languages\par
+    Department of Computational Linguistics\par}
+  \vspace{4em}
+  {\scshape\Large M.A. Thesis\par}
+  \vspace{2em}
+  {\huge\bfseries An Online Learning System for Parsing and Answering
+    Geographical Queries in Natural Language\par}
+  \vspace{4em}
+  {\Large
+    Simon Will\par
+    \today\par}
+  \raggedright
+  \vfill
+  \vspace{4em}
+  {\large
+    Berliner Straße 109a\\
+    69121 Heidelberg\\
+    simon.will@gorgor.de\par}
+  \vspace{1em}
+  {\large
+    Supervisor: Prof.~Dr.~Stefan Riezler\\
+    Second assessor: Prof.~Dr.~Artem Sokolov}
+\end{titlepage}
+
+\frontmatter
+\tableofcontents
+\listoffigures
+\listoftables
+
+%\include{tex/abstract-english}
+
+%\include{tex/abstract-german}
+
+\mainmatter
+
+%\include{tex/introduction}
+
+%\include{tex/related_work}
+
+%\include{tex/nlmaps}
+
+%\include{tex/implementation}
+
+%\include{tex/experiments}
+
+%\include{tex/discussion}
+
+%\include{tex/conclusion}
+
+%\appendix
+
+%\include{tex/acknowledgements}
+
+\backmatter
+
+\printbibliography[nottype=online]
+
+\printbibliography[type=online,title={Online Resources}]
+
+\end{document}
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-parse-self: t
+%%% TeX-master: t
+%%% TeX-command-extra-options: "-shell-escape"
+%%% End:
