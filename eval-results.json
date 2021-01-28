@@ -1,10 +1,4 @@
 {
-  "config_path": {
-    "nlmaps_v2delta/nlmaps.v2.test": 0.9173987680500858,
-    "nlmaps_v3delta/v3delta.normal.plusv2/nlmaps.v3delta.test": 0.4803594870241341,
-    "nlmaps_v3delta/v3delta.normal/nlmaps.v3delta.test": 0.04316873674644047,
-    "nlmaps_web_2to1/nlmaps.web.test": 0.03
-  },
   "will_nlmaps_2delta_lin_char.yaml": {
     "nlmaps_v2delta/nlmaps.v2.test": 0.9173987680500858,
     "nlmaps_v3delta/v3delta.normal.plusv2/nlmaps.v3delta.test": 0.4803594870241341,
