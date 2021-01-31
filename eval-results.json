@@ -1,0 +1,44 @@
+{
+  "will_nlmaps_2delta_lin_char.yaml": {
+    "nlmaps_v2delta/nlmaps.v2.test": 0.9173987680500858,
+    "nlmaps_v3delta/v3delta.normal.plusv2/nlmaps.v3delta.test": 0.4803594870241341,
+    "nlmaps_v3delta/v3delta.normal/nlmaps.v3delta.test": 0.04316873674644047,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.03
+  },
+  "will_nlmaps_3delta.noise.plusv2_lin_char.yaml": {
+    "nlmaps_v2delta/nlmaps.v2.test": 0.9198222760779562,
+    "nlmaps_v3delta/v3delta.normal.plusv2/nlmaps.v3delta.test": 0.9483994749065939,
+    "nlmaps_v3delta/v3delta.normal/nlmaps.v3delta.test": 0.9772291224881349,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.42
+  },
+  "will_nlmaps_3delta.noise.plusv2_web1to1.yaml": {
+    "nlmaps_v2delta/nlmaps.v2.test": 0.8938705442795113,
+    "nlmaps_v3delta/v3delta.normal.plusv2/nlmaps.v3delta.test": 0.9260830051499546,
+    "nlmaps_v3delta/v3delta.normal/nlmaps.v3delta.test": 0.959103302029688,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.6
+  },
+  "will_nlmaps_3delta.noise.plusv2_web2to1.yaml": {
+    "nlmaps_v2delta/nlmaps.v2.test": 0.894173482782995,
+    "nlmaps_v3delta/v3delta.normal.plusv2/nlmaps.v3delta.test": 0.9272442694133091,
+    "nlmaps_v3delta/v3delta.normal/nlmaps.v3delta.test": 0.9608199535494295,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.64
+  },
+  "will_nlmaps_3delta.noise.plusv2_web2to1_ratio05.yaml": {
+    "nlmaps_v2delta/nlmaps.v2.test": 0.8982126628294457,
+    "nlmaps_v3delta/v3delta.normal.plusv2/nlmaps.v3delta.test": 0.9297687569423407,
+    "nlmaps_v3delta/v3delta.normal/nlmaps.v3delta.test": 0.9624861153185903,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.71
+  },
+  "will_nlmaps_3delta.normal.plusv2_lin_char.yaml": {
+    "nlmaps_v2delta/nlmaps.v2.test": 0.9180046450570534,
+    "nlmaps_v3delta/v3delta.normal.plusv2/nlmaps.v3delta.test": 0.9417853175805312,
+    "nlmaps_v3delta/v3delta.normal/nlmaps.v3delta.test": 0.9641522770877512,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.4
+  },
+  "will_nlmaps_3delta.normal_lin_char.yaml": {
+    "nlmaps_v2delta/nlmaps.v2.test": 0.2229627385640715,
+    "nlmaps_v3delta/v3delta.normal.plusv2/nlmaps.v3delta.test": 0.6046147632030697,
+    "nlmaps_v3delta/v3delta.normal/nlmaps.v3delta.test": 0.9861153185903262,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.34
+  }
+}
