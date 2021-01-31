@@ -6,6 +6,7 @@ from pathlib import Path
 import os
 import re
 import subprocess
+import sys
 
 import yaml
 
@@ -14,7 +15,6 @@ RELATIVE_PREFIXES = {
     'nlmaps_v3delta/v3delta.normal/nlmaps.v3delta.test',  # v3delta
     'nlmaps_v3delta/v3delta.normal.plusv2/nlmaps.v3delta.test',  # v2+v3delta
     'nlmaps_web_2to1/nlmaps.web.test',  # web
-
 }
 
 
@@ -57,9 +57,18 @@ def main(config_path, results_file, nlmaps_dir, addition='',
         args = ['python3', '-m', 'joeynmt', 'translate', '--output_path',
                 output_path, config_path]
         print('Running: {}'.format(' '.join(args)))
-        with open(prefix + '.en') as en_file:
-            subprocess.run(args, stdin=en_file, capture_output=True,
-                           check=True)
+        try:
+            with open(prefix + '.en') as en_file:
+                subprocess.run(args, stdin=en_file, capture_output=True,
+                               check=True)
+        except subprocess.CalledProcessError as exc:
+            print('Command {} failed with exit code {}.'
+                  .format(exc.cmd, exc.returncode))
+            print('Output:')
+            print(exc.stdout)
+            print('Output:')
+            print(exc.stderr)
+            sys.exit(exc.returncode)
 
         with open(prefix + '.lin') as lin_file:
             gold_lines = [line.strip() for line in lin_file]
