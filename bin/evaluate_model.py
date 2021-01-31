@@ -65,9 +65,15 @@ def main(config_path, results_file, nlmaps_dir, addition='',
             print('Command {} failed with exit code {}.'
                   .format(exc.cmd, exc.returncode))
             print('Output:')
-            print(exc.stdout)
-            print('Output:')
-            print(exc.stderr)
+            try:
+                print(exc.stdout.decode())
+            except:
+                print(exc.stdout)
+            print('Error:')
+            try:
+                print(exc.stderr.decode())
+            except:
+                print(exc.stderr)
             sys.exit(exc.returncode)
 
         with open(prefix + '.lin') as lin_file:
