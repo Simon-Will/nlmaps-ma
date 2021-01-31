@@ -10,19 +10,23 @@ import subprocess
 import yaml
 
 RELATIVE_PREFIXES = {
-    'nlmaps_v2delta/nlmaps.v2.test',
-    'nlmaps_v3delta/v3delta.normal/nlmaps.v3delta.test',
-    'nlmaps_v3delta/v3delta.normal.plusv2/nlmaps.v3delta.test',
-    'nlmaps_web_2to1/nlmaps.web.test',
+    'nlmaps_v2delta/nlmaps.v2.test',  # v2delta
+    'nlmaps_v3delta/v3delta.normal/nlmaps.v3delta.test',  # v3delta
+    'nlmaps_v3delta/v3delta.normal.plusv2/nlmaps.v3delta.test',  # v2+v3delta
+    'nlmaps_web_2to1/nlmaps.web.test',  # web
+
 }
 
 
-def get_output_path(output_dir, path):
-    basename = path.replace('/', '-') + '-hypotheses.txt'
+def get_output_path(output_dir, path, addition=''):
+    basename = path.replace('/', '-');
+    if addition:
+        basename += '-' + addition
+    basename += '-hypotheses.txt'
     return os.path.join(output_dir, basename)
 
 
-def main(config_path, results_file, nlmaps_dir,
+def main(config_path, results_file, nlmaps_dir, addition='',
          relative_prefixes=RELATIVE_PREFIXES):
     with open(config_path) as f:
         config = yaml.safe_load(f)
@@ -35,7 +39,7 @@ def main(config_path, results_file, nlmaps_dir,
         for prefix in relative_prefixes
     ]
     output_paths = [
-        get_output_path(output_dir, prefix)
+        get_output_path(output_dir, prefix, addition=addition)
         for prefix in relative_prefixes
     ]
 
@@ -76,6 +80,7 @@ def parse_args():
     parser.add_argument('config_path')
     parser.add_argument('results_file')
     parser.add_argument('--nlmaps-dir', default=str(Path.home() / 'ma/data'))
+    parser.add_argument('--addition')
     args = parser.parse_args()
     return args
 
