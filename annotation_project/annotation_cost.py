@@ -14,8 +14,8 @@ wage = int(os.environ.get('WAGE', 15))
 # Fixed hours for tutorial plus guideline reading
 fixtime = int(os.environ.get('FIXTIME', 1))
 
-cost = agoal * wage / arate + fixtime * wage
 time = agoal / arate + fixtime
+cost = time * wage
 
 print('Annotation Goal: {} a'.format(agoal))
 print('Annotation Rate: {} a/h'.format(arate))

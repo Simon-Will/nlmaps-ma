@@ -1,5 +1,6 @@
 ---
 title: Study Participants Wanted
+date: \today
 geometry:
 - a4paper
 - top=30mm
@@ -33,7 +34,7 @@ can play table tennis!”_ and the system mistakenly looks for places with the
 OpenStreetMap tag `sport=tennis`. Then it will be your job to tell the system to
 look for places tagged `sport=table_tennis` instead.
 
-If the system gets it right from the beginning, you will have to just tell it
+If the system gets it right from the beginning, you will just have to tell it
 that it was right. This will also count as an annotation.
 
 ## Your Skills
