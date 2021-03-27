@@ -52,7 +52,8 @@ You can also do 200 annotations for 75 € instead.
 
 ## Contact
 
-**By March 31**, send an informal email to Simon Will via
+**By 4 April 2021**, send an informal email to Simon Will via
 [will@cl.uni-heidelberg.de](mailto:will@cl.uni-heidelberg.de) if you are
-interested in taking part in the annotation project. If you have any questions,
-please don’t hesitate to ask.
+interested in taking part in the annotation project. The annotations should be
+finished until 15 April 2021. If you have any questions, please don’t hesitate
+to ask.
