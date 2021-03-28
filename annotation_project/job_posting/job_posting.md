@@ -39,7 +39,7 @@ that it was right. This will also count as an annotation.
 
 ## Your Skills
 
-We expect that you have excellent English skills and a basic familiarity
+We expect that you have good English skills and a basic familiarity
 with OpenStreetMap.
 
 ## The Pay
