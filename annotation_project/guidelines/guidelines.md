@@ -13,6 +13,13 @@ monofontoptions:
 urlcolor: blue
 ---
 \pagenumbering{gobble}
+# Requirements
+
+The annotation website https://nlmaps.gorgor.de/ is meant to be used with a
+recent version of a modern Browser. That means Firefox, Safari, Chrome or any
+other Chromium derivates (such as recent MS Edge). It is not optimized for
+mobile use, so please use a desktop computer.
+
 # Principles
 
 In essence, we need a dataset that fulfills three criteria:
@@ -70,14 +77,52 @@ Please enter at least the given amount of queries for each of the following. The
 linked wiki pages give you a feel for what the most common tags in each category
 are.
 
-* [shop=*](https://wiki.openstreetmap.org/wiki/Key:shop): 30
-* [leisure=*](https://wiki.openstreetmap.org/wiki/Key:leisure): 30
+* [shop=*](https://wiki.openstreetmap.org/wiki/Key:shop): 20
+* [leisure=*](https://wiki.openstreetmap.org/wiki/Key:leisure): 20
 * [sport=*](https://wiki.openstreetmap.org/wiki/Key:sport): 20
 * [craft=*](https://wiki.openstreetmap.org/wiki/Key:craft): 20
 * [man_made=*](https://wiki.openstreetmap.org/wiki/Key:man_made): 20
-* [amenity=restaurant](https://wiki.openstreetmap.org/wiki/Tag:amenity=restaurant), [amenity=fast_food](https://wiki.openstreetmap.org/wiki/Tag:amenity=fast_food): 30
+* [amenity=cafe](https://wiki.openstreetmap.org/wiki/Tag:amenity=cafe): 10
+* [amenity=restaurant](https://wiki.openstreetmap.org/wiki/Tag:amenity=restaurant): 10
+* [amenity=fast_food](https://wiki.openstreetmap.org/wiki/Tag:amenity=fast_food): 10
 * [cuisine=*](https://wiki.openstreetmap.org/wiki/Key:cuisine): 30.
 * [diet:\*=\*](https://wiki.openstreetmap.org/wiki/Key:diet): 20.
-* [wheelchair=yes](https://wiki.openstreetmap.org/wiki/Key:wheelchair): 50.
+* [wheelchair=yes](https://wiki.openstreetmap.org/wiki/Key:wheelchair): 30.
   Just sprinkle phrases like _wheelchair-accessible [place]_ or _[places] that
   are wheelchair-accessible_ into your queries now and then.
+
+Some tags _can and should_ be combined. E.g., use `shop=massage,wheelchair=yes`
+for wheelchair-accessible massage shops or `club=sport,sport=tennis` for tennis
+clubs. But use only `sport=tennis` if you’re just asking for places to play
+tennis at.
+
+Especially the `cuisine=*` and `diet:*=*` tags can be combined productively. Some examples:
+
+* `cuisine=japanese`: Places serving japanese food
+* `cuisine=japanese,amenity=fast_food`: Fast food restaurants serving japanese food
+* `or(diet:vegan=yes,diet:vegan=only),amenity=cafe`: Vegan cafes
+* `or(diet:gluten_free=yes,diet:gluten_free=only),` `cuisine=burger,amenity=restaurant`: Restaurants serving gluten-free burgers
+
+# Miscellaneous 
+
+* Sometimes deciding between QType `findkey('name')` and `latlong` is not
+  obvious. By convention:
+  - “_which/what_ restaurants/museums/etc. …”: `findkey('name')`
+  - “_show_ restaurants/museums/etc. …”: `latlong`
+
+* Some queries will not return results even if they are correct (e.g. rare tags
+  like gluten-free etc.). Please base your judgement primarily on the MRL, not
+  on the answer or map.
+
+* Avoid querying too much data (“trees in Berlin”) or too large areas
+  (“restaurants in Bangladesh”) to put less stress on servers and your browser.
+
+* Questions looking for the closest thing to some other thing should always have
+  a maxdist of `DIST_INTOWN`. In theory, this doesn’t make sense. It’s just a
+  limitation of the current system.
+
+* “Show all restaurants in X that are wheelchair-accessible!”: Target tags
+  include `wheelchair=yes`, QType is `latlong`
+
+* “Is X accessible by wheelchair?”: Use QType `findkey('wheelchair')`, no
+  `wheelchair=*` target tag
