@@ -77,15 +77,15 @@ Please enter at least the given amount of queries for each of the following. The
 linked wiki pages give you a feel for what the most common tags in each category
 are.
 
-* [shop=*](https://wiki.openstreetmap.org/wiki/Key:shop): 20
+* [shop=*](https://wiki.openstreetmap.org/wiki/Key:shop): 30
 * [leisure=*](https://wiki.openstreetmap.org/wiki/Key:leisure): 20
 * [sport=*](https://wiki.openstreetmap.org/wiki/Key:sport): 20
 * [craft=*](https://wiki.openstreetmap.org/wiki/Key:craft): 20
-* [man_made=*](https://wiki.openstreetmap.org/wiki/Key:man_made): 20
+* [man_made=*](https://wiki.openstreetmap.org/wiki/Key:man_made): 10
 * [amenity=cafe](https://wiki.openstreetmap.org/wiki/Tag:amenity=cafe): 10
 * [amenity=restaurant](https://wiki.openstreetmap.org/wiki/Tag:amenity=restaurant): 10
 * [amenity=fast_food](https://wiki.openstreetmap.org/wiki/Tag:amenity=fast_food): 10
-* [cuisine=*](https://wiki.openstreetmap.org/wiki/Key:cuisine): 30.
+* [cuisine=*](https://wiki.openstreetmap.org/wiki/Key:cuisine): 20.
 * [diet:\*=\*](https://wiki.openstreetmap.org/wiki/Key:diet): 20.
 * [wheelchair=yes](https://wiki.openstreetmap.org/wiki/Key:wheelchair): 30.
   Just sprinkle phrases like _wheelchair-accessible [place]_ or _[places] that
