@@ -87,7 +87,7 @@ are.
 * [amenity=fast_food](https://wiki.openstreetmap.org/wiki/Tag:amenity=fast_food): 10
 * [cuisine=*](https://wiki.openstreetmap.org/wiki/Key:cuisine): 20.
 * [diet:\*=\*](https://wiki.openstreetmap.org/wiki/Key:diet): 20.
-* [wheelchair=yes](https://wiki.openstreetmap.org/wiki/Key:wheelchair): 30.
+* [wheelchair=yes](https://wiki.openstreetmap.org/wiki/Key:wheelchair): 20.
   Just sprinkle phrases like _wheelchair-accessible [place]_ or _[places] that
   are wheelchair-accessible_ into your queries now and then.
 
@@ -110,6 +110,9 @@ Especially the `cuisine=*` and `diet:*=*` tags can be combined productively. Som
   - “_which/what_ restaurants/museums/etc. …”: `findkey('name')`
   - “_show_ restaurants/museums/etc. …”: `latlong`
 
+* Don’t repeat the same query with only a different location. Adjust the
+  wording, as well.
+
 * Some queries will not return results even if they are correct (e.g. rare tags
   like gluten-free etc.). Please base your judgement primarily on the MRL, not
   on the answer or map.
@@ -117,12 +120,24 @@ Especially the `cuisine=*` and `diet:*=*` tags can be combined productively. Som
 * Avoid querying too much data (“trees in Berlin”) or too large areas
   (“restaurants in Bangladesh”) to put less stress on servers and your browser.
 
-* Questions looking for the closest thing to some other thing should always have
-  a maxdist of `DIST_INTOWN`. In theory, this doesn’t make sense. It’s just a
-  limitation of the current system.
-
 * “Show all restaurants in X that are wheelchair-accessible!”: Target tags
   include `wheelchair=yes`, QType is `latlong`
 
 * “Is X accessible by wheelchair?”: Use QType `findkey('wheelchair')`, no
   `wheelchair=*` target tag
+
+* Questions looking for the closest thing to some other thing should always have
+  a maxdist of `DIST_INTOWN`. In theory, this doesn’t make sense. It’s just a
+  limitation of the current system.
+
+* Use the appropriate maxdist value according to the table in [chapter 4 of the
+  tutorial](https://nlmaps.gorgor.de/tutorial?chapter=4). E.g., when using the
+  word “near” in your query, use `DIST_INTOWN`.
+
+# Counting Annotations
+
+A natural language query and the corresponding MRL are considered one _complete
+annotation_. If you don’t know what the correct MRL looks like, you can choose
+“Wrong, but I cannot help” and it will be considered an _incomplete annotation_.
+This is still valuable; four incomplete annotations will count as one complete
+annotation.
