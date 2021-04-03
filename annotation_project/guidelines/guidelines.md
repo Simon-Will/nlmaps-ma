@@ -107,8 +107,13 @@ Especially the `cuisine=*` and `diet:*=*` tags can be combined productively. Som
 
 * Sometimes deciding between QType `findkey('name')` and `latlong` is not
   obvious. By convention:
-  - “_which/what_ restaurants/museums/etc. …”: `findkey('name')`
-  - “_show_ restaurants/museums/etc. …”: `latlong`
+  - “_Which/What_ restaurants/museums/etc. …”: `findkey('name')`
+  - “_Name_ restaurants/museums/etc. …”: `findkey('name')`
+  - “What are restaurants/museums/etc. … _called_?”: `findkey('name')`
+  - “_Give/Tell_ (me) the _names_ of restaurants/museums/etc. …”: `findkey('name')`
+  - “_Show/Give/Tell_ (me) restaurants/museums/etc. …”: `latlong`
+  - “_Where_ are restaurants/museums/etc. …”: `latlong`
+  - “_Location/Coordinates_ of restaurants/museums/etc. …”: `latlong`
 
 * Don’t repeat the same query with only a different location. Adjust the
   wording, as well.
