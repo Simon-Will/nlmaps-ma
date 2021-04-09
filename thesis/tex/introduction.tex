@@ -1,0 +1,39 @@
+\chapter{Introduction}
+\label{sec:introduction}
+
+The OpenStreetMap projects’ database stores a wealth of geographical information
+about the world including detailed information about mapped places. However,
+extracting specific information – such as the answer for the simple natural
+language question \nl{Which Italian restaurants in Berlin are
+  wheelchair-accessible?} – requires either purpose-built tooling or knowledge
+of custom OpenStreetMap query languages. A natural language interface to the
+database would make the available information more accessible.
+
+Important groundwork for such a natural language interface was laid by Lawrence
+and Riezler, who developed a simple OpenStreetMap machine-readable query
+language (MRL) and also released the NLMaps dataset mapping natural language
+queries to their corresponding counterpart in that query language.
+
+This thesis reviews previous work on NLMaps and reveals shortcomings in the
+published NLMaps dataset. In order to improve on it, the existing NLMaps dataset
+is overhauled by eliminating some of the identified shortcomings and by
+extending it through the use of probabilistic templates to include more diverse
+queries on both the natural language and the machine-readable language side.
+
+The improved NLMaps dataset is used to train an improved parsing model exposed
+via a new web interface that can be used for both asking queries and correcting
+queries. In order to further improve the model, the system is able to directly
+learn from the corrected queries using an online learning technique.
+
+An annotation experiment is performed, in which people use the new web interface
+for asking and correcting queries. The data collected in this way is used to
+test the online learning setup and is also released as a new NLMaps dataset.
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-parse-self: t
+%%% TeX-command-extra-options: "-shell-escape"
+%%% TeX-master: "../thesis"
+%%% End:

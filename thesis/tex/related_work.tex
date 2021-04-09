@@ -1,0 +1,188 @@
+\chapter{Related Work}
+\label{ch:related-work}
+
+\section{Natural Language Interfaces}
+
+% TODO: Intro to Natural Language Interfaces
+% Goals, first interfaces, intent classification, etc.
+% Purposes (see wikipedia), my purpose: querying
+
+% Q&A Systems, closed vs open domain
+
+% SQL Parsing
+
+\subsection{OpenStreetMap Query Systems}
+% Nominatim, Overpass, Sophox, Overpass Turbo Wizard
+
+\subsubsection{OpenStreetMap and its Ecosystem}
+\label{sec:osm}
+
+In a crowd-sourcing approach similar to Wikipedia’s, the
+OpenStreetMap\footcite{openstreetmap} (OSM) project aims to create a map of the
+world by letting users contribute missing data, ranging from low-granular
+objects like forests or streets to high-granular objects like benches or
+information boards and even including non-geographical information like opening
+hours of stores or the types of cuisine available in restaurants. The
+OpenStreetMap Foundation makes the map data available under the Open Data
+Commons Open Database License\footcite{odbl} effectively allowing the usage of
+the data for any project but requiring that any extensions of the data are
+shared under the same license again.
+
+OpenStreetMap data is made up of three different elements: Nodes, ways (ordered
+lists of nodes) and relations (groups of elements). These elements’ meaning is
+derived from the tags that are added to them. For instance an Italian restaurant
+that has vegan options and is wheelchair-accessible may be tagged with the
+following tags:
+
+\begin{itemize}
+\item \osmtag{amenity=restaurant}
+\item \osmtag{cuisine=italian}
+\item \osmtag{diet:vegan=yes}
+\item \osmtag{diet:vegetarian=yes}
+\item \osmtag{wheelchair=yes}
+\item \osmtag{opening_hours=Mo-Sa 11:30-22:00}
+\item \osmtag{website=https://restaurant.example.com/}
+\end{itemize}
+
+The OpenStreetMap database can be queried in a number of ways, the most
+prevalent one of which is via Geocoders such as Nominatim \footcite{nominatim}.
+They allow the database being queried by the name or address of an object in
+\emph{forward geocoding} or by its geographic coordinates in \emph{reverse
+  geocoding}.
+
+For querying by more than name or address, there are two specialized systems:
+Sophox\footcite[The official website at \url{https://sophox.org} is offline as
+of December 2020]{sophox} and the Overpass API \footcite{overpass-api}, which
+can be used most conveniently via the Overpass Turbo \footcite{overpass-turbo}
+interface. The Overpass API allows queries using an XML-like language or – more
+prominently – its custom Overpass Query Language (Overpass QL). The question
+\nl{Which Italian restaurants in Berlin are wheelchair-accessible?} could be
+expressed with the following Overpass Query
+
+\begin{lstlisting}[style=MyOverpassQL,title={Overpass QL for wheelchair-accessible restaurants in Heidelberg}]
+(area[name=Heidelberg];) -> .a;
+nwr[amenity=restaurant][wheelchair=yes](area.a);
+out geom;
+\end{lstlisting}
+
+\subsubsection{NLMaps}
+\label{sec:nlmaps}
+
+The open license as well as the diverse and rich information available in the
+data make OSM a promising candidate for the foundation of an information
+retrieval system about questions pertaining to geo-related information. The
+first step in this direction was made by \textcite{haas-2016}, when they
+released the first version of the \nlmaps{} dataset a \textquote[][.]{corpus
+  consisting of 2,380 questions about geographical facts that can be answered
+  with the [OSM] database}\footcite{nlmaps} Each question is provided as
+a natural language (NL) query in English and in German and as its rendering in a
+custom machine-readable language (MRL, see Section~\ref{sec:mrl}) query. The
+dataset can be used to develop a parser for parsing an NL query into its
+corresponding MRL query, which can then be used to extract the answer to the
+question from the OSM database.
+
+In two subsequent works, Lawrence\footnote{Carolin Haas changed her name to
+  Carolin Lawrence in 2016.} and Riezler
+\parencites*{lawrence-2016}{lawrence-2018} expanded the English
+part\footnote{\nlmapstwo{} is not available in German.} of the dataset to
+include more NL-MRL pairs and by extension also more word types and OSM tags
+(see Section~\ref{sec:mrl}). Table~\ref{tab:nlmaps-v1-v2-stats} shows key data
+about the size of the extended dataset. Table~\ref{tab:nlmapsv2-splits} shows
+the size of the dataset splits. In contrast to the first version, the NL-MRL
+pairs in this extended version were created with a templating approach, which
+made use of a
+table\footnote{\url{https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN}.
+  It is not known which version of the table was used for generating the
+  \nlmapstwo{} dataset.} mapping natural language expressions (e.g.
+“restaurant”) to OSM tags (e.g. \osmtag{amenity=restaurant}).
+
+In addition to the NL and the MRL queries, the dataset includes a linearized
+(LIN) version of the MRL query. This is a formally equivalent variant of the MRL
+query that avoids parentheses and commata by specifying each operator’s arity
+instead. For further information on this,
+\textcites(cf.)(){andreas-2013}{haas-2016}. All parsing models discussed in this
+thesis parse the NL query into the LIN query, which can be converted into the
+MRL query for retrieving the result from the OSM database.
+
+All of the question and query variants are also provided in a version where the
+locations and the points of interest are replaced by generic
+\lstinline!_LOCATION! and \lstinline!_POI! tokens, respectively. This is
+intended to simplify training a parser model which relies on an external Named
+Entity Recognition (NER) component for the named entities.
+
+\textcite{lawrence-2018} trained a GRU-based encoder-decoder model
+\parencite{cho-2014} with Bahdanau attention \parencite{bahdanau-2015} on
+\nlmapstwo{}, once without masking the named entities and once with masking
+them. The model trained on the masked version is accompanied by an NER model.
+\textcite{staniek-2020} trained a similar model for comparison with
+\textcite{lawrence-2018}, once as a token-based RNN and once as a
+character-based RNN, both without masking the named entities. The results are
+shown in Table~\ref{tab:lawrence-staniek-results}. In essence, they show that it
+is easy enough for the character-based model to copy the named entities from the
+source to the target so that a separate NER model does not improve the results.
+
+\begin{table}[ht!]
+  \centering
+  \begin{tabular}{lrr}
+    \toprule
+    Model & unmasked & masked + NER\\
+    \midrule
+    \textcite{lawrence-2018} (token) & \num{.804} & \num{.901}\\
+    \textcite{staniek-2020} (token) & \num{.834} & ---\\
+    \textcite{staniek-2020} (character) & \bfnum{.938} & ---\\
+    \bottomrule
+  \end{tabular}
+  \caption[Previous NLMaps results]{Accuracy of models by
+    \textcite{lawrence-2018} and \textcite{staniek-2020} on \nlmapstwo{}}
+  \label{tab:lawrence-staniek-rsults}
+\end{table}
+
+An accuracy of \SI{93.8}{\%} makes it seem as though the task of parsing NL
+queries were mostly solved. However, this is not the case, at all. The high
+accuracy is the result of a number of shortcomings in the \nlmapstwo{} dataset ,
+a part of which has already been noticed by \textcite{staniek-2020} and which
+are investigated in more detail in Chapter~\ref{ch:nlmaps-improvement}.
+
+\begin{table}[ht!]
+  \centering
+  \begin{tabular}[h]{lll}
+    \toprule
+    & \nlmapsone{} & \nlmapstwo{}\\
+    \midrule
+    question-query-pairs & \num{2380} & \num{28609}\\
+    tokens & \num{25906} & \num{202088}\\
+    types & \num{1002} & \num{8710}\\
+    avg.\ sentence length & \num{10.88} & \num{7.06}\\
+    distinct tags & \num{477} & \num{6582}\\
+    \bottomrule
+  \end{tabular}
+  \caption[\nlmapstwo{} statistics]{Numeric information about \nlmapsone{} and
+    \nlmapstwo{}. The table is reproduced from \textcite{lawrence-2018}.}
+  \label{tab:nlmaps-v1-v2-stats}
+\end{table}
+
+\begin{table}[ht!]
+  \centering
+  \begin{tabular}[h]{ll}
+    \toprule
+    Set split & \nlmapstwo{}\\
+    \midrule
+    train & \num{16172}\\
+    dev & \num{1843}\\
+    test & \num{10594}\\
+    \bottomrule
+  \end{tabular}
+  \caption[\nlmapstwo{} splits]{Split sizes in the \nlmapstwo{} dataset}
+  \label{tab:nlmapsv2-splits}
+\end{table}
+
+\section{Online Learning}
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-parse-self: t
+%%% TeX-command-extra-options: "-shell-escape"
+%%% TeX-master: "../thesis"
+%%% End:

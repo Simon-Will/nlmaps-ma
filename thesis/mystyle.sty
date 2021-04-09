@@ -1,0 +1,116 @@
+\ProvidesPackage{mystyle}
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{xparse}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{etoolbox}
+\usepackage{placeins}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{diagbox}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% In LuaTeX, it is necessary to define some commands
+% for including svg images
+\usepackage{ifluatex}
+\ifluatex
+  \usepackage{pdftexcmds}
+  \makeatletter
+  \let\pdfstrcmp\pdf@strcmp
+  \let\pdffilemoddate\pdf@filemoddate
+  \makeatother
+\fi
+\usepackage{svg}
+
+\setmainfont{Linux Libertine O}
+\setmonofont{Liberation Mono}
+
+\lstdefinestyle{MyXML}{
+  language=XML,
+}
+
+\lstdefinestyle{MyOverpassQL}{
+  language=bash,
+}
+
+\lstdefinestyle{MyQL}{
+  language=bash,
+}
+
+\lstdefinestyle{MyMRL}{
+  language=bash,
+}
+
+\lstdefinestyle{MyLinMRL}{
+  language=bash,
+}
+
+\lstset{
+  style=MyQL,
+  basicstyle={\ttfamily\footnotesize},
+  showspaces=false,
+  showstringspaces=false,
+  frame=single,
+}
+
+\robustify\bfseries
+
+% Allow bold font for numbers
+\sisetup{detect-weight=true,detect-inline-weight=math}
+
+% Boxed minipage
+% From:
+% https://tex.stackexchange.com/questions/88616/fbox-around-type-area
+\newsavebox{\fminipagebox}
+\NewDocumentEnvironment{fminipage}{m O{\fboxsep}}
+ {\par\kern#2\noindent\begin{lrbox}{\fminipagebox}
+  \begin{minipage}{#1}\ignorespaces}
+ {\end{minipage}\end{lrbox}%
+  \makebox[#1]{%
+    \kern\dimexpr-\fboxsep-\fboxrule\relax
+    \fbox{\usebox{\fminipagebox}}%
+    \kern\dimexpr-\fboxsep-\fboxrule\relax
+  }\par\kern#2
+ }
+
+\newcommand{\nl}[1]{\enquote*{#1}}
+\newcommand{\mrl}[1]{\lstinline!#1!}
+\newcommand{\osmtag}[1]{\lstinline!#1!}
+
+\newcommand{\chk}[1]{\textcolor{BurntOrange}{#1}}
+
+\newcommand{\nlmaps}{NLmaps}
+\newcommand{\nlmapsone}{NLmaps\,v1}
+\newcommand{\nlmapstwo}{NLmaps\,v2}
+\newcommand{\nlmapsthree}{NLmaps\,v3}
+
+\newcommand{\realnums}{\mathbb{R}}
+\newcommand{\naturalnums}{\mathbb{N}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\softmax}{softmax}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\newcommand{\pdv}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\newcommand{\bfnum}[1]{\bfseries\num{#1}}
+\newcommand{\devacc}{Dev-Acc}
+\newcommand{\testacc}{Test-Acc}
+\newcommand{\testfone}{$F_1$}
+\newcommand{\model}[1]{#1}
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-parse-self: t
+%%% TeX-command-extra-options: "-shell-escape"
+%%% TeX-master: "../thesis"
+%%% End:
