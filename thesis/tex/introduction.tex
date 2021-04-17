@@ -1,33 +1,41 @@
 \chapter{Introduction}
-\label{sec:introduction}
+\label{ch:introduction}
 
-The OpenStreetMap projects’ database stores a wealth of geographical information
-about the world including detailed information about mapped places. However,
-extracting specific information – such as the answer for the simple natural
-language question \nl{Which Italian restaurants in Berlin are
-  wheelchair-accessible?} – requires either purpose-built tooling or knowledge
-of custom OpenStreetMap query languages. A natural language interface to the
-database would make the available information more accessible.
+The OpenStreetMap project’s database stores a wealth of geographical information
+about the world ranging from map-typical features like borders, streets and
+buildings to detailed information about points of interest like shops, sights
+and recreational areas. However, extracting specific information – such as the
+answer for the simple natural language question \nl{Which Italian restaurants in
+  Berlin are wheelchair-accessible?} – requires either purpose-built tooling or
+knowledge of custom OpenStreetMap query languages. A natural language interface
+to the database would make the available information more accessible.
 
-Important groundwork for such a natural language interface was laid by Lawrence
-and Riezler, who developed a simple OpenStreetMap machine-readable query
-language (MRL) and also released the NLMaps dataset mapping natural language
-queries to their corresponding counterpart in that query language.
+Important groundwork for such a natural language interface was laid by
+\textcite{haas-2016}, who developed a simple machine-readable query language
+(MRL) for OpenStreetMap and also released the dataset \emph{\nlmaps{}}, which
+maps natural language (NL) queries to their corresponding counterpart in that
+query language. This dataset makes it possible to train a semantic parser that
+parses NL into MRL queries.
 
-This thesis reviews previous work on NLMaps and reveals shortcomings in the
-published NLMaps dataset. In order to improve on it, the existing NLMaps dataset
-is overhauled by eliminating some of the identified shortcomings and by
-extending it through the use of probabilistic templates to include more diverse
-queries on both the natural language and the machine-readable language side.
+Despite various models producing good results on the \nlmaps{} test set, their
+performance does not suffice for practical usage on new real world queries.
+Investigating that problem, this thesis reviews previous work on \nlmaps{} and
+reveals shortcomings in the published dataset. In order to improve on it, the
+existing dataset is overhauled by eliminating some of the identified
+shortcomings and by extending it through the use of probabilistic templates to
+include more diverse queries on both the natural language and the
+machine-readable language side.
 
-The improved NLMaps dataset is used to train an improved parsing model exposed
-via a new web interface that can be used for both asking queries and correcting
-queries. In order to further improve the model, the system is able to directly
-learn from the corrected queries using an online learning technique.
+The improved \nlmaps{} dataset is used to train an improved parsing model, which
+is exposed via a new web interface so that it can be used for both asking
+queries and correcting a parse if the model gets it wrong. In order to further
+improve the model, the system is able to directly learn from the corrected
+queries using an online learning technique.
 
-An annotation experiment is performed, in which people use the new web interface
-for asking and correcting queries. The data collected in this way is used to
-test the online learning setup and is also released as a new NLMaps dataset.
+The new web interface is employed in an annotation experiment with users from
+various backgrounds who use it to ask new queries and to correct errors. The
+data collected in this way is used to test the online learning setup and is also
+released as a new \nlmaps{} dataset.
 
 %%% Local Variables:
 %%% coding: utf-8

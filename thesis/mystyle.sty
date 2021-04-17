@@ -37,19 +37,29 @@
 }
 
 \lstdefinestyle{MyOverpassQL}{
-  language=bash,
+  language=,
 }
 
 \lstdefinestyle{MyQL}{
-  language=bash,
+  language=,
 }
 
 \lstdefinestyle{MyMRL}{
-  language=bash,
+  language=,
 }
 
 \lstdefinestyle{MyLinMRL}{
-  language=bash,
+  language=,
+}
+
+\lstdefinestyle{MyJinja}{
+  language=,
+}
+
+\lstdefinestyle{MyNL}{
+  language=,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{gray}{$\hookrightarrow$}\space},
 }
 
 \lstset{
@@ -58,6 +68,7 @@
   showspaces=false,
   showstringspaces=false,
   frame=single,
+  escapeinside={(@}{@)},
 }
 
 \robustify\bfseries
@@ -80,25 +91,47 @@
   }\par\kern#2
  }
 
-\newcommand{\nl}[1]{\enquote*{#1}}
+\newcommand{\nl}[1]{\emph{\enquote*{#1}}}
 \newcommand{\mrl}[1]{\lstinline!#1!}
 \newcommand{\osmtag}[1]{\lstinline!#1!}
+%\newcommand{\mrl}[1]{\texttt{#1}}
+%\newcommand{\osmtag}[1]{\texttt{#1}}
 
 \newcommand{\chk}[1]{\textcolor{BurntOrange}{#1}}
 
-\newcommand{\nlmaps}{NLmaps}
-\newcommand{\nlmapsone}{NLmaps\,v1}
-\newcommand{\nlmapstwo}{NLmaps\,v2}
-\newcommand{\nlmapsthree}{NLmaps\,v3}
+\newcommand{\nlmaps}{NLMaps}
+\newcommand{\nlmapsone}{NLMaps\,v1}
+\newcommand{\nlmapstwo}{NLMaps\,v2}
+\newcommand{\nlmapstwoone}{NLMaps\,v2.1}
+\newcommand{\nlmapsthreea}{NLMaps\,v3a}
+\newcommand{\nlmapsthreeb}{NLMaps\,v3b}
+\newcommand{\nlmapsthree}{NLMaps\,v3}
+\newcommand{\nlmapswebpilot}{NLMaps\,Web\,Pilot}
+
+\newcommand{\nlmone}{v1}
+\newcommand{\nlmtwo}{v2}
+\newcommand{\nlmtwoone}{v2.1}
+\newcommand{\nlmthreea}{v3a}
+\newcommand{\nlmthreeb}{v3b}
+\newcommand{\nlmthree}{v3}
+\newcommand{\nlmwebpilot}{Web\,Pilot}
+
+\newcommand{\nlmapsweb}{NLMaps Web}
 
 \newcommand{\realnums}{\mathbb{R}}
 \newcommand{\naturalnums}{\mathbb{N}}
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator*{\softmax}{softmax}
+\DeclareMathOperator*{\Prob}{P}
 \DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\tfidf}{tfidf}
+\DeclareMathOperator{\tf}{tf}
+\DeclareMathOperator{\idf}{idf}
+\DeclareMathOperator{\df}{df}
 \newcommand{\pdv}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\cardinality}[1]{\left|#1\right|}
 
 \newcommand{\bfnum}[1]{\bfseries\num{#1}}
 \newcommand{\devacc}{Dev-Acc}
@@ -112,5 +145,5 @@
 %%% TeX-engine: xetex
 %%% TeX-parse-self: t
 %%% TeX-command-extra-options: "-shell-escape"
-%%% TeX-master: "../thesis"
+%%% TeX-master: "thesis"
 %%% End:
