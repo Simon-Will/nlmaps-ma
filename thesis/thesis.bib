@@ -1,11 +1,70 @@
 % General
 
+@inproceedings{och-2002,
+author = {Och, Franz Josef and Ney, Hermann},
+title = {Discriminative Training and Maximum Entropy Models for Statistical Machine Translation},
+year = {2002},
+booktitle = {Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics},
+eventtitle = {ACL},
+venue = {Philadelphia, PE, USA},
+pages = {295--302}
+}
+
+@article{casacuberta-2009,
+author = {Casacuberta, Francisco and Civera, Jorge and Cubel, Elsa and Lagarda, Antonio L. and Lapalme, Guy and Macklovitch, Elliott and Vidal, Enrique},
+title = {Human interaction for high quality machine translation},
+year = {2009},
+journaltitle = {Communications of the ACM},
+volume = {52},
+number = 10,
+pages = {135--138}
+}
+
+@article{barrachina-2009,
+title = {Statistical Approaches to Computer-Assisted Translation},
+author = {Barrachina, Sergio and Bender, Oliver and Casacuberta, Francisco and Civera, Jorge and Cubel, Elsa and Khadivi, Shahram and Lagarda, Antonio and Ney, Hermann and Tomás, Jesús and Vidal, Enrique and Vilar, Juan-Miguel},
+year = {2009},
+journaltitle = {Computational Linguistics},
+volume = {35},
+number = 1,
+pages = {3--28}
+}
+
+@article{stahlberg-2020,
+author = {Stahlberg, Felix},
+title = {Neural Machine Translation: A Review and Survey},
+year = {2020},
+journaltitle = {Journal of Artificial Intelligence Research},
+volume = {69},
+pages = {343--418}
+}
+
+@book{goodfellow-2016,
+author = {Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron},
+title = {Deep Learning},
+year = {2016},
+publisher = {MIT Press},
+url = {https://www.deeplearningbook.org/},
+urldate = {2021-04-19}
+}
+
+@book{murphy-2021,
+author = {Murphy, Kevin Patrick},
+title = {Probabilistic Machine Learning: An Introduction},
+publisher = {MIT Press},
+year = {2021},
+url = {http://probml.ai/},
+urldate = {2021-04-19}
+}
+
 @article{shannon-1948,
 author = {Shannon, Claude Elwood},
 title = {A Mathematical Theory of Communication},
 year = {1948},
 journaltitle = {The Bell System Technical Journal},
-volume = 27
+volume = {27},
+number = 3,
+pages={379--423}
 }
 % See also http://pit-claudel.fr/clement/blog/an-experimental-estimation-of-the-entropy-of-english-in-50-lines-of-python-code/
 
@@ -15,16 +74,21 @@ title = {Learning Phrase Representations using RNN Encoder–Decoder for Statist
 year = {2014},
 booktitle = {Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing},
 eventtitle = {EMNLP},
-venue = {Doha, Qatar}
+venue = {Doha, Qatar},
+pages = {1724--1734}
 }
 
-@inproceedings{bahdanau-2015,
+@inproceedings{bahdanau-2014,
 author = {Bahdanau, Dzmitry and Cho, Kyunghyun and Bengio, Yoshua},
 title = {Neural Machine Translation by Jointly Learning to Align and Translate},
-year = {2015}, % At ICLR 2015, but published in 2014
-booktitle = {Proceedings of the 3rd International Conference on Learning Representations},
-eventtitle = {ICLR},
-venue = {San Diego, CA, USA}
+year = {2014}, % At ICLR 2015, but published in 2014
+%booktitle = {Proceedings of the 3rd International Conference on Learning Representations},
+%eventtitle = {ICLR},
+%venue = {San Diego, CA, USA}
+eprint = {1409.0473},
+eprinttype = {arXiv},
+eprintclass = {cs.CL},
+note = {Accepted at ICLR 2015 as oral presentation}
 }
 
 @inproceedings{andreas-2013,
@@ -33,9 +97,174 @@ title = {Semantic Parsing as Machine Translation},
 year = {2013},
 booktitle = {Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics},
 eventtitle = {ACL},
-volume = 2,
+%volume = {2 (Short Papers)},
 venue = {Sofia, Bulgaria}
 }
+
+% Online Learning
+
+@inproceedings{liang-2006,
+author = {Liang, Percy and Bouchard-Côté, Alexandre and Klein, Dan and Taskar, Ben},
+title = {An End-to-End Discriminative Approach to Machine Translation},
+year = {2006},
+booktitle = {Proceedings of the 21st International Conference on Computational Linguistics and 44th Annual Meeting of the Association for Computational Linguistics},
+eventtitle = {ACL/COLING},
+venue = {Sydney, Australia},
+}
+% pages = {761--768},
+
+@misc{arun-2007,
+author = {Arun, Abhishek and Koehn, Philipp},
+title = {Online Learning Methods For Discriminative Training of Phrase Based Statistical Machine Translation},
+year = {2007},
+eventtitle = {MT Summit XI}
+}
+
+@inproceedings{watanabe-2007,
+author = {Watanabe, Taro and Suzuki, Jun and Tsukada, Hajime and Isozaki, Hideki},
+title = {Online Large-Margin Training for Statistical Machine Translation},
+year = {2007},
+booktitle = {Proceedings of the 2007 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning},
+eventtitle = {EMNLP/CoNLL},
+venue = {Prague, Czech Republic}
+}
+%pages = {764--773},
+
+@inproceedings{ortiz-martinez-2010,
+author = {Ortiz-Martínez, Daniel and García-Varea, Ismael and Casacuberta, Francisco},
+title = {Online Learning for Interactive Statistical Machine Translation},
+year = {2010},
+booktitle = {Human Language Technologies: The 2010 Annual Conference of the North American Chapter of the Association for Computational Linguistics},
+eventtitle = {NAACL},
+venue = {Los Angeles, CA, USA}
+}
+% pages = {546–-554}
+
+@article{ortiz-martinez-2016,
+author = {Ortiz-Martínez, Daniel},
+title = {Online Learning for Statistical Machine Translation},
+year = {2016},
+%month = {3},
+journaltitle = {Computational Linguistics},
+volume = {42},
+number = {1}
+}
+%pages = {121--161},
+
+@article{turchi-2017,
+author = {Turchi, Marco and Negri, Matteo and Farajian, M.\ Amin and Federico, Marcello},
+title = {Continuous Learning from Human Post-Edits for Neural Machine Translation},
+year = {2017},
+%month = {6},
+journaltitle = {The Prague Bulletin of Mathematical Linguistics},
+volume = {108}
+}
+%pages = {233--244}
+
+@article{peris-2017,
+author = {Peris, Álvaro and Cebrián, Luis and Casacuberta, Francisco},
+title = {Online Learning for Neural Machine Translation Post-editing},
+year = {2017},
+eprint = {1706.03196},
+eprinttype = {arXiv},
+eprintclass = {cs.LG}
+}
+
+@article{peris-2019,
+author = {Peris, Álvaro and Casacuberta, Francisco},
+title = {Online learning for effort reduction in interactive neural machine translation},
+year = {2019},
+%month = {11},
+journaltitle = {Computer Speech & Language},
+volume = {58}
+}
+%pages = {98-126}
+
+@article{karimova-2018,
+author = {Karimova, Sariya and Simianer, Patrick and Riezler, Stefan},
+title = {A User-Study on Online Adaptation of Neural Machine Translation to Human Post-Edits},
+year = {2018},
+journaltitle = {Machine Translation},
+volume = {32}
+}
+% pages = {309--324}
+
+@inproceedings{lam-2018,
+author = {Lam, Tsz Kin and Kreutzer, Julia and Riezler, Stefan},
+title = {A Reinforcement Learning Approach to Interactive-Predictive Neural Machine Translation},
+year = {2018},
+booktitle = {Proceedings of the 21st Annual Conference of the European Association for Machine Translation},
+eventtitle = {EAMT},
+venue = {Alacant, Spain}
+}
+% pages = {169--178}
+
+@inproceedings{kreutzer-2018,
+author = {Kreutzer, Julia and Khadivi, Shahram and Matusov, Evgeny and Riezler, Stefan},
+title = {Can Neural Machine Translation be Improved with User Feedback?},
+year = {2018},
+booktitle = {Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+%volume = {3 (Industry Papers)}
+eventtitle = {NAACL},
+venue = {New Orleans, LA, USA}
+}
+% pages = {92--105}
+
+@inproceedings{kreutzer-2020,
+author = {Kreutzer, Julia and Berger, Nathaniel and Riezler, Stefan},
+title = {Correct Me If You Can: Learning from Error Corrections and Markings},
+year = {2020},
+booktitle = {Proceedings of the 22nd Annual Conference of the European Association for Machine Translation},
+eventtitle = {EAMT},
+venue = {Lisboa, Portugal}
+}
+%pages = {135--144}
+
+@inproceedings{domingo-2019,
+author = {Domingo, Miguel and García-Martínez, Mercedes and Pastor, Amando Estela and Bié, Laurent and Helle, Alexander and Peris, Álvaro and Casacuberta, Francisco and Pérez, Manuel Herranz},
+title = {Demonstration of a Neural Machine Translation System with Online Learning for Translators},
+year = {2019},
+booktitle = {Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
+%volume = {System Demonstrations},
+eventtitle = {ACL},
+venue = {Florence, Italy}
+}
+% pages = {70--74}
+
+@inproceedings{kennardi-2019,
+author = {Kennardi, Alvin and Ferraro, Gabriela and Wang, Qing},
+title = {Domain Adaptation for Low-Resource Neural Semantic Parsing},
+year = {2019},
+booktitle = {Proceedings of the The 17th Annual Workshop of the Australasian Language Technology Association},
+eventtitle = {ALTA},
+venue = {Sydney, Australia}
+}
+% pages = {87--93}
+
+@inproceedings{li-2020,
+author = {Li, Zechang and Lai, Yuxuan and Feng, Yansong and Zhao, Dongyan},
+title = {Domain Adaptation for Semantic Parsing},
+year = {2020},
+booktitle = {Proceedings of the Twenty-Ninth International Joint Conference on Artificial Intelligence},
+eventtitle = {IJCAI},
+venue = {Yokohama, Japan}
+}
+% pages = {3723--3729}
+
+@inproceedings{xilun-2020,
+author = {Chen, Xilun and Ghoshal, Asish and Mehdad, Yashar and Zettlemoyer, Luke and Gupta, Sonal},
+title = {Low-Resource Domain Adaptation for Compositional Task-Oriented Semantic Parsing},
+year = {2020},
+booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing},
+eventtitle = {EMNLP},
+venue = {Online}
+}
+% pages = {5090–-5100}
+
+% Further Domain Adaptation at EMNLP:
+% https://www.aclweb.org/anthology/2020.emnlp-main.87/
+% https://www.aclweb.org/anthology/2020.emnlp-main.439/
+% https://www.aclweb.org/anthology/2020.emnlp-main.558/
 
 % ICL
 
@@ -43,10 +272,11 @@ venue = {Sofia, Bulgaria}
 author = {Haas, Carolin and Riezler, Stefan},
 title = {A Corpus and Semantic Parser for Multilingual Natural Language Querying of OpenStreetMap},
 year = {2016},
-booktitle = {Proceedings of the 15th Annual Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
-eventtitle = {NAACL-HLT},
+booktitle = {Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+eventtitle = {NAACL},
 venue = {San Diego, CA, USA}
 }
+% pages = {740--750}
 
 @inproceedings{lawrence-2016,
 author = {Lawrence, Carolin and Riezler, Stefan},

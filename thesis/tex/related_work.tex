@@ -9,12 +9,77 @@
 
 % Q&A Systems, closed vs open domain
 
-% SQL Parsing
+% SQL Parsing; Spider etc.
 
-\subsection{OpenStreetMap Query Systems}
-% Nominatim, Overpass, Sophox, Overpass Turbo Wizard
+\section{Online Learning}
 
-\subsubsection{OpenStreetMap and its Ecosystem}
+Neural machine translation models \(p_{\theta}\) are usually trained with the
+goal of minimizing the expected cross-entropy loss on the training set
+\parencite[376]{stahlberg-2020} by taking steps \(\Delta \theta\) in the opposite
+direction of the gradient:
+
+\begin{align}
+  \theta^* &= \argmin_{\theta} \E_{(x, y) \sim (X, Y)_{\text{train}}} -\log p_{\theta}(y|x)\\
+  \Delta \theta &\propto \nabla \E_{(x, y) \sim (X, Y)_{\text{train}}} -\log p_{\theta}(y|x)\\
+  &\propto \E_{(x, y) \sim (X, Y)_{\text{train}}} -\nabla \log p_{\theta}(y|x)
+\end{align}
+
+This explicit method – also called \emph{batch gradient descent} as an instance
+of \emph{batch learning} \parencites[275]{goodfellow-2016}[100]{murphy-2021} –
+requires making a prediction for every instance of the training set, which makes
+it prohibitively computationally expensive. Instead, \emph{stochastic gradient
+  descent} (SGD) – as an instance of \emph{online learning}
+\parencites[275]{goodfellow-2016}[100]{murphy-2021} – approximates the gradient
+by sampling a single instance \((x,y)\) from the training set and updating the
+parameters based on this instance:
+
+\begin{align}
+  (x,y) &\sim (X,Y)\\
+  \Delta \theta &\propto -\nabla \log p_{\theta}(y|x)\\
+\end{align}
+
+With SGD, the model parameters can be updated much more often, but the variance
+of the gradient is also larger. In practice, minibatches are used as a
+compromise when training a model on an already-prepared dataset. However, in the
+case where the dataset becomes available only one instance at a time, the online
+learning setup is still useful. A prominent usecase is post-editing of machine
+translation outputs. Following the defintion of \textcite{ortiz-martinez-2016},
+online learning from post-editing can be operationalized like this:
+
+\begin{enumerate}
+\item An MT system receives a source sentence \(x\).
+\item The system makes a prediction \(\hat{y}\) for the target sentence.
+\item A user reviews \(\hat{y}\), adjusts it and presents the system with the
+  correct translation \(y\).
+\item The MT system is updated by learning from \(y\).
+\end{enumerate}
+
+% TODO: Add note about pre-2010 SMT online learning. Cf. ortiz-martinez 2016,
+% page 153
+
+Before the advent of NMT, online learning had been applied in statistical
+machine translation (SMT) on adjusting the weights of the log-linear model
+\parencites(e.g.)(){liang-2006}{arun-2007}{watanbe-2007}. Later,
+\textcites{ortiz-martinez-2010}{ortiz-martinez-2016} employed online learning in
+the scenarios of post-editing and interactive machine translation (IMT;
+\cites{casacuberta-2009}{barrachina-2009}) for adjusting also the model features
+themselves.
+
+
+
+%batch vs stochastic gradient descent
+%
+%usually: minibatch as a compromise
+%
+%special case: streaming, i.e. 1 instance becomes available at a time
+%
+%online learning with reward feedback
+%
+%online learning with gold
+
+\section{OpenStreetMap Query Systems}
+
+\subsection{OpenStreetMap and its Ecosystem}
 \label{sec:osm}
 
 In a crowd-sourcing approach similar to Wikipedia’s, the
@@ -29,10 +94,10 @@ the data for any project but requiring that any extensions of the data are
 shared under the same license again.
 
 OpenStreetMap data is made up of three different elements: Nodes, ways (ordered
-lists of nodes) and relations (groups of elements). These elements’ meaning is
+lists of nodes) and relations (groups of elements). The elements’ meaning is
 derived from the tags that are added to them. For instance an Italian restaurant
-that has vegan options and is wheelchair-accessible may be tagged with the
-following tags:
+that has vegan options and is wheelchair-accessible may be tagged as a node with
+the following tags:
 
 \begin{itemize}
 \item \osmtag{amenity=restaurant}
@@ -65,36 +130,67 @@ nwr[amenity=restaurant][wheelchair=yes](area.a);
 out geom;
 \end{lstlisting}
 
-\subsubsection{NLMaps}
+\subsection{NLMaps}
 \label{sec:nlmaps}
 
 The open license as well as the diverse and rich information available in the
 data make OSM a promising candidate for the foundation of an information
-retrieval system about questions pertaining to geo-related information. The
-first step in this direction was made by \textcite{haas-2016}, when they
-released the first version of the \nlmaps{} dataset a \textquote[][.]{corpus
-  consisting of 2,380 questions about geographical facts that can be answered
-  with the [OSM] database}\footcite{nlmaps} Each question is provided as
-a natural language (NL) query in English and in German and as its rendering in a
-custom machine-readable language (MRL, see Section~\ref{sec:mrl}) query. The
-dataset can be used to develop a parser for parsing an NL query into its
-corresponding MRL query, which can then be used to extract the answer to the
-question from the OSM database.
+retrieval system about geo-related questions. The first step in this direction
+was made by \textcite{haas-2016}, when they released the first version of the
+\nlmaps{} dataset a \textquote[][.]{corpus consisting of 2,380 questions about
+  geographical facts that can be answered with the [OSM]
+  database}\footcite{nlmaps} Each question is provided as a natural language
+(NL) query in English and in German and as its rendering in a custom
+machine-readable language (MRL). The dataset can be used to develop a parser for
+parsing an NL query into its corresponding MRL query, which can then be used to
+extract the answer to the question from the OSM database.
 
 In two subsequent works, Lawrence\footnote{Carolin Haas changed her name to
   Carolin Lawrence in 2016.} and Riezler
 \parencites*{lawrence-2016}{lawrence-2018} expanded the English
 part\footnote{\nlmapstwo{} is not available in German.} of the dataset to
-include more NL-MRL pairs and by extension also more word types and OSM tags
-(see Section~\ref{sec:mrl}). Table~\ref{tab:nlmaps-v1-v2-stats} shows key data
-about the size of the extended dataset. Table~\ref{tab:nlmapsv2-splits} shows
-the size of the dataset splits. In contrast to the first version, the NL-MRL
-pairs in this extended version were created with a templating approach, which
-made use of a
+include more NL-MRL pairs and by extension also more word types and OSM tags.
+Table~\ref{tab:nlmaps-v1-v2-stats} shows key data about the size of the extended
+dataset. Table~\ref{tab:nlmapsv2-splits} shows the size of the dataset splits.
+In contrast to the first version, the NL-MRL pairs in this extended version were
+created with a templating approach, which made use of a
 table\footnote{\url{https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN}.
   It is not known which version of the table was used for generating the
-  \nlmapstwo{} dataset.} mapping natural language expressions (e.g.
-“restaurant”) to OSM tags (e.g. \osmtag{amenity=restaurant}).
+  \nlmapstwo{} dataset.} mapping natural language expressions (such as
+\emph{restaurant}) to OSM tags (such as \osmtag{amenity=restaurant}).
+
+\begin{table}[ht!]
+  \centering
+  \begin{tabular}[h]{lll}
+    \toprule
+    & \nlmapsone{} & \nlmapstwo{}\\
+    \midrule
+    Instances & \num{2380} & \num{28609}\\
+    Tokens & \num{25906} & \num{202088}\\
+    Types & \num{1002} & \num{8710}\\
+    Avg. Tokens per NL & \num{10.88} & \num{7.06}\\
+    Distinct Tags & \num{477} & \num{6582}\\
+    \bottomrule
+  \end{tabular}
+  \caption[\nlmapstwo{} statistics]{Numeric information about \nlmapsone{} and
+    \nlmapstwo{}. The table is reproduced from \textcite{lawrence-2018}.}
+  \label{tab:nlmaps-v1-v2-stats}
+\end{table}
+
+\begin{table}[ht!]
+  \centering
+  \begin{tabular}[h]{ll}
+    \toprule
+    Set split & \nlmapstwo{}\\
+    \midrule
+    train & \num{16172}\\
+    dev & \num{1843}\\
+    test & \num{10594}\\
+    \bottomrule
+  \end{tabular}
+  \caption[\nlmapstwo{} splits]{Split sizes in the \nlmapstwo{} dataset}
+  \label{tab:nlmapsv2-splits}
+\end{table}
 
 In addition to the NL and the MRL queries, the dataset includes a linearized
 (LIN) version of the MRL query. This is a formally equivalent variant of the MRL
@@ -109,6 +205,115 @@ locations and the points of interest are replaced by generic
 \lstinline!_LOCATION! and \lstinline!_POI! tokens, respectively. This is
 intended to simplify training a parser model which relies on an external Named
 Entity Recognition (NER) component for the named entities.
+Figure~\ref{fig:nlmaps-v2-query-variants} shows an overview of the available
+variants.
+
+\begin{figure}[h]
+  \centering
+    \begin{minipage}{0.48\textwidth}
+      \begin{lstlisting}[style=MyMRL,title={Unmasked MRL},basicstyle={\ttfamily\scriptsize}]
+query(
+  around(
+    center(
+      area(keyval('name','München)),
+      nwr(keyval('name','Super Cut'))
+    ),
+    search(
+      nwr(keyval('amenity','post_box'))
+    ),
+    maxdist(DIST_INTOWN)
+  ),
+  qtype(latlong)
+)
+      \end{lstlisting}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+      \begin{lstlisting}[style=MyMRL,title={Masked MRL},basicstyle={\ttfamily\scriptsize{}}]
+query(
+  around(
+    center(
+      area(keyval('name','(@\textcolor{blue}{\_LOCATION}@)')),
+      nwr(keyval('name','(@\textcolor{blue}{\_POI}@)'))
+    ),
+    search(
+      nwr(keyval('amenity','post_box'))
+    ),
+    maxdist(DIST_INTOWN)
+  ),
+  qtype(latlong)
+)
+      \end{lstlisting}
+    \end{minipage}
+    \begin{minipage}{0.48\textwidth}
+      \begin{lstlisting}[style=MyLin,title={Unmasked LIN},basicstyle={\ttfamily\scriptsize}]
+query@2
+  around@3
+    center@2
+      area@1 keyval@2 name@0 München@s
+      nwr@1 keyval@2 name@0 Super€Cut@s
+    search@1
+      nwr@1 keyval@2 amenity@0 post_box@s
+    maxdist@1 DIST_INTOWN@0
+  qtype@1 latlong@0
+      \end{lstlisting}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+      \begin{lstlisting}[style=MyLin,title={Masked LIN},basicstyle={\ttfamily\scriptsize{}}]
+query@2
+  around@3
+    center@2
+      area@1 keyval@2 name@0 (@\textcolor{blue}{\_LOCATION}@)@s
+      nwr@1 keyval@2 name@0 (@\textcolor{blue}{\_POI}@)@s
+    search@1
+      nwr@1 keyval@2 amenity@0 post_box@s
+    maxdist@1 DIST_INTOWN@0
+  qtype@1 latlong@0
+      \end{lstlisting}
+    \end{minipage}
+    \caption[\nlmapstwo{} query variants]{MRL and LIN queries for the NL query
+      \nl{Where Post Boxes near Super Cut in München} in their unmasked and
+      masked form. The instance is taken from \nlmapstwo{}.}
+  \label{fig:nlmaps-v2-query-variants}
+\end{figure}
+
+\subsubsection{\nlmaps{} Evaluation}
+
+There are two methods of evaluating a model’s predictions on an \nlmaps{}
+dataset: Comparing the predicted MRLs with the gold MRLs or comparing the
+results retrieved by interpreting the MRLs. The latter method defines precision,
+recall and \(F_1\) score, where \(F_1\) is the measure that is usually reported.
+
+\begin{align*}
+  \text{precision} &= \frac{\text{number of correct answers}}{\text{number of MRLs that yield an answer}}\\
+  \text{recall} &= \frac{\text{number of correct answers}}{\text{number of all NL-MRL pairs}}\\
+  F_1 &= 2 \times \frac{\text{precision} \times \text{recall}}{\text{precision} + \text{recall}}
+\end{align*}
+
+This thesis takes the stand that comparing the results of queries is not
+appropriate because of two major reasons: First, the result of two MRLs may be
+identical by chance, especially when asking whether something exists or how many
+of something there are. Second, such an evaluation is dependent on the versions
+of the OSM database and the version of the software interpreting the MRL making
+reported scores difficult to reproduce. Additionally, retrieving results takes
+up a large amount of time and computing resources, which renders this evaluation
+method unsuitable for validation during training.
+
+Therefore, the models in this thesis are compared using exact match accuracy on
+MRLs. Theoretically, this method has the problem that MRLs can be semantically
+equivalent but syntactically different by switching the order of OSM tags or
+values (e.g. \mrl{keyval('diet:vegetarian',or('yes','only'))} vs.
+\mrl{keyval('diet:vegetarian',or('only,'yes))}). In practice however, we ensure
+that all MRLs used for training are in a canonical form by sorting tags and
+values alphabetically. This way, switched order doesn’t occur in the models of
+this thesis.
+
+\begin{align*}
+  \text{accuracy} &= \frac{\text{number of system MRLs perfectly matching the gold MRL}}{\text{number of all NL-MRL pairs}}
+\end{align*}
+
+\subsubsection{Previous Results on \nlmapstwo{}}
 
 \textcite{lawrence-2018} trained a GRU-based encoder-decoder model
 \parencite{cho-2014} with Bahdanau attention \parencite{bahdanau-2015} on
@@ -132,51 +337,21 @@ source to the target so that a separate NER model does not improve the results.
     \textcite{staniek-2020} (character) & \bfnum{.938} & ---\\
     \bottomrule
   \end{tabular}
-  \caption[Previous NLMaps results]{Accuracy of models by
-    \textcite{lawrence-2018} and \textcite{staniek-2020} on \nlmapstwo{}}
+  \caption[Previous NLMaps results]{\(F_1\) score after retrieving query results
+    of models by \textcite{lawrence-2018} and \textcite{staniek-2020} on
+    \nlmapstwo{}}
   \label{tab:lawrence-staniek-results}
 \end{table}
 
-An accuracy of \SI{93.8}{\%} makes it seem as though the task of parsing NL
-queries were mostly solved. However, this is not the case, at all. The high
-accuracy is the result of a number of shortcomings in the \nlmapstwo{} dataset ,
-a part of which has already been noticed by \textcite{staniek-2020} and which
-are investigated in more detail in Chapter~\ref{ch:nlmaps-improvement}.
+Even though \citeauthor{staniek-2020} achieves an \(F_1\) score of \SI{93.8}{\%}
+and an accuracy of \SI{89.8}{\%}\footnote{The accuracy is not reported in the
+  original work, but \citeauthor{staniek-2020} kindly made his model
+  available.}, the task of parsing NL queries is not solved, at all. The high
+performance is the result of a number of shortcomings in the \nlmapstwo{}
+dataset, a part of which has already been discussed by \citeauthor{staniek-2020}
+and which are investigated in more detail in
+Chapter~\ref{ch:nlmaps-improvement}.
 
-\begin{table}[ht!]
-  \centering
-  \begin{tabular}[h]{lll}
-    \toprule
-    & \nlmapsone{} & \nlmapstwo{}\\
-    \midrule
-    question-query-pairs & \num{2380} & \num{28609}\\
-    tokens & \num{25906} & \num{202088}\\
-    types & \num{1002} & \num{8710}\\
-    avg.\ sentence length & \num{10.88} & \num{7.06}\\
-    distinct tags & \num{477} & \num{6582}\\
-    \bottomrule
-  \end{tabular}
-  \caption[\nlmapstwo{} statistics]{Numeric information about \nlmapsone{} and
-    \nlmapstwo{}. The table is reproduced from \textcite{lawrence-2018}.}
-  \label{tab:nlmaps-v1-v2-stats}
-\end{table}
-
-\begin{table}[ht!]
-  \centering
-  \begin{tabular}[h]{ll}
-    \toprule
-    Set split & \nlmapstwo{}\\
-    \midrule
-    train & \num{16172}\\
-    dev & \num{1843}\\
-    test & \num{10594}\\
-    \bottomrule
-  \end{tabular}
-  \caption[\nlmapstwo{} splits]{Split sizes in the \nlmapstwo{} dataset}
-  \label{tab:nlmapsv2-splits}
-\end{table}
-
-\section{Online Learning}
 
 %%% Local Variables:
 %%% coding: utf-8
