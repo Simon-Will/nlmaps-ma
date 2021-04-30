@@ -1,0 +1,7552 @@
+[
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": true,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": true,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": true,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": true,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": true,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": true,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": true,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": true,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": true,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": true,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": true,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": true,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": true,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": true,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": true,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": true,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": true,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": false,
+    "area": true,
+    "center_nwr": false,
+    "target_nwr": false,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": true,
+    "other": false
+  },
+  {
+    "structure": true,
+    "area": false,
+    "center_nwr": false,
+    "target_nwr": true,
+    "maxdist": false,
+    "around_topx": false,
+    "qtype": false,
+    "other": false
+  }
+]

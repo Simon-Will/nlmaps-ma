@@ -1,0 +1,210 @@
+{
+  "n21.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.07019867549668875,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.06887417218543046,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7828015858032848,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.9131576290013127,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.47127133191962034,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.028829647581540947,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.47354337069574876,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.03387862263960416,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.06
+  },
+  "n3.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.280794701986755,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.28874172185430463,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.787238059278837,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.9125517519943451,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.8739270928001616,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.8336362718368171,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.930829041704534,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.9498131879228516,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.42
+  },
+  "n3_50e.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.2913907284768212,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.29668874172185433,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7925240702284312,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.92093305059073,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.8825608401494497,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.8443905887104918,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.9423911945874988,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.963495910330203,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.46
+  },
+  "n3_ar.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.5086092715231788,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.519205298013245,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7218236737776099,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.8287387660304958,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.7884479450671513,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.7446733313137434,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.8462587094819751,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.8663536302130668,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.86
+  },
+  "n3_ar_adadelta_1-0-0.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.41456953642384103,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.42119205298013246,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7104021144043798,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.819246692921337,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.7722407351307684,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.7251337978390386,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.8307078663031404,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.8449964657174593,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.58
+  },
+  "n3_ar_adadelta_1-0-0_5.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.4,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.4066225165562914,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.6720785350198225,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.7655255983035444,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.7296778753912956,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.6959002322528527,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.7843582752701201,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.8087953145511462,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.59
+  },
+  "n3_ar_ratio05.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.5509933774834437,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7711912403247121,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.8962940523073816,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.8552963748359083,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.8137937998586287,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.9145208522669898,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.9342623447440169,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.9
+  },
+  "n3_arc_adadelta_1-0-0.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.376158940397351,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.39072847682119205,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.708703039456296,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.8171261233969505,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.7736544481470261,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.7297788548924569,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.8351509643542361,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.8548419670806826,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.6
+  },
+  "n3_arc_adadelta_1-0-5.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.3536423841059603,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.3655629139072848,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7844062676986974,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.9114409774815713,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.8712006462688074,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.8292436635363021,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.9271432899121478,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.9451176411188529,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.54
+  },
+  "n3_arc_adadelta_1-0-5_5.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.39867549668874175,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.41456953642384103,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7888427411742496,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.9153791780268605,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.8764515803291931,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.8336867615873977,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.9331010804806624,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.9510249419367869,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.62
+  },
+  "n3_arc_adadelta_1-4-5.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.38145695364238413,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.39602649006622515,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7807249386445158,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.9053822074118953,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.8659497122084217,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.8251035039886903,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.9236090073715035,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.9418358073311118,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.69
+  },
+  "n3_arc_adadelta_1-4-5_5.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.4304635761589404,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.447682119205298,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7856333773834245,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.9120468544885388,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.8710996667676462,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.8282338685246895,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.9295163081894375,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.9467838028880138,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.81
+  },
+  "n3_arc_adam_1-4-5_5.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.49933774834437084,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.5298013245033113,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7385312441004342,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.8594365343835202,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.77395738665051,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.6891850954256286,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.8272745632636574,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.7963748359083106,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.78
+  },
+  "n3_arc_ratio05.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.5483443708609271,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.5880794701986755,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.788087596752879,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.9138644855094415,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.8648894274462284,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.8143996768655963,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.9232555791174392,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.9350701807533071,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.89
+  },
+  "n3a.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.21721854304635763,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.22251655629139072,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.2236171417783651,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.2506311218822579,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.5193375744723822,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.7885994143188932,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.6181460163586792,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.9865697263455518,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.37
+  },
+  "n3b.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.22649006622516557,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.23311258278145697,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.3716254483670002,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.42401292537614865,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.6556599010400889,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.8836716146622235,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.7003433303039484,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.9763707967282642,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.36
+  },
+  "n3normal.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.3072847682119205,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.31125827814569534,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7896922786482915,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.9194183580733111,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.856710087852166,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.7915783096031506,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.948248005654852,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.9776835302433606,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.43
+  },
+  "n3normal_50e.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.3165562913907285,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.32450331125827814,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7944119312818576,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.9247702716348581,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.8612036756538423,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.7965767949106332,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.952640613955367,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.9807634050287791,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.41
+  },
+  "staniek_nlmaps_lin_char_upper2.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.05033112582781457,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.051655629139072845,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.8983386822729847,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.8437847117035242,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.4393618095526608,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.03322225588205594,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.4412299303241442,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.03933151570231243,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.06
+  }
+}

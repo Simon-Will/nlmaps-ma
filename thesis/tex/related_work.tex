@@ -11,7 +11,9 @@
 
 % SQL Parsing; Spider etc.
 
-\section{Online Learning}
+\section{Online Learning and Domain Adaptation}
+
+\subsection{Online Learning}
 
 Neural machine translation models \(p_{\theta}\) are usually trained with the
 goal of minimizing the expected cross-entropy loss on the training set
@@ -57,25 +59,102 @@ online learning from post-editing can be operationalized like this:
 % TODO: Add note about pre-2010 SMT online learning. Cf. ortiz-martinez 2016,
 % page 153
 
-Before the advent of NMT, online learning had been applied in statistical
-machine translation (SMT) on adjusting the weights of the log-linear model
-\parencites(e.g.)(){liang-2006}{arun-2007}{watanbe-2007}. Later,
+This procedure is especially useful for adapting a system pre-trained on general
+data to another domain. In statistical machine translation (SMT), online
+learning research has first focused on adjusting the weights of the log-linear
+model \parencites(e.g.)(){liang-2006}{arun-2007}{watanabe-2007}. Later,
 \textcites{ortiz-martinez-2010}{ortiz-martinez-2016} employed online learning in
 the scenarios of post-editing and interactive machine translation (IMT;
 \cites{casacuberta-2009}{barrachina-2009}) for adjusting also the model features
 themselves.
 
+For NMT, \textcite{turchi-2017} simulated online learning with an attentional
+encoder-decoder network finding that simply updating by doing an SGD step with
+the post-edited instance is superior to a more complicated approach in which
+they added an additional training step after receiving each source sentence but
+\emph{before} predicting the target sequence. They also found that doing five
+training iterations per post-edited instance is actually worse than doing only
+one iteration. Very interestingly, vanilla SGD outperforms Adagrad, Adadelta and
+Adagrad in their experiments.  % TODO: Cite Ada*
 
+At the same time, \textcite{peris-2017} performed very similar work, in which
+they compared gradient descent optimization algorithms with more complicated
+passive-aggressive update rules using subgradient methods. Gradient descent
+optimizers performed significantly better, although vanilla SGD was inferior to
+adaptive gradient update rules, out of which Adadelta and Adam performed best.
 
-%batch vs stochastic gradient descent
-%
-%usually: minibatch as a compromise
-%
-%special case: streaming, i.e. 1 instance becomes available at a time
-%
-%online learning with reward feedback
-%
-%online learning with gold
+\textcite{peris-2019} continued this work for post-editing and IMT scenarios and
+found Adadelta to be the best and also the most stable optimizer with regard to
+varying the learning rate. They demonstrate that online learning can be
+successfully used to enhance the performance not only of out-of-domain systems,
+but also of systems pre-trained with a limited amount of in-domain data.
+
+While the work of \textcites{turchi-2017}{peris-2017}{peris-2019} was done using
+simulations, \textcite{karimova-2018} conducted an actual experiment with
+students of translation studies post-editing NMT outputs, in which they found
+that online adaptation was able to improve both BLEU score and key-stroke and
+mouse-action ratio \parencite[for KSMR cf.][]{barrachina-2009}.
+
+\subsection{Learning from weak user feedback}
+
+A related line of NMT research attempts to improve a pre-trained system with a
+weaker form of user feedback: Instead of a user post-editing a target sentence,
+they can give feedback in the form of scalar rewards about the quality of a
+translatio or even specific parts of it, e.g. by rating it from 0 to 10. This
+has the advantage of requiring less user effort and skill, but it is more
+difficult to correct a translation due to the lack of a gold translation.
+This poses a particular challenge in tasks with a very large output space like
+machine translation.
+
+This scalar feedback can be leveraged with reinforcement learning techniques,
+which was done by \textcite{kreutzer-2017}, who simulated user feedback with
+sentence-level gGLEU \parencite{wu-2016} obtained from out-of-domain reference
+translations. In their comparison of domain adaptation via fully-supervised
+fine-tuning and learning from gGLEU \enquote{rewards} using expected loss
+minimization (which is in essence the REINFORCE algorithm by
+\textcite{williams-1992}), they found that learning from weak feedback is a
+viable method of domain adaptation, even though the fully-supervised approach
+naturally yielded better results. They also showed that performance on the
+original data used for pre-training deteriorated in both scenarios, but more so
+with fully-supervised fine-tuning. \textcite{nguyen-2017} employ the advantage
+actor-critic algorithm \parencite{mnih-2016} in a similar scenario with one
+difference of introducing noise and skew in their reward signals in order to
+simulate actual user feedback. They also do not perform domain adaptation, but
+\emph{fine-tune} on a separate part of the training set.
+
+In contrast to those systems, which simulate a sequence-level reward signal
+after predicting a complete translation, \textcite{lam-2018} use an advantage
+actor-critic NMT system in an IMT-style setting where feedback is simulated for
+\emph{partial} translations when the NMT model is uncertain about its
+prediction. Unsurprisingly, they observed that the more granular feedback yields
+improvements over the sentence-level feedback used in \textcite{nguyen-2017}.
+
+Online methods are of limited use in production systems where the risk of
+deteriorating performance cannot be taken, especially in the light of possibly
+adversarial actors. Therefore, user feedback is usually logged for later
+learning, which is unproblematic for post-edits since they can serve as
+self-contained training instances not much different from reference translations
+in specially-prepared training sets. However, weaker user feedback in the form
+of ratings is tied to the system’s original prediction, which complicates
+learning from it with another system. \textcite{lawrence-2017} used
+control-variate-based smoothing technique called \emph{deterministic propensity
+  matching} to leverage this kind of logged feedback for offline learning with
+an SMT system. Later, \textcite{lawrence-2018} applied this approach also to
+improving an NMT-based parser on the \nlmapstwo{} dataset, which is discussed
+later in this thesis. They were able to learn from both sequence- and
+token-based feedback (both simulated and actual human), but the more granular
+token-based feedback proved superior.
+
+\textcite{kreutzer-2020a} conducted an offline learning NMT experiment with
+human annotators who corrected wrong translations in one scenario and only
+marked erroneous passages in another scenario. They found comparable
+improvements over the baseline in both scenarios, but the error markings took
+significantly less effort to collect.
+
+For an overview of human feedback in reinforcement learning for NLP, see the
+work of \textcite{kreutzer-2020b}.
+
+\subsection{Domain Adaptation in Semantic Parsing}
 
 \section{OpenStreetMap Query Systems}
 

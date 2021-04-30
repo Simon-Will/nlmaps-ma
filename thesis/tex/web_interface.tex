@@ -24,9 +24,9 @@ Finally, the user can tell the system that an MRL query is correct when they are
 satisfied with it. The new NL-MRL pair is saved and is also directly used for
 improving the system by online training.
 
-Figure~\ref{fig:successful-query-process} shows the typical flow from the user’s
-perspective when the query is successfully parsed and
-Figure~\ref{fig:correction-process} shows the flow for a flawed MRL and its
+The screenshots in Figure~\ref{fig:successful-query-process} show the typical
+flow from the user’s perspective when the query is successfully parsed and those
+in Figure~\ref{fig:correction-process} show the flow for a flawed MRL and its
 correction.
 
 \begin{figure}[h]
@@ -146,14 +146,16 @@ approach.
 \begin{itemize}
 \item Their fork has been unmaintained for years and thus does not profit from
   further development and bugfixes in the upstream Overpass API project. Merging
-  the upstream changes and maintaining the fork would mean a lot of work.
-\item Running an instance of the Overpass API entails having the whole OSM
-  database installed in the Overpass database and keeping it up to date, which
-  also is a lot of work.
+  the upstream bugfixes and other changes and maintaining the fork would mean a
+  lot of ongoing work.
+\item Running an instance of the Overpass API entails having a complete copy of
+  OSM data stored in the Overpass database and keeping it up to date, which also
+  is a lot of work.
 \item The Overpass API is meant for precise queries to the OSM database and has
-  no functionality\footnote{Regular expressions are supported, by they do not
-    suffice for this task.} for fuzzy matching of place names or for ranking
-  results by importance. These are typical cases where this becomes a problem:
+  no functionality for fuzzy matching of place names\footnote{Regular
+    expressions are supported, but they do not suffice for this task.} or for
+  ranking results by importance. These are typical cases where this becomes a
+  problem:
   \begin{itemize}
   \item The user asks \nl{Show Verpackungsmuseum in Heidelberg} and the parser
     correctly analyzes that the user wants a place called
@@ -161,8 +163,8 @@ approach.
     place because that museum is in fact called \emph{Deutsches
       Verpackungsmuseum}.
   \item The user asks for objects in \emph{Paris}, but there are several cities
-    with that name in the world and the Overpass API has no importance ranking,
-    with which it could determine that the capital of France most likely the
+    with that name in the world and the Overpass API has no importance ranking
+    with which it could determine that the capital of France is most likely the
     city the user has in mind.
   \end{itemize}
 \end{itemize}
@@ -180,6 +182,7 @@ query is then sent to any of the publicly available Overpass API instances for
 retrieving the result, which means that there is no need of running a separate
 instance of the API with all the maintenance work.
 
+% TODO: Link to Repo
 % TODO: Example.
 
 \section{NL Query Keyword Extraction}

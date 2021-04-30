@@ -1,0 +1,238 @@
+\chapter{Experiments}
+\label{ch:experiments}
+
+Our goal is simulating different strategies of online learning for the new web
+interface. Before we can do that, we first pre-train parsers in
+Section~\ref{sec:pre-training} on the existing datasets \nlmapstwo{} and the
+variations we introduced in \nlmapsthree{} and evaluate whether the dataset
+extensions yield any improvement in parser quality. In
+Section~\ref{sec:annotation}, we then hire annotators to use our web interface
+to ask NL queries and correct the MRL parse if it is incorrect, thus collecting
+a new dataset consisting of real user queries. Finally, in
+Section~\ref{sec:online-simulation} we use the newly acquired dataset for
+evaluating various online learning setups.
+
+For all our experiments, we use the same model architecture: A character-based
+one-layer bidirectional GRU encoder-decoder \parencite{cho-2014} model with
+attention.\parencite{bahdanau-2015} The dimension of both source and target
+embeddings is 620, the encoder layer size is 500, the decoder layer size is 1000
+and we don’t use dropout. This model configuration is adopted from
+\textcite{staniek-2020}.
+
+\section{Training on \nlmapstwo{} and \nlmapsthree{}}
+\label{sec:pre-training}
+
+While \textcite{staniek-2020} trained his model on the \nlmapstwo{} dataset for
+100 epochs (of 16172 instances each), we train our models in this section for a
+shorter time, which is still enough for sufficient convergence: The model on
+\nlmapstwoone{} is trained for 60 epochs (of 15113 instances each), while the
+models on variations of \nlmapsthree{} are trained for 30 epochs (of 30226
+instances each). All models are trained with the Adam optimizer (\(\beta_1 =
+0.9\) and \(\beta_2 = 0.999\)) and a learning rate of \num{0.0002}
+
+Table~\ref{tab:pre-trained-performance} shows the results of testing the models
+on the different variations of \nlmaps{} datasets. Recall: \nlmtwoone{} is the
+result of fixing issues in the MRL queries of \nlmtwo{}, but has identical NL
+queries; \nlmthreea{} is purely generated with probabilistic templates and
+\nlmthreeb{} is its counterpart with added noise; \nlmthreenormal{} is
+\nlmtwoone{} + \nlmthreea{} and \nlmthree{} is \nlmtwoone{} + \nlmthreeb{}. The
+datasets \nlmfourraw{} and \nlmfour{} are introduced in
+Section~\ref{sec:annotation} and are the user-supplied MRL-NL pairs with some
+corrections applied to them in \nlmfour{}. Even though the last two datasets
+were not yet available when the models were pre-trained, we still evaluate the
+pre-trained models on them in this section because we consider the results on
+these user-supplied queries the most relevant.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{lcccccccc}
+    \toprule
+    \diagbox{Train}{Test} & \nlmtwo{} & \nlmtwoone{} & \nlmthreea{} & \nlmthreeb{} & \nlmthreenormal{} & \nlmthree{} & \nlmfourraw{} & \nlmfour{}\\
+    \midrule
+    \textcite{staniek-2020} & \bfnum{0.898} & \num{0.844} & \num{0.039} & \num{0.033} & \num{0.441} & \num{0.439} & \num{0.050} & \num{0.052}\\
+    \nlmtwoone{} & \num{0.783} & \num{0.913} & \num{0.034} & \num{0.029} & \num{0.474} & \num{0.471} & \num{0.070} & \num{0.069}\\
+    \nlmthreea{} & \num{0.224} & \num{0.251} & \bfnum{0.987} & \num{0.789} & \num{0.618} & \num{0.519} & \num{0.217} & \num{0.223}\\
+    \nlmthreeb{} & \num{0.372} & \num{0.424} & \num{0.976} & \bfnum{0.884} & \num{0.700} & \num{0.656} & \num{0.226} & \num{0.233}\\
+    \nlmthreenormal{} & \num{0.790} & \bfnum{0.919} & \num{0.978} & \num{0.792} & \bfnum{0.948} & \num{0.857} & \bfnum{0.307} & \bfnum{0.311}\\
+    \nlmthree{} & \num{0.787} & \num{0.913} & \num{0.950} & \num{0.834} & \num{0.931} & \bfnum{0.874} & \num{0.281} & \num{0.289}\\
+    \bottomrule
+  \end{tabular}
+  \caption{Performance of pre-trained parsers}
+  \label{tab:pre-trained-performance}
+\end{table}
+
+Unsurprisingly, the model by \textcite{staniek-2020}, which was trained on
+\nlmapstwo{}, performs best on the corresponding test set with an accuracy of
+\SI{89.8}{\%}. The model trained on \nlmtwoone{}, which contains the fixes of
+tag usage and inconsistencies described in Chapter~\ref{ch:nlmaps-improvement},
+achieves a higher accuracy on its corresponding test set with \SI{91.3}{\%}.
+This is to be expected since the resolution of inconsistencies in MRL structure
+and tag usage makes a new part of the dataset accessible for confident
+predictions in the first place. These two models’ performance drops dramatically
+on new datasets. An error analysis (see Figure~\ref{fig:v21-errors}) shows that
+not only does the model trained on \nlmtwoone{} make an error in the
+\mrl{target_nwr} operator in over \SI{70}{\%} of queries from the \nlmapsfour{}
+test set, the recognized \mrl{area} is false in more than half the queries, as
+well.
+
+\begin{figure}[h]
+  \centering
+  \resizebox{\textwidth}{!}{\input{fig/n21_n4_errors.pgf}}
+  \caption[Errors pre-trained on \nlmtwoone{}]{Percentage of queries with an
+    error in a specific operator. The model was pre-trained on \nlmapstwoone{}
+    and tested on \nlmapsfour{}.}
+  \label{fig:v21-errors}
+\end{figure}
+
+The models trained on the purely synthetic training sets of \nlmthreea{} and
+\nlmthreeb{} achieve an extremely high accuracy of around \SI{98}{\%} on the
+test set of \nlmthreea{}. The model trained on the non-noisy \nlmthreea{} turns
+out to be less robust on the noisy \nlmthreeb{} test set with a performance drop
+of almost \SI{20}{\%} whereas the accuracy of the model trained on \nlmthreeb{}
+only drops by around \SI{9}{\%}. More interestingly, the \nlmthreeb{} model
+significantly outperforms the \nlmthreea{} model on the \nlmtwoone{} test set,
+as well, which suggests that the added noise serves as a means of regularization
+and avoids overfitting on the synthetic queries. When confronted with the real
+queries in \nlmapsfour{}, both models’ accuracy again drops starkly to around
+\SI{23}{\%} – with the noisy model still performing slightly better than its
+non-noisy counterpart. As shown in Figure~\ref{fig:v3b-errors}, the improvement
+with respect to the model trained on \nlmtwoone{} is mostly due to the greater
+variety of location names (cf. Section~\ref{sec:little-location-variety}), which
+significantly reduces the number of errors in the \mrl{area} and
+\mrl{center_nwr} operators. The main source of errors remains choosing the
+correct OSM tags in the \mrl{target_nwr} operator.
+
+\begin{figure}[h]
+  \centering
+  \resizebox{\textwidth}{!}{\input{fig/n3b_n4_errors.pgf}}
+  \caption[Errors pre-trained on \nlmtwoone{}]{Percentage of queries with an
+    error in a specific operator. The model was pre-trained on \nlmapsthreeb{}
+    and tested on \nlmapsfour{}.}
+  \label{fig:v3b-errors}
+\end{figure}
+
+Combining \nlmtwoone{} and the new synthetic data from \nlmthreea{} or
+\nlmthreeb{} yields further improvement as evidenced by the performance of the
+models trained on \nlmthreenormal{} and \nlmthree{}. They perform well on
+\nlmtwoone{} as well as on the variations of \nlmthree{}, but the accuracy on
+the noisy versions is still noticeably smaller than on their non-noisy
+counterparts. While the comparison of the two models trained on \nlmthreea{} and
+\nlmthreeb{} showed a clearly superior performance of the model trained on the
+noisy data in all variations of \nlmtwo{} and \nlmthree{} except \nlmthreea{},
+this is not observed when comparing the two models trained on \nlmthreenormal{}
+and \nlmthree{}. Instead, they have a similar accuracy on all test sets with the
+model trained on \nlmthreenormal{} being slightly superior on the non-noisy
+datasets and the model trained on \nlmthree{} being slightly superior on the
+noisy ones. Testing on the real user queries from \nlmfour{} reveals that the
+model trained on the non-noisy data actually performs better in the end.
+However, since \nlmfour{} was not available during the pre-training phase, at
+that point the two models seemed comparable and our assumption was that the
+model trained on \nlmthreeb{} would prove more robust against typing errors.
+
+\begin{figure}[h]
+  \centering
+  \resizebox{\textwidth}{!}{\input{fig/n3_n4_errors.pgf}}
+  \caption[Errors pre-trained on \nlmtwoone{}]{Percentage of queries with an
+    error in a specific operator. The model was pre-trained on \nlmapsthree{}
+    and tested on \nlmapsfour{}.}
+  \label{fig:v3-errors}
+\end{figure}
+
+Figure~\ref{fig:pre-trained-learning-curve} shows the models’ learning curves on
+the development set of \nlmthree{} during pre-training. While all models
+converge fairly quickly, it can be seen that the model trained on \nlmtwoone{}
+converges somewhat faster than the other models. This might again be due to the
+simpler location names, which can be memorized by the model, while the other
+models have to learn to copy arbitrary location names – including some that are
+very long or contain rare characters.
+
+\begin{figure}[h]
+  \centering
+  \resizebox{\textwidth}{!}{\input{fig/n3_learning_curve.pgf}}
+  \caption[Pre-training learning curves]{Learning curves on the development set
+    of \nlmapsthree{}}
+  \label{fig:pre-trained-learning-curve}
+\end{figure}
+
+\section{Annotation for New Dataset}
+\label{sec:annotation}
+
+Training and evaluating useful \nlmaps{} models without having a dataset of
+actual user queries is problematic. For this reason, an annotation experiment is
+conducted, during which several people use our web interface presented in
+Chapter~\ref{ch:web-interface} to issue new NL queries. They are tasked to
+confirm the model’s predicted MRL query if they deem it correct or to correct it
+if they consider it false. Before beginning the task, the annotators complete a
+tutorial,\footnote{\url{https://nlmaps.gorgor.de/tutorial}.} which explains
+the basics of OSM, the capabilities of the MRL language and the usage of the web
+interface.
+
+The call for participation in the annotation study was distributed through
+various OSM-typical channels including the \emph{talk} mailing
+list\footcite{osm-talk} and the OSM subreddit\footcite{osm-subreddit}, which
+yielded the highest response. Albeit slightly eurocentric, the participants stem
+from a fairly diverse set of countries and feature. In contrast, all of the
+acquired annotators report their gender as male, which is reflective of the
+overall OSM demographic since only between \SI{2}{\%} and \SI{5}{\%} of OSM
+contributors are estimated to be female
+\parencites{budhathoki-2010}{stark-2010}{lechner-2011}{klettner-2013}{das-2019}.
+This is problematic as it has the potential to lead to a bias in the dataset. In
+future annotation projects this effect should be mitigated by targeted
+advertising for projects in female mapping communities such as GeoChicas.\footcite{geochicas}
+
+\begin{table}[h]
+  \centering
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}[t]{lllll} % 63
+      \toprule
+      \#Annotations & Nationality & Native Language & OSM Experience & Gender\\
+      \midrule
+      \num{442} & Poland & Polish & Extensive & Male\\ % Mateusz
+      \num{414} & Germany & German & Extensive & Male\\ % Martin
+      \num{405} & Turkey & Turkish & Medium & Male\\ % Ali Y
+      \num{404} & UK & English & Medium & Male\\ % Jake
+      \num{404} & Hungary & Hungarian & Extensive & Male\\ % Benjámin Z
+      \num{400} & India & Hindi & Little & Male\\ % Aksha
+      \num{400} & Turkey & Turkish & Little & Male\\ % Ali A
+      \num{393} & Germany & German & Little & Male\\ % David
+      \num{361} & Germany & German & Extensive & Male\\ % Simon
+      \num{253} & Brazil & Portuguese & Little & Male\\ % Thales
+      \num{253} & Nepal & Nepalese & Extensive & Male\\ % Rabin
+      \num{19} & Philippines & English, Filipino, Cebuano & Extensive & Male\\ % Erwin
+      \num{43} & \multicolumn{4}{l}{\emph{Various untracked people without login}}\\
+      \bottomrule
+    \end{tabular}}
+  \caption[Annotator profiles]{Information about annotators. Everything but the
+    number of annotations is self-reported by the annotators.}
+  \label{tab:annotator-profiles}
+\end{table}
+
+The annotation guidelines explain to the annotators that their queries should be
+linguistically diverse, cover a large part of OSM tags and cover more useful
+tags in more detail. To ensure that the annotators sufficiently cover the most
+important tags, we choose a set of tags (e.g. \osmtag{amenity=cafe} or
+\osmtag{wheelchair=yes}) and keys (e.g. \osmtag{shop} or \osmtag{leisure}) for
+which each annotator must issue a minimum number of queries. See the full
+guidelines in Appendix~\ref{ch:annotation-guidelines} for details. The
+annotators can monitor their annotation progress via an overview page in the web
+interface, which is shown in Figure~\ref{fig:annotation-progress}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{fig/annotation_progress.png}
+  \caption[Annotation progress overview]{Overview of an annotator’s annotation
+    progress}
+  \label{fig:annotation-progress}
+\end{figure}
+
+\section{Online Learning Simulation}
+\label{sec:online-simulation}
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-parse-self: t
+%%% TeX-command-extra-options: "-shell-escape"
+%%% TeX-master: "../thesis"
+%%% End:

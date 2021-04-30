@@ -7,8 +7,8 @@ that the \SI{93.8}{\%} performance on the test split is not reflected in the
 model’s performance on new queries. In particular, the model is not robust
 against unseen wordings of a query and it – more understandably – also fails for
 unseen OSM tags. Figure~\ref{fig:nlmaps-v2-reality-check} shows typical errors
-the model makes on NL queries from the test set of \nlmapswebpilot{}, which is
-introduced in Section~\ref{sec:nlmaps-web-pilot}.
+the model makes on NL queries from \nlmapsfour{}, which is
+introduced in Section~\ref{sec:annotation}.
 
 \begin{figure}[h]
   \centering
@@ -328,14 +328,12 @@ source emitting tokens \(t\) with a probability \(\Prob(T=t)\).
 If a token’s emission probability \(\Prob(T=t)\) depends on the previously emitted
 block \(b\) of \(n-1\) tokens as the manifestation of random variable \(B\), the
 conditional entropy is defined by
-
 \begin{align}
   H(T|B) &= \sum_b \Prob(B=b) H(T|B=b)\\
          &= - \sum_b \Prob(B=b) \sum_t \Prob(T=t|B=b) \log_2 \Prob(T=t|B=b)\\
          &= - \sum_b \sum_t \Prob(B=b) \Prob(T=t|B=b) \log_2 \Prob(T=t|B=b)\\
          &= - \sum_b \sum_t \Prob(B=b, T=t) \log_2 \Prob(T=t|B=b)
 \end{align}
-
 where \(\Prob(B=b, T=t) = \Prob(T=t|B=b) \Prob(B=b)\) is the probability of observing the
 \(n\)-gram \((b, t)\). The probabilities can be estimated by observing the
 trigrams (\(n=3\)) in \nlmapstwo{} and we arrive at conditional entropies of
@@ -347,6 +345,7 @@ By using more templates and templates that are not as rigid as the ones used for
 the conditional entropy of such a dataset will be increased.
 
 \subsection{Little variety in location names}
+\label{sec:little-location-variety}
 
 Suspiciously, the NL sample of \nlmapstwo{} in Figure~\ref{fig:nlmaps-v2-sample}
 contains the areas \emph{Edinburgh}, \emph{Lille}, \emph{Nice} in two queries
@@ -650,7 +649,7 @@ Finally, we concatenate \nlmapstwo{} and \nlmapsthreeb{} and call the result
 
 The linguistic diversity of the resulting datasets is quantified by the entropy
 rate estimated by the conditional entropy on trigrams, as described in
-Section~\ref{sec:little-linguistic-diversity}. Table \ref{tab:v2-v3-entropy}
+Section~\ref{sec:little-linguistic-diversity}. Table \ref{tab:v2-v3-overview}
 offers an overview over the datasets.
 
 \begin{table}[h]
@@ -665,7 +664,7 @@ offers an overview over the datasets.
     \bottomrule
   \end{tabular}
   \caption{Entropy rates estimated on trigrams.}
-  \label{tab:v2-v3-entropy-rates}
+  \label{tab:v2-v3-overview}
 \end{table}
 
 %%% Local Variables:

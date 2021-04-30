@@ -1,0 +1,150 @@
+\chapter{Annotation Guidelines}
+\label{ch:annotation-guidelines}
+
+\section{Requirements}
+
+The annotation website\footnote{\url{https://nlmaps.gorgor.de/}} is meant to be
+used with a recent version of a modern Browser. That means Firefox, Safari,
+Chrome or any other Chromium derivates (such as recent MS Edge). It is not
+optimized for mobile use, so please use a desktop computer.
+
+\section{Principles}
+
+In essence, we need a dataset that fulfills three criteria:
+
+\begin{enumerate}
+\item The natural language (NL) queries should be linguistically diverse, i.e. a mix of short search-engine-style queries and full questions like you would ask another person.
+\item The queries should cover a large part of the commonly used OpenStreetmap (OSM) tags that are relevant for our system.
+\item The queries should cover the most useful OSM tags in particular depth. E.g., asking for restaurants and shops is arguably one of the most useful areas.
+\end{enumerate}
+
+\section{Linguistic Diversity}
+
+When entering queries, please diversify your language use. Valid variations of
+the same question include:
+
+\begin{itemize}
+\item \nl{closest swimming pool near Eiffel Tower in Paris}
+\item \nl{In Paris, give me the swimming pool that is closest to the Eiffel Tower!}
+\item \nl{Closest place where I can take a swim near Eiffel Tower in Paris}
+\end{itemize}
+
+However, keep it natural and don’t make your queries artificially complex. If a
+particular query style comes more natural to you, it’s alright to use it more
+often. Just make sure that not all of you queries look alike.
+
+Similarly, avoid using the same place name more than a couple of times. Also use
+place names in other languages than German and English, e.g. \nl{České
+  Budějovice} or \nl{València}.
+
+It’s \textbf{very important} that you don’t only base your wording on the name
+of the OSM tags. E.g., for \osmtag{highway=speed_camera} you can ask for a
+\nl{speed camera}, but you can also ask for a \nl{speed trap} or a \nl{radar
+  trap}.
+
+\section{Tag Diversity and Depth}
+
+Take a \nl{quick} look at the most important OSM
+features\footnote{\url{https://wiki.openstreetmap.org/wiki/Map_features}} to get
+a feel for what things you can ask for in OSM. You can use this as an
+inspiration if you run out of ideas about what to ask. Choose tags that you find
+relevant.
+
+\textbf{Beware of the \osmtag{building=*} tag!} It is used to tag what the
+building was built as, not to tag its current use. E.g., a place tagged
+\osmtag{building=church} may not be a church anymore; churches are tagged with
+the tags \osmtag{amenity=place_of_worship} + \osmtag{religion=christian}. If
+in doubt, don’t use the \osmtag{building=*} tag, at all.
+
+In general, enter more than one query for a chosen tag or tag combination,
+especially if the system fails answering the query correctly.
+
+\subsection{Most relevant keys}
+
+Please enter at least the given amount of queries for each of the following. The
+linked wiki pages give you a feel for what the most common tags in each category
+are.
+
+\begin{itemize}
+\item \osmtag{shop=*}: 30.
+\item \osmtag{leisure=*}: 20.
+\item \osmtag{sport=*}: 20.
+\item \osmtag{craft=*}: 20.
+\item \osmtag{man_made=*}: 10.
+\item \osmtag{amenity=cafe}: 10.
+\item \osmtag{amenity=restaurant}: 10.
+\item \osmtag{amenity=fast_food}: 10.
+\item \osmtag{cuisine=*}: 20.
+\item \osmtag{diet:*=*}: 20.
+\item \osmtag{wheelchair=yes}: 20. Just sprinkle phrases like
+  \nl{wheelchair-accessible [place]} or \nl{[places] that are
+    wheelchair-accessible} into your queries now and then.
+\end{itemize}
+
+Some tags \emph{can and should} be combined. E.g., use
+\mrl{shop=massage,wheelchair=yes} for wheelchair-accessible massage shops or
+\mrl{club=sport,sport=tennis} for tennis clubs. But use only
+\osmtag{sport=tennis} if you’re just asking for places to play tennis at.
+
+Especially the \osmtag{cuisine=*} and \osmtag{diet:*=*} tags can be combined
+productively. Some examples:
+
+\begin{itemize}
+\item \osmtag{cuisine=japanese}: Places serving japanese food
+\item \mrl{cuisine=japanese,amenity=fast_food}: Fast food restaurants
+  serving\\japanese food
+\item \mrl{or(diet:vegan=yes,diet:vegan=only),amenity=cafe}: Vegan cafes
+\item \mrl{or(diet:gluten_free=yes,diet:gluten_free=only),}\\
+  \mrl{cuisine=burger,amenity=restaurant}: Restaurants serving\\gluten-free
+  burgers
+\end{itemize}
+
+\section{Miscellaneous}
+
+\begin{itemize}
+\item Sometimes deciding between QType \mrl{findkey('name')} and \mrl{latlong} is not obvious. By convention:
+  \begin{itemize}
+  \item \nl{\emph{Which/What} restaurants/museums/etc. …}: \mrl{findkey('name')}
+  \item \nl{\emph{Name} restaurants/museums/etc. …}: \mrl{findkey('name')}
+  \item \nl{What are restaurants/museums/etc. … \emph{called}?}: \mrl{findkey('name')}
+  \item \nl{\emph{Give/Tell} (me) the \emph{names} of restaurants/museums/etc.
+      …}:\\\mrl{findkey('name')}
+  \item \nl{\emph{Show/Give/Tell} (me) restaurants/museums/etc. …}: \mrl{latlong}
+  \item \nl{\emph{Where} are restaurants/museums/etc. …}: \mrl{latlong}
+  \item \nl{\emph{Location/Coordinates} of restaurants/museums/etc. …}: \mrl{latlong}
+  \end{itemize}
+\item Don’t repeat the same query with only a different location. Adjust the wording, as well.
+\item Some queries will not return results even if they are correct (e.g. rare
+  tags like gluten-free etc.). Please base your judgement primarily on the mrl,
+  not on the answer or map.
+\item Avoid querying too much data (\nl{trees in Berlin}) or too large areas
+  (\nl{restaurants in Bangladesh}) to put less stress on servers and your
+  browser.
+\item \nl{Show all restaurants in X that are wheelchair-accessible!}: Target
+  tags include \mrl{wheelchair=yes}, QType is `latlong`
+\item \nl{Is X accessible by wheelchair?}: Use QType
+  \mrl{findkey('wheelchair')}, no \mrl{wheelchair=*} target tag
+\item Questions looking for the closest thing to some other thing should always
+  have a maxdist of \mrl{DIST_INTOWN}. In theory, this doesn’t make sense. It’s
+  just a limitation of the current system.
+\item Use the appropriate maxdist value according to the table in chapter 4 of
+  the tutorial\footnote{\url{https://nlmaps.gorgor.de/tutorial?chapter=4}}.
+  E.g., when using the word “near” in your query, use \mrl{DIST_INTOWN}.
+\end{itemize}
+
+\section{Counting Annotations}
+
+A natural language query and the corresponding mrl are considered one
+\emph{complete annotation}. If you don’t know what the correct mrl looks like,
+you can choose \enquote{Wrong, but I cannot help} and it will be considered an
+\emph{incomplete annotation}. This is still valuable; four incomplete
+annotations will count as one complete annotation.
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-parse-self: t
+%%% TeX-command-extra-options: "-shell-escape"
+%%% TeX-master: "../thesis"
+%%% End:
