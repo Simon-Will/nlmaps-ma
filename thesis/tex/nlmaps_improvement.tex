@@ -117,6 +117,7 @@ In the following subsections, these issues are analyzed in detail and solutions
 for how to improve on \nlmapstwo{} are proposed.
 
 \subsection{Train/Test Resemblance}
+\label{sec:train-test-resemblance}
 
 As already noticed by \textcite{staniek-2020}, the fact that \nlmapstwo{} was
 created by using fairly simple templates led to nearly the same NL query
@@ -663,7 +664,8 @@ offers an overview over the datasets.
     Avg. Tokens per NL & \num{6.98} & \num{7.02} & \num{10.72} & \num{10.69} & \num{8.85}\\
     \bottomrule
   \end{tabular}
-  \caption{Entropy rates estimated on trigrams.}
+  \caption[Dataset statistics]{Comparison of dataset statistics. Entropy rates
+    are estimated by the conditional entropy trigrams.}
   \label{tab:v2-v3-overview}
 \end{table}
 

@@ -171,14 +171,14 @@ The call for participation in the annotation study was distributed through
 various OSM-typical channels including the \emph{talk} mailing
 list\footcite{osm-talk} and the OSM subreddit\footcite{osm-subreddit}, which
 yielded the highest response. Albeit slightly eurocentric, the participants stem
-from a fairly diverse set of countries and feature. In contrast, all of the
-acquired annotators report their gender as male, which is reflective of the
-overall OSM demographic since only between \SI{2}{\%} and \SI{5}{\%} of OSM
-contributors are estimated to be female
+from a reasonably diverse set of countries and have diverse native languages. In
+contrast, all of the acquired annotators report their gender as male, which is
+reflective of the overall OSM demographic since only between \SI{2}{\%} and
+\SI{5}{\%} of OSM contributors are estimated to be female
 \parencites{budhathoki-2010}{stark-2010}{lechner-2011}{klettner-2013}{das-2019}.
 This is problematic as it has the potential to lead to a bias in the dataset. In
-future annotation projects this effect should be mitigated by targeted
-advertising for projects in female mapping communities such as GeoChicas.\footcite{geochicas}
+future annotation projects, this effect should be mitigated by targeted
+advertising in female mapping communities such as GeoChicas.\footcite{geochicas}
 
 \begin{table}[h]
   \centering
@@ -195,11 +195,11 @@ advertising for projects in female mapping communities such as GeoChicas.\footci
       \num{400} & India & Hindi & Little & Male\\ % Aksha
       \num{400} & Turkey & Turkish & Little & Male\\ % Ali A
       \num{393} & Germany & German & Little & Male\\ % David
-      \num{361} & Germany & German & Extensive & Male\\ % Simon
+      \num{318} & Germany & German & Extensive & Male\\ % Simon
       \num{253} & Brazil & Portuguese & Little & Male\\ % Thales
       \num{253} & Nepal & Nepalese & Extensive & Male\\ % Rabin
-      \num{19} & Philippines & English, Filipino, Cebuano & Extensive & Male\\ % Erwin
-      \num{43} & \multicolumn{4}{l}{\emph{Various untracked people without login}}\\
+      \num{26} & Philippines & English, Filipino, Cebuano & Extensive & Male\\ % Erwin
+      \num{40} & \multicolumn{4}{l}{\emph{Various untracked people without login}}\\
       \bottomrule
     \end{tabular}}
   \caption[Annotator profiles]{Information about annotators. Everything but the
@@ -223,6 +223,119 @@ interface, which is shown in Figure~\ref{fig:annotation-progress}.
   \caption[Annotation progress overview]{Overview of an annotator’s annotation
     progress}
   \label{fig:annotation-progress}
+\end{figure}
+
+During the annotation, the parser model used by the web interface is initially
+the model from Section~\ref{sec:pre-training} that is pre-trained on
+\nlmapsthree{}. Due to technical problems however, no systematic online learning
+happened throughout the annotation experiment because of various crashes. The
+result is a dataset where the annotators made their corrections based on
+predictions made by a model that had learned from some, but not all annotations.
+
+In total, the annotators issued \num{4152} NL queries. For \num{92} of those
+they could not give an MRL, mostly because the queries were not expressible by
+an MRL query (e.g. \nl{cities without hospitals in Poland}), leaving \num{4060}
+NL-MRL pairs. Since \textcite{staniek-2020} correctly criticised that
+\nlmapstwo{} has queries in its development and test sets that appear
+identically in the training set if location names are masked,\footnote{Cf.
+  Section~\ref{sec:train-test-resemblance}}, we identify such sets of identical
+queries in the remaining \num{4060} NL-MRL pairs and delete all but one in each
+set, which leaves \num{3773} NL-MRL pairs.
+
+Furthermore, we observe that users tend to reuse the same areas many times. E.g.
+a user from Istanbul will ask lots of questions about Istanbul, which leads to
+the problem of lacking variety in location names that was already identified as
+a problem in Section~\ref{sec:little-location-variety}. In order to avoid this
+problem in our new dataset, the web interface automatically replaces a location
+name (anything with OSM tag \osmtag{name=*}) if it has occurred three or more
+times in that user’s queries already. The original query is of course saved
+separately, as well. The location names used for replacement are selected from
+the same large list of areas and point of interest that is also used for
+generating the \nlmapsthree{} dataset. The resulting dataset of \num{3773} NL
+-MRL pairs with replacement of some location names is called \nlmapsfourraw{}.
+
+Finally, we notice some errors in the MRLs the annotators created. E.g., for the
+NL query \nl{show me restaurants with limited wheelchair access in gmina
+  Piaseczno}, the annotated MRL query erroneously uses
+\mrl{qtype(findkey('wheelchair'))} (which informs about the wheelchair
+accessibility status of returned objects) instead of actually \emph{selecting}
+for wheelchair status by using \mrl{keyval('wheelchair','limited')} in the
+\mrl{nwr} operator. Similar queries by the same annotator where they didn’t make
+that mistake show that they understood the issue and may just have been
+unconcentrated in this case. Other examples include using 
+\osmtag{diet=chinese} instead of \osmtag{cuisine=chinese} or \osmtag{shop=fuel}
+instead of \osmtag{amenity=fuel}, both of which can be attributed to a lack of
+concentration, which is not surprising in a repetitive annotation task.
+
+Besides these obvious errors, there is a separate and more frequent issue with
+ambiguous NL queries. E.g., the NL query \nl{count the fireplaces in the
+  Naturpark Schönbuch} is annotated to select objects tagged as
+\mrl{keyval('leisure','firepit')}, which ignores fireplaces that are mapped with
+the key \osmtag{fireplace=yes} on picnic sites. Another annotator issues a
+similar NL query, but creates an MRL which selects objects tagged as
+\mrl{or(keyval('fireplace','yes'),} \mrl{keyval('leisure',} \mrl{'firepit'))}.
+While the second query is more inclusive and overall more fitting for the NL
+query, there is a valid reason to exclude \osmtag{fireplace=yes}: It can also be
+used on wilderness huts to indicate that they feature an \emph{indoor}
+fireplace, which may not be what the user has in mind. This is one of several
+cases where it is not at all obvious what the correct MRL query for an NL query
+should be.
+
+Since our goal is creating a dataset that is as useful as possible for training
+an NLMaps model which makes sensible and consistent predictions, we fix the
+obvious errors and we also adjust MRLs where there are diverging MRL
+interpretations for similar NL queries in the dataset. This is judged by the
+author Simon Will based on the MRLs created by all the annotators. As a result
+of this resolution, \num{377} MRLs of the \num{3773} instances are modified to
+create the dataset called \nlmapsfour{}.
+
+Both \nlmfourraw{} and \nlmfour{} are split into training, development and test
+sets containing \num{2264}, \num{754} and \num{755} instances respectively.
+Table~\ref{tab:v2-v3-v4-overview} compares the new datasets with \nlmtwoone{}
+and \nlmthreeb{} and shows that the user queries are actually shorter and have a
+smaller entropy rate than the queries generated by our probabilistic templates.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{lrrrr}
+    \toprule
+    Measure & \nlmtwoone{} & \nlmthreeb{} & \nlmfourraw{}/\nlmfour{}\\
+    \midrule
+    Instances & \num{28609} & \num{53500} & \num{3773}\\
+    Conditional Entropy & \num{2.11} & \num{2.93} & \num{2.68}\\
+    Avg. Tokens per NL & \num{6.98} & \num{10.69} & \num{8.37}\\
+    \bottomrule
+  \end{tabular}
+  \caption[Dataset statistics]{Comparison of dataset statistics. Entropy rates
+    are estimated by the conditional entropy trigrams.}
+  \label{tab:v2-v3-v4-overview}
+\end{table}
+
+Probably due to the influence of the annotation guidelines, the most common tags
+in \nlmapsfour{} are \osmtag{wheelchair=yes}, \osmtag{amenity=restaurant} and
+\osmtag{amenity=cafe}, which are used in over \num{100} queries each. What makes
+the dataset especially changing, is the long tail of rarely used tags: \num{310}
+tags are used only once and \num{489} are used at most three times.
+Figure~\ref{fig:tag-distribution} reveals two insights about how the tag
+distribution in \nlmapsfour{} compares to that of the previous datasets: The
+synthetic nature of \nlmapsthreeb{} and the larger part of \nlmapstwoone{} makes
+it feasible to generate an arbitrary number for each tag, which is of course not
+possible when manually issuing queries. At the same time, the manual processs is
+more creative resulting in a larger number of different tags. Note that even
+though the number of instances in \nlmapsfour{} is only \SI{7}{\%} of that in
+\nlmapsthree{}, it still contains \num{1.3} times as many different tags.
+
+In conclusion, the annotation process was unfortunately only done by male
+participants and the question of how to handle diverging MRL queries for similar
+NL queries deserves further research. Nevertheless, the result is a challenging
+dataset with a large number of tags and more \emph{real} user queries than any
+of the previous \nlmaps{} datasets.
+
+\begin{figure}[h]
+  \centering
+  \resizebox{\textwidth}{!}{\input{fig/tag_counts.pgf}}
+  \caption[Tag distribution]{Tag distribution in different \nlmaps{} datasets.}
+  \label{fig:tag-distribution}
 \end{figure}
 
 \section{Online Learning Simulation}
