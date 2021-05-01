@@ -65,6 +65,17 @@
     "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.8087953145511462,
     "nlmaps_web_2to1/nlmaps.web.test": 0.59
   },
+  "n3_ar_adam_1-4-5.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.48344370860927155,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.4900662251655629,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7572210685293562,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.8798343936180956,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.8306068868019792,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.7804705644754115,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.8838735736645461,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.8945269110370595,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.79
+  },
   "n3_ar_ratio05.yaml": {
     "nlmaps_ann_replaced/nlmaps.test": 0.5509933774834437,
     "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7711912403247121,
@@ -73,6 +84,17 @@
     "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.8137937998586287,
     "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.9145208522669898,
     "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.9342623447440169,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.9
+  },
+  "n3_arc.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.5178807947019868,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.5536423841059602,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7300358693600151,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.8362112491164294,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.7919317378572149,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.7462890033323235,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.8519135615470059,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.8709986872664849,
     "nlmaps_web_2to1/nlmaps.web.test": 0.9
   },
   "n3_arc_adadelta_1-0-0.yaml": {
@@ -129,6 +151,39 @@
     "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.9295163081894375,
     "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.9467838028880138,
     "nlmaps_web_2to1/nlmaps.web.test": 0.81
+  },
+  "n3_arc_adam_1-0-0.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.3841059602649007,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.3973509933774834,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.5004719652633566,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.5645763909926285,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.5521054225992124,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.5351913561547006,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.601029990911845,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.6412703221246087,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.65
+  },
+  "n3_arc_adam_1-0-5.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.4304635761589404,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.4503311258278146,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7615631489522371,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.8861961021912552,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.8473189942441685,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.8079369887912754,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.9073008179339594,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.9306270827022115,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.64
+  },
+  "n3_arc_adam_1-4-5.yaml": {
+    "nlmaps_ann_replaced/nlmaps.test": 0.4860927152317881,
+    "nlmaps_ann_replaced_corrected/nlmaps.test": 0.5099337748344371,
+    "nlmaps_v2/split_1_train_dev_test/nlmaps.v2.test": 0.7638285822163489,
+    "nlmaps_v2delta/nlmaps.v2.test": 0.8871049177017065,
+    "nlmaps_v3epsilon/v3epsilon.noise.plusv2/nlmaps.v3epsilon.test": 0.8410582651721701,
+    "nlmaps_v3epsilon/v3epsilon.noise/nlmaps.v3epsilon.test": 0.7952135716449561,
+    "nlmaps_v3epsilon/v3epsilon.normal.plusv2/nlmaps.v3epsilon.test": 0.9011915581137029,
+    "nlmaps_v3epsilon/v3epsilon.normal/nlmaps.v3epsilon.test": 0.9158335857820863,
+    "nlmaps_web_2to1/nlmaps.web.test": 0.8
   },
   "n3_arc_adam_1-4-5_5.yaml": {
     "nlmaps_ann_replaced/nlmaps.test": 0.49933774834437084,

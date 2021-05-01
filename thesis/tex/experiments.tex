@@ -15,20 +15,21 @@ evaluating various online learning setups.
 For all our experiments, we use the same model architecture: A character-based
 one-layer bidirectional GRU encoder-decoder \parencite{cho-2014} model with
 attention.\parencite{bahdanau-2015} The dimension of both source and target
-embeddings is 620, the encoder layer size is 500, the decoder layer size is 1000
-and we don’t use dropout. This model configuration is adopted from
-\textcite{staniek-2020}.
+embeddings is \num{620}, the encoder layer size is \num{500}, the decoder layer
+size is \num{1000} and we don’t use dropout. This model configuration is adopted
+from \textcite{staniek-2020}.
 
 \section{Training on \nlmapstwo{} and \nlmapsthree{}}
 \label{sec:pre-training}
 
 While \textcite{staniek-2020} trained his model on the \nlmapstwo{} dataset for
-100 epochs (of 16172 instances each), we train our models in this section for a
-shorter time, which is still enough for sufficient convergence: The model on
-\nlmapstwoone{} is trained for 60 epochs (of 15113 instances each), while the
-models on variations of \nlmapsthree{} are trained for 30 epochs (of 30226
-instances each). All models are trained with the Adam optimizer (\(\beta_1 =
-0.9\) and \(\beta_2 = 0.999\)) and a learning rate of \num{0.0002}
+\num{100} epochs (of \num{16172} instances each), we train our models in this
+section for a shorter time, which is still enough for sufficient convergence:
+The model on \nlmapstwoone{} is trained for \num{60} epochs (of \num{15113}
+instances each), while the models on variations of \nlmapsthree{} are trained
+for \num{30} epochs (of \num{30226} instances each). All models are trained with
+the Adam optimizer (\(\beta_1 = 0.9\) and \(\beta_2 = 0.999\)) and a learning
+rate of \num{0.0002}
 
 Table~\ref{tab:pre-trained-performance} shows the results of testing the models
 on the different variations of \nlmaps{} datasets. Recall: \nlmtwoone{} is the
@@ -183,7 +184,7 @@ advertising in female mapping communities such as GeoChicas.\footcite{geochicas}
 \begin{table}[h]
   \centering
   \resizebox{\textwidth}{!}{%
-    \begin{tabular}[t]{lllll} % 63
+    \begin{tabular}[t]{rllll}
       \toprule
       \#Annotations & Nationality & Native Language & OSM Experience & Gender\\
       \midrule
@@ -277,7 +278,7 @@ similar NL query, but creates an MRL which selects objects tagged as
 While the second query is more inclusive and overall more fitting for the NL
 query, there is a valid reason to exclude \osmtag{fireplace=yes}: It can also be
 used on wilderness huts to indicate that they feature an \emph{indoor}
-fireplace, which may not be what the user has in mind. This is one of several
+fireplace, which may not be what the user has in mind. This is one of numerous
 cases where it is not at all obvious what the correct MRL query for an NL query
 should be.
 
@@ -340,6 +341,161 @@ of the previous \nlmaps{} datasets.
 
 \section{Online Learning Simulation}
 \label{sec:online-simulation}
+
+In this section, we train various models on the new \nlmapsfour{} dataset and
+investigate which learning setup is best suited for online learning in the web
+interface. The model trained on the large \nlmapsthree{} dataset is used as a
+starting point for all models in this section.
+
+First, we establish an upper boundary for the fine-tuning on \nlmfour{} in a
+regular batch-based offline learning experiment. In the setup called \nlmthree{}
+\textrightarrow{} \nlmfour{} in Table~\ref{tab:fine-tuned-performance} the model
+is fine-tuned on \nlmfour{} for \num{20} epochs with a batch size of \num{10}.
+While that model achieves significant accuracy gains on \nlmfour{}, its
+performance on the old dataset \nlmthree{} drops starkly. Therefore, another
+model is trained for \num{20} epochs (of \nlmfour{}) with batches made up of
+\num{5} instances from \nlmfour{} and \num{5} instances of \nlmthree{}. This
+model achieves the highest accuracy on \nlmfour{} in this thesis: \SI{58.8}{\%}.
+The learning curve shown in Figure~\ref{fig:v3-v4-learning-curve} shows that the
+performance on \nlmthree{} remains fairly stable throughout the training while
+the performance on the new \nlmfour{} is improved.
+
+\begin{figure}[h]
+  \centering
+  \resizebox{\textwidth}{!}{\input{fig/n3_arc_ratio05_learning_curve.pgf}}
+  \caption[\nlmthree{}+\nlmfour{} learning curve]{Learning curve of model
+    pre-trained on \nlmapsthree{} and fine-tuned on a mix of \nlmapsthree{} and
+    \nlmapsfour{}.}
+  \label{fig:v3-v4-learning-curve}
+\end{figure}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{lccccc}
+    \toprule
+    \diagbox{Train}{Test} & \nlmtwoone{} & \nlmthreenormal{} & \nlmthree{} & \nlmfourraw{} & \nlmfour{}\\
+    \midrule
+    \nlmthree{} & \num{0.913} & \bfnum{0.931} & \bfnum{0.874} & \num{0.281} & \num{0.289}\\
+    \midrule
+    \nlmthree{} \textrightarrow{} \nlmfour{} & \num{0.836} & \num{0.852} & \num{0.792} & \num{0.518} & \num{0.554}\\
+    \nlmthree{} \textrightarrow{} \nlmthree{}/\nlmfour{} & \bfnum{0.914} & \num{0.923} & \num{0.865} & \bfnum{0.548} & \bfnum{0.588}\\
+    \midrule
+    \nlmthree{} \textrightarrow{} \nlmfour{} Adadelta 1-0-0 Iter: 1 & \num{0.817} & \num{0.835} & \num{0.774} & \num{0.376} & \num{0.391}\\
+    \nlmthree{} \textrightarrow{} \nlmthree{}/\nlmfour{} Adadelta 1-0-5 Iter: 1 & \num{0.911} & \num{0.927} & \num{0.871} & \num{0.354} & \num{0.366}\\
+    \nlmthree{} \textrightarrow{} \nlmthree{}/\nlmfour{} Adadelta 1-4-5 Iter: 1 & \num{0.905} & \num{0.924} & \num{0.866} & \num{0.381} & \num{0.396}\\
+    \nlmthree{} \textrightarrow{} \nlmthree{}/\nlmfour{} Adadelta 1-4-5 Iter: 5 & \num{0.912} & \num{0.930} & \num{0.871} & \num{0.430} & \num{0.448}\\
+    \midrule
+    \nlmthree{} \textrightarrow{} \nlmfour{} Adam 1-0-0 Iter: 1 & \num{0.565} & \num{0.601} & \num{0.552} & \num{0.384} & \num{0.397}\\
+    \nlmthree{} \textrightarrow{} \nlmthree{}/\nlmfour{} Adam 1-0-5 Iter: 1 & \num{0.886} & \num{0.907} & \num{0.847} & \num{0.430} & \num{0.450}\\
+    \nlmthree{} \textrightarrow{} \nlmthree{}/\nlmfour{} Adam 1-4-5 Iter: 1 & \num{0.887} & \num{0.901} & \num{0.841} & \num{0.486} & \num{0.510}\\
+    \nlmthree{} \textrightarrow{} \nlmthree{}/\nlmfour{} Adam 1-4-5 Iter: 5 & \num{0.859} & \num{0.827} & \num{0.774} & \num{0.499} & \num{0.530}\\
+    \midrule
+    \nlmthree{} \textrightarrow{} \nlmthree{}/\nlmfourraw{} Adam 1-4-5 Iter: 1 & \num{0.880} & \num{0.884} & \num{0.831} & \num{0.483} & \num{0.490}\\
+    \bottomrule
+  \end{tabular}
+  \caption{Performance of fine-tuned parsers.}
+  \label{tab:fine-tuned-performance}
+\end{table}
+
+\begin{figure}[h]
+  \centering
+  \resizebox{\textwidth}{!}{\input{fig/online_1_arc.pgf}}
+  \caption{Learning curve on development set of \nlmapsfour{} during online
+    simulation with one iteration per instance.}
+  \label{fig:online-1-v4-learning-curve}
+\end{figure}
+
+The next experiment is a simulation of online learning: The model trained on
+\nlmapsthree{} is fine-tuned on \nlmapsfour{} by making one pass through the
+\nlmfour{} training set and performing one gradient descent step per instance.
+In the 1-0-0 variant of the experiment, the \enquote{minibatch} for calculating
+the gradient consists of only this instance. In the 1-0-5 variant, 5 instances
+sampled from \nlmapsthree{} are added to the minibatch. In the 1-0-5 variant, a
+further 4 instances sampled from the part of \nlmfour{} seen at that point are
+added to the minibatch, which means that the minibatches consist of 5 instances
+from \nlmthree{} and 5 instances from \nlmfour{}, just like in the previous
+offline experiment. Another variation of the experiment is iterating five times
+instead of once for each instance in \nlmfour{}, which is indicated by the
+\enquote{Iter: 5} in Table~\ref{tab:fine-tuned-performance}. Note that while the
+one instance is used in all five iterations in this case, the other samples
+change with each minibatch.
+
+Since previous work suggests that Adadelta performs as good as
+\parencite{peris-2017} or even better than \parencites{turchi-2017}{peris-2019}
+Adam for online learning on single instances, the first experiments are
+conducted using Adadelta with the learning rate set to \num{0.01} as done by
+\textcite{peris-2019}. The results show that the simple 1-0-0 variant increases
+the accuracy on \nlmfour{} by over \SI{10}{\%}, but at the same time the
+accuracy on \nlmthree{} degrades by \SI{10}{\%}. Adding instances sampled from
+\nlmthree{} to the minibatch almost eradicates this problem, but also impedes
+adaptation as evidenced by an increase of accuracy on \nlmfour{} by only
+\SI{7}{\%}. Adding further memorized \nlmfour{} instances in the 1-4-5 variant
+evidently rectifies this problem. By performing 5 iterations per instance, the
+accuracy on \nlmfour{} can even be increased by \SI{15}{\%} with respect to the
+pre-trained model.
+
+\begin{figure}[h]
+  \centering
+  \resizebox{\textwidth}{!}{\input{fig/online_1_n3.pgf}}
+  \caption{Learning curve on development set of \nlmapsthree{} during online
+    simulation with one iteration per instance.}
+  \label{fig:online-1-v3-learning-curve}
+\end{figure}
+
+Substituting Adam (again with a learning rate of \num{0.0002}) for Adadelta
+yields little improvement in the 1-0-0 variant. In fact, there is an extreme
+decrease in accuracy to only \SI{55.2}{\%} on the original \nlmthree{} data,
+which is illustrated well in the learning curve in
+Figure~\ref{fig:online-1-v3-learning-curve}. Again, adding the \nlmthree{}
+instances to the batch alleviates this problem, but not as effectively as with
+Adadelta. However, this stabilization helps the Adam 1-0-5 variant to reach an
+\nlmfour{} accuracy of \SI{45.0}{\%}, significantly outperforming its Adadelta
+counterpart. The memory of previous \nlmfour{} instances further increases the
+accuracy to \SI{51.0}{\%}. Performing 5 iterations per instance yields
+another accuracy increase of \SI{2}{\%}, but in the case of Adam this comes with
+a \SI{7}{\%} decrease on \nlmthree{}.
+
+While all of the online learning setups were able to increase the accuracy on
+the new \nlmapsfour{} dataset, it is a challenge not to degrade the model on the
+original data. It proves beneficial to include instances from the original data
+as well as from memorized new instances in each update in order to make the
+largest gains in accuracy on the new data while preserving old performance as
+well as possible. Overall, Adadelta is the more conservative optimizer in this
+regard, which comes at a signifcantly worse ability to adapt to the new data. In
+contrast, Adam adapts better, but is very prone to overfitting on the new data
+when not provided with original data. It also turns out not to have any
+advantage over Adadelta when the minibatch consists only of the one new
+instance, which is in line with findings in previous work. Furthermore, using a
+single instance in five consecutive batches leads to overfitting even when
+original data is added. Most likely, this is due to the Adam’s first-order
+momentum which builds up over these batches.
+
+Overall, the online learning is successful, but still not as effective as the
+the offline learning from the mix of \nlmthree{} and \nlmfour{}, which achieves
+an accuracy which is higher by \SI{5.8}{\%}. But note that the offline learning
+was run for \num{20} epochs while the online learning simulations made only one
+pass over the training data. Compare the number of steps in
+Figures~\ref{fig:v3-v4-learning-curve} and \ref{fig:online-1-v4-learning-curve}
+for this.
+
+\begin{figure}[h]
+  \centering
+  \resizebox{\textwidth}{!}{\input{fig/online_5_arc.pgf}}
+  \caption{Learning curve on development set of \nlmapsfour{} during online
+    simulation with five iterations per instance.}
+  \label{fig:online-5-v4-learning-curve}
+\end{figure}
+
+diet:pescetarian=only   2
+leisure=horse_riding    2
+cuisine=mexican 22
+amenity=nightclub       8
+sport=handball  6
+material=wood   5
+sport=karate    4
+religion=buddhist       5
+summit:cross=yes        2
+bicycle_parking=wall_loops      2
 
 %%% Local Variables:
 %%% coding: utf-8

@@ -220,6 +220,68 @@ the MRL query returned by the parser.
 
 \section{Online Learning}
 
+In interactive machine translation or other human-in-the-loop learning
+processes, it is often assumed that there is only one user and the interaction
+process is strictly sequential: The system makes a prediction and then waits for
+the human to make a post-edit or to give some other kind of feedback. As soon as
+it receives the feedback it immediately updates the model parameters and is then
+ready to make another prediction. However, this process breaks down in a
+multi-user setting since a user can send feedback when the model is still in the
+process of updating its parameters on some other user’s feedback. One could
+resolve this by providing one model per user that will only update based on
+their corresponding user’s feedback, but this would mean that a user will not
+benefit from other users’ feedback, which is undesirable. On top of that,
+maintaining a separate model for each user quickly becomes costly in practice.
+
+Therefore, we use an asynchronous learning setup – formalized in
+Algorithm~\ref{alg:async-online-learning} –, where the MT server permanently
+runs a dedicated process for updating the model. It runs a loop that detects if
+any fresh feedback is present in the list \(\cal{F}\). If this is the case, it
+goes through all instances in \(\cal{F}\) creating batches that can also include
+instances from a fixed training set (e.g.\ the training set the model was
+pre-trained on) and instances that are \emph{memorized} from feedback that has
+already been processed in the past. On these batches, the process then makes
+gradient descent updates of the model parameters. While the process is running
+the update procedure, users can still use the system and give feedback, which is
+added to \(\cal{F}\) and will be processed by the update process in the next
+iteration of the loop.
+
+\begin{algorithm}
+  \caption{Asynchronous Online Learning}
+  \label{alg:async-online-learning}
+  \begin{algorithmic}[1]
+    \Procedure{AsynchronousOnlineLearning}{$\theta$, $\cal{F}$, $\cal{M}$, $\cal{T}$,
+      $n_F$, $n_M$, $n_T$, $I$}
+      \State $\theta$: Model parameters
+      \State $\cal{F}$: List of fresh MRL-NL feedback
+      \State $\cal{M}$: Set of memorized older MRL-NL feedback
+      \State $\cal{T}$: Set of MRL-NL pairs from pre-training
+      \State $n_F$: Instances from \cal{F} per batch
+      \State $n_M$: Instances from \cal{M} per batch
+      \State $n_T$: Instances from \cal{T} per batch
+      \State $I$: Iterations per fresh feedback
+      \Loop
+        \If{$\cardinality{\cal{F}} > 0$}
+          \State $\cal{F}' \gets \text{Copy } \cal{F}$
+          \State $\cal{F} \gets$ Empty list
+          \Comment Users can add to $\cal{F}$ without affecting $\cal{F}'$
+          \For{$i \gets 1 \ldots I$}
+            \For{$\text{offset} \gets 0 \ldots \floor*{\frac{\cardinality{\cal{F'}}}{n_F}}$}
+            \State \Comment Go through $\cal{F}'$ in $n_F$-sized batches
+            \State $b_F \gets {\cal{F}'}[\text{offset}] \ldots {\cal{F}'}[\text{offset} + n_F - 1]$
+            \State $b_M \gets$ Sample $n_M$ instances from $\cal{M}$
+            \State $b_T \gets$ Sample $n_T$ instances from $\cal{T}$
+            \State $b \gets$ Concatenate batches $b_F$, $b_M$, $b_T$
+            \State Update parameters $\theta$ on batch $b$
+            \EndFor
+          \EndFor
+          \State Add all instances in $\cal{F}'$ to $\cal{M}$
+        \EndIf
+      \EndLoop
+    \EndProcedure
+  \end{algorithmic}
+\end{algorithm}
+
 %%% Local Variables:
 %%% coding: utf-8
 %%% mode: latex
