@@ -1,0 +1,38 @@
+\chapter{Abriss (German Abstract)}
+\label{ch:abstract-german}
+
+OpenStreetMap (OSM) speichert riesige Mengen an Daten, die nützlich sind, um
+alltägliche und weniger alltägliche Fragen zu beantworten. Doch für exakte
+Abfragen sind in der Regel entweder auf Einzelfragen spezialisierte Software
+oder Kenntnisse in speziellen OSM-Anfragesprachen notwendig. Allerdings kann mit
+dem bestehenden Korpus \nlmapstwo{} ein Parsing-System trainiert werden, das
+natürlichsprachliche Anfragen in eine maschinenlesbare Anfrage übersetzt,
+mithilfe derer dann die Antwort auf die Frage in der OSM-Datenbank gefunden
+werden kann. Die Zuverlässigkeit von auf diesem Korpus trainierten
+Parsing-Systemen ist aber sehr begrenzt.
+
+In dieser Arbeit analysieren wir das Korpus \nlmapstwo{} und stellen
+verschiedene Mängel fest. Nach dem Beheben dieser Mängel erweitern wir das
+Korpus um neue, linguistisch diverse Anfragen, die mit einem probabilistischen
+Mustervorlagensystem erstellt werden. Das erweiterte Korpus nutzen wir dann, um
+ein neues Parsing-System zu trainieren, das die bisher in der Literatur
+vorgestellten Systeme deutlich übertrifft.
+
+Unser Parsing-System machen wir in einem neuen Web-Interface zugänglich, das
+sowohl dazu verwendet werden kann, Fragen zu stellen, als auch dazu, falsche
+Antworten zu korrigieren. Das Web-Interface ist außerdem dazu in der Lage, das
+Parsing-System auf korrigierten Beispielen online weiter zu trainieren. Wir
+nutzen es in dieser Arbeit auch, um mithilfe von Studienteilnehmern das erste
+große \nlmaps{}-Korpus zu erstellen, das aus Anfragen verschiedener Menschen
+besteht. Dieses Korpus wird in dieser Arbeit zudem dazu verwendet, in
+verschiedenen Online-Lern-Simulationen den besten Ansatz zu finden, von neuen
+Rückmeldungen zu lernen.
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-parse-self: t
+%%% TeX-command-extra-options: "-shell-escape"
+%%% TeX-master: "../thesis"
+%%% End:

@@ -484,9 +484,9 @@ original data. It proves beneficial to include instances from the original data
 as well as from memorized new instances in each update in order to make the
 largest gains in accuracy on the new data while preserving old performance as
 well as possible. Overall, Adadelta is the more conservative optimizer in this
-regard, which comes at a signifcantly worse ability to adapt to the new data. In
-contrast, Adam adapts better, but is very prone to overfitting on the new data
-when not provided with original data. It also turns out not to have any
+regard, which comes at a significantly worse ability to adapt to the new data.
+In contrast, Adam adapts better, but is very prone to overfitting on the new
+data when not provided with original data. It also turns out not to have any
 advantage over Adadelta when the minibatch consists only of the one new
 instance, which is in line with findings in previous work. Furthermore, using a
 single instance in five consecutive batches leads to overfitting even when
@@ -572,8 +572,6 @@ of several cases that illustrate the brittleness of the character-based model.
     Figure~\ref{fig:online-analysis}.}
   \label{fig:butcher-nl}
 \end{figure}
-
-
 
 %%% Local Variables:
 %%% coding: utf-8

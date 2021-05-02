@@ -1,0 +1,31 @@
+\chapter{Conclusion}
+\label{ch:conclusion}
+
+In this thesis, we conducted a detailed analysis of the original \nlmapstwo{}
+dataset finding several shortcomings, many of which were introduced by a flawed
+approach of generating synthetic data. We fixed these shortcomings as well as
+possible and extended the dataset by generating a linguistically diverse dataset
+using probabilistic templates. Training on the extended dataset greatly improves
+accuracy on unseen data, especially by making the resulting parser robust
+against new location names.
+
+We built a web interface for issuing NL queries, which can also be used to
+correct wrong parses and which is capable of training the parser on the new
+feedback in an online fashion. With the help of hired annotators, we created the
+first large \nlmaps{} dataset consisting of real user queries. This new dataset
+was used to demonstrate the effectiveness of our online learning setup in
+various simulations, although traditional offline learning still proved
+superior.
+
+In our experiments and discussion, we gained new insight into what the main
+challenges of the \nlmaps{} task are and proposed various directions for
+subsequent research.
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-parse-self: t
+%%% TeX-command-extra-options: "-shell-escape"
+%%% TeX-master: "../thesis"
+%%% End:

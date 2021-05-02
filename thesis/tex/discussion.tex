@@ -1,0 +1,106 @@
+\chapter{Discussion and Future Work}
+\label{ch:discussion}
+
+We spent significant work on analyzing the original \nlmapstwo{} dataset and on
+fixing any of its shortcomings as well as possible. The insight gained by this,
+we also used for generating new synthetic queries. By combining the fixed old
+data with the new synthetic data into the \nlmapsthree{} dataset the data
+available for pre-training an \nlmaps{} model is vastly improved as shown in the
+experiments conducted in Section~\ref{sec:pre-training}. This success naturally
+calls for continuing this work by generating even more diverse synthetic data,
+which can be done by extending the table mapping NL terms to OSM tags or by
+designing new templates. New templates could incorporate verb-based questions
+like \nl{Where can I eat chinese food?} or take inspiration from the newly
+collected queries in \nlmapsfour{}.
+
+The annotation experiment was successful for the most part and we now have a
+natural dataset on which new \nlmaps{} models can be evaluated in a more
+sensible way than on the flawed and synthetic previous datasets. However, it
+must be acknowledged that the MRL queries the annotators produced reintroduce
+some inconsistencies in tag usage that were already observed in \nlmapstwo{}.
+This is partly due to simple user error (e.g. when an annotator does not know of
+or does not think of a similar tag for the same thing, like using only
+\osmtag{shop=tailor} and forgetting \osmtag{craft=tailor}), but is partly also
+rooted in real vagueness of the NL queries. E.g., what should really be selected
+when asking for a place to buy cigarettes? Only tobacco shops or also cigarette
+vending machines or even all kinds of places that might sell cigarettes like
+supermarkets or kiosks?
+
+Two different approaches for handling this tag inconsistency come to mind: In a
+more \enquote{authoritarian} approach, an abstraction layer between OSM and MRL
+could be introduced. This could take the form of a table mapping concepts like
+\enquote{tailor} or \enquote{buy cigarettes} – which should then appear in the
+MRL – to a manually maintained OSM meaning like \mrl{or(shop=tailor,}
+\mrl{craft=tailor)} or \mrl{or(shop=tobacco,} \mrl{vending=cigarettes)},
+respectively. But maintaining this mapping would amount to a lot of
+(semi-)manual work and it would mean losing the advantage of directly using OSM
+tags, which OSM users should be somewhat familiar with.
+
+In contrast, the second approach is guided by thr MRL queries’ denotation: When
+several users issue queries with some minimum amount of overlap in their result
+sets after interpretation, this – perhaps together with a semantic similarity of
+the NL queries – can be taken as a sign that the users are actually asking for
+the same thing. It is then left for a system to observe which MRL formulation is
+the most popular (or – in a recall-focused approach – the most inclusive) and
+regard this as the canonical MRL.
+
+However, even the \nlmapsfourraw{} with its inconsistencies is shown in our
+simulations to be very usable for improving the parser in an online learning
+setting. Not surprisingly, manually removing the inconsistencies as well as
+possible yielded even better results. The Adam optimizer is shown to adapt
+faster to new examples while Adadelta is better suited to preserve the
+performance on the pre-training dataset. It must be noted that we did not
+conduct any true online learning experiment where the annotators would have made
+their annotations with the model changing over time. Moreover, albeit the online
+simulations did improve the accuracy on the new data, they were outperformed
+signifcantly by the simple offline batch learning.
+
+Regardless of the learning setup, the main challenge of any \nlmaps{} dataset
+remains predicting the correct tag combination while our models make only few
+errors in other parts of the MRL. Aside from collecting a lot more training data
+to make the tag distribution in the training set less sparse, zero-shot learning
+is a direction which could be explored. In one approach, the tag descriptions
+from the OSM wiki or even the whole wiki pages could be used as a knowledge
+source for learning about the meaning of tags, perhaps in a similar approach as
+in CLIP \parencite{radford-2021}.
+
+Part of the reason that the tags pose the main challenge is that the MRL
+structure is actually very simple. In fact, it is too simplistic for
+representing some queries that OSM could answer. For example, it is not possible
+to ask for places whose name (or description or any other tag) includes a
+certain substring nor it is possible to query places which are \emph{not} tagged
+with a certain tag. And also referring to one’s own geographical position isn’t
+possible resulting resulting in the situation NL queries like \nl{closest bus
+  stop near me} have no MRL equivalent. These issues serve as pointers on how to
+extend the current MRL.
+
+Due to its success in previous work, a character-based model was used for all
+work in this thesis, which has the advantages that no NER system is necessary
+for recognizing named entities and copying them to the MRL and that new tags can
+easily be accomodated without the need to add them to the target vocabulary. The
+downside of the character-based model is that it is fairly sensitive to spelling
+variations on the NL side. As observed in the experiments, the spelling \nl{fire
+  station} was correctly mapped to \osmtag{amenity=fire_station}, but the
+spelling variation \nl{firestation} led to the model hallucinating the tag
+\osmtag{amenity=firestation}. A related problem is that the character-based
+model will probably not be able to take advantage of semantic similarity of NL
+queries or even singular words. The time is ripe for a modern seq-to-seq model
+operating on subword units like BPE at least on the NL side with a pointer
+mechanism \parencite{see-2017} for copying the location names from NL to MRL. To
+leverage semantic similarity between terms and even whole NL queries,
+pre-trained language representations should be incorporated in a similar way as
+done by \textcite{chen-2020}.
+
+As of now, \nlmaps{} is unfortunately only available in English. However, the
+relative simplicity of most NL queries should make it possible to translate them
+into other languages in order to create datasets for parsing NL queries in
+languages other than English.
+
+%%% local variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-parse-self: t
+%%% TeX-command-extra-options: "-shell-escape"
+%%% TeX-master: "../thesis"
+%%% End:

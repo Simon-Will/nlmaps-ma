@@ -1,0 +1,32 @@
+\chapter{Abstract}
+\label{ch:abstract-english}
+
+OpenStreetMap (OSM) stores a huge amount of data useful for everyday tasks as
+well as informational queries, but it is difficult to query without specialized
+applications or knowledge of special OSM query languages. The existing
+\nlmapstwo{} dataset can be used for building a question answering system that
+translates a natural language query into a machine-readable query used for
+extracting the answer from the OSM database, but the performance of parsers
+trained on that dataset is very limited.
+
+In this thesis, we analzye \nlmapstwo{} and find several shortcomings. After
+fixing them, we extend the dataset by generating new and linguistically diverse
+queries with a probabilistic templating approach, which we then use to train a
+new parser that significantly outperforms parsers presented in previous work.
+
+In order to make our parser accessible, we build a web interface for asking
+queries, which can also be used to correct wrong parses and which is capable of
+learning from the corrections in an online fashion. We use the new interface to
+hire users to issue queries and to correct the parses, thus creating the first
+large \nlmaps{} dataset consisting of real user queries. This dataset is used in
+online learning simulation experiments in order to find the most effective
+approach to learn from new feedback.
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-parse-self: t
+%%% TeX-command-extra-options: "-shell-escape"
+%%% TeX-master: "../thesis"
+%%% End:

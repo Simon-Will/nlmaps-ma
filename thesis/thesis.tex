@@ -9,16 +9,15 @@
 
 \usepackage[%
 style=authoryear-icomp,
+maxbibnames=99,
+maxcitenames=2,
 ibidtracker=strict,
 backend=biber,
+dashed=false,
 ]{biblatex}
 \addbibresource{thesis.bib}
 
 \usepackage{mystyle}
-
-% Open questions
-%
-% - NLMaps vs NLmaps
 
 \begin{document}
 
@@ -55,7 +54,7 @@ backend=biber,
 \listoffigures
 \listoftables
 
-%\include{tex/abstract-english}
+\include{tex/abstract-english}
 
 %\include{tex/abstract-german}
 
@@ -71,11 +70,9 @@ backend=biber,
 
 \include{tex/experiments}
 
-%\include{tex/discussion}
+\include{tex/discussion}
 
-%\include{tex/future_work}
-
-%\include{tex/conclusion}
+\include{tex/conclusion}
 
 \appendix
 
