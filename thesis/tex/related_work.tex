@@ -1,15 +1,46 @@
 \chapter{Related Work}
 \label{ch:related-work}
 
-\section{Natural Language Interfaces}
+\section{Question Answering by Semantic Parsing}
 
-% TODO: Intro to Natural Language Interfaces
-% Goals, first interfaces, intent classification, etc.
-% Purposes (see wikipedia), my purpose: querying
+With the advent of the computer age, there also arose interest in leveraging the
+digitally stored information for automatically answering natural language
+questions with systems being developed as early as the 1960s
+\parencite[e.g.]{green-1961}. The field of question answering (QA) can be
+genereally divided into \emph{open-domain QA}, which concerns itself with
+answering arbitrary questions based on large quantities of natural language text
+or other unstructured information using information retrieval techniques, and
+\emph{knowledge-based QA}, which takes advantage of structured information in
+order to answer questions about specific information that is stored in that
+knowledge base \parencites[cf.]{molla-2007}{jurafsky-2021}. The work in this
+thesis is an instance of the latter.
 
-% Q&A Systems, closed vs open domain
+In the most common variant of knowledge-based QA, a natural language query is
+parsed into a machine-readable logical form for representing the meaning
+(\emph{semantic parsing}), which can then be used to extract the answer from the
+knowledge base. Notable datasets for this task include the Air Travel
+Information System (ATIS) dataset \parencite{hemphill-1990}, which maps
+\num{5280} questions about flights in the USA to a representation in SQL, and
+GeoQuery, which maps \num{877} questions about US geography to lambda-calculus
+based representations in Prolog \parencite{zelle-1996}. While these two are
+small datasets specialized on one domain each, the crowd-sourced WikiSQL dataset
+introduced by \textcite{zhong-2017} comprises \num{80654} questions on numerous
+different databases, but all of their queries are very simple and include no
+advanced SQL operators.
 
-% SQL Parsing; Spider etc.
+With Spider, \textcite{yu-2018} introduced the first Text-to-SQL dataset that
+features a large number of different tables as well as complex SQL queries.
+They present initial results on their dataset using Seq2Seq models like
+attention-based RNNs as well as more rigid slot-filling models based on SQLNet
+\parencite{xu-2017}, which fill pre-defined places in the SQL query. The latter
+perform better in their experiments.
+
+Since \textcite{hwang-2019} showed that using BERT \parencite{devlin-2019} for
+encoding query and database schema in Text-to-SQL task is highly effective on
+WikiSQL, most recent systems use models based on BERT also on the Spider task
+\parencites{shaw-2020}{wang-2020}{lin-2020} with some even taking advantage of
+the content of the database \parencites{wang-2020}{lin-2020} further improve
+performance.
 
 \section{Online Learning and Domain Adaptation}
 
@@ -92,7 +123,7 @@ students of translation studies post-editing NMT outputs, in which they found
 that online adaptation was able to improve both BLEU score and key-stroke and
 mouse-action ratio \parencite[for KSMR cf.][]{barrachina-2009}.
 
-\subsection{Learning from weak user feedback}
+\subsection{Learning from Weak User Feedback}
 
 A related line of NMT research attempts to improve a pre-trained system with a
 weaker form of user feedback: Instead of a user post-editing a target sentence,
@@ -152,6 +183,25 @@ For an overview of human feedback in reinforcement learning for NLP, see the
 work of \textcite{kreutzer-2020b}.
 
 \subsection{Domain Adaptation in Semantic Parsing}
+
+Domain Adaptation is especially interesting for custom semantic parsing systems
+on new domains since creating custom datasets involves a lot of expensive
+annotation work resulting in small dataset sizes. The goal here is pre-training
+a model on a larger dataset that is similar to the custom one in order to reduce
+the needed size of the custom dataset or to simply improve performance.
+\textcite{kennardi-2019} pre-trained an attention-based RNN on the ATIS dataset
+and then fine-tuned the pre-trained model on subsets of the GeoQuery dataset
+showing that especially for small subsets (i.e. small target domain datasets)
+pre-training on ATIS improved the performance.
+
+Instead of pre-training a semantic parsing model on a larger semantic parsing
+dataset, \textcite{xilun-2020} employ a system that takes advantage of
+pre-trained language representations in the form of BART \parencite{lewis-2020},
+a BERT-inspired encoder-decoder setup trained by denoising artificially
+corrupted text. They show that the BART-based parser incorporating pre-trained
+language representations outperforms an LSTM-based \parencite{hochreiter-1997}
+parser trained from scratch – an effect that is especially pronounced when only
+a subset of the data from the target domain is used.
 
 \section{OpenStreetMap Query Systems}
 

@@ -40,6 +40,10 @@ def main(online_analysis, outfile):
         for step, class_ in result:
             ax.plot([step], [i], color=get_color(class_), marker='o')
 
+    xmin, xmax = -30, 2400
+    ax.hlines(ind, xmin, xmax, colors='lightgray')
+
+    ax.set_xlim(xmin, xmax)
     ax.set_xlabel('Instance')
     ax.set_yticks(ind)
     ax.set_yticklabels(tags)

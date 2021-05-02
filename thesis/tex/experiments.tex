@@ -358,7 +358,10 @@ model is trained for \num{20} epochs (of \nlmfour{}) with batches made up of
 model achieves the highest accuracy on \nlmfour{} in this thesis: \SI{58.8}{\%}.
 The learning curve shown in Figure~\ref{fig:v3-v4-learning-curve} shows that the
 performance on \nlmthree{} remains fairly stable throughout the training while
-the performance on the new \nlmfour{} is improved.
+the performance on the new \nlmfour{} is improved. Figure~\ref{fig:v3-v4-errors}
+shows that errors are still predominantly caused by selecting the wrong tags to
+query for, even though the tag error rate is greatly reduced with respect to the
+pre-training model (compare Figure~\ref{fig:v3-errors}).
 
 \begin{figure}[h]
   \centering
@@ -367,6 +370,15 @@ the performance on the new \nlmfour{} is improved.
     pre-trained on \nlmapsthree{} and fine-tuned on a mix of \nlmapsthree{} and
     \nlmapsfour{}.}
   \label{fig:v3-v4-learning-curve}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \resizebox{\textwidth}{!}{\input{fig/n3_arc_ratio05_errors.pgf}}
+  \caption[Errors after fine-tuning]{Percentage of queries with an
+    error in a specific operator. The model was pre-trained on \nlmthree{},
+    fine-tuned on \nlmthree{} and \nlmfour{} and tested on \nlmfour{}.}
+  \label{fig:v3-v4-errors}
 \end{figure}
 
 \begin{table}[h]
@@ -397,12 +409,31 @@ the performance on the new \nlmfour{} is improved.
   \label{tab:fine-tuned-performance}
 \end{table}
 
+\begin{figure}[p]
+  \centering
+  \resizebox{0.9\textwidth}{!}{\input{fig/online_1_arc.pgf}}
+  \caption[1-iter learning curve on \nlmfour{}]{Learning curve on development
+    set of \nlmapsfour{} during online simulation with one iteration per
+    instance.}
+  \label{fig:online-1-v4-learning-curve}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \resizebox{0.9\textwidth}{!}{\input{fig/online_1_n3.pgf}}
+  \caption[1-iter learning curve on \nlmthree{}]{Learning curve on development
+    set of \nlmapsthree{} during online simulation with one iteration per
+    instance.}
+  \label{fig:online-1-v3-learning-curve}
+\end{figure}
+
 \begin{figure}[h]
   \centering
-  \resizebox{\textwidth}{!}{\input{fig/online_1_arc.pgf}}
-  \caption{Learning curve on development set of \nlmapsfour{} during online
-    simulation with one iteration per instance.}
-  \label{fig:online-1-v4-learning-curve}
+  \resizebox{\textwidth}{!}{\input{fig/online_5_arc.pgf}}
+  \caption[5-Iter learning curve on \nlmfour{}]{Learning curve on development
+    set of \nlmapsfour{} during online simulation with five iterations per
+    instance.}
+  \label{fig:online-5-v4-learning-curve}
 \end{figure}
 
 The next experiment is a simulation of online learning: The model trained on
@@ -434,14 +465,6 @@ evidently rectifies this problem. By performing 5 iterations per instance, the
 accuracy on \nlmfour{} can even be increased by \SI{15}{\%} with respect to the
 pre-trained model.
 
-\begin{figure}[h]
-  \centering
-  \resizebox{\textwidth}{!}{\input{fig/online_1_n3.pgf}}
-  \caption{Learning curve on development set of \nlmapsthree{} during online
-    simulation with one iteration per instance.}
-  \label{fig:online-1-v3-learning-curve}
-\end{figure}
-
 Substituting Adam (again with a learning rate of \num{0.0002}) for Adadelta
 yields little improvement in the 1-0-0 variant. In fact, there is an extreme
 decrease in accuracy to only \SI{55.2}{\%} on the original \nlmthree{} data,
@@ -470,32 +493,87 @@ single instance in five consecutive batches leads to overfitting even when
 original data is added. Most likely, this is due to the Adam’s first-order
 momentum which builds up over these batches.
 
-Overall, the online learning is successful, but still not as effective as the
-the offline learning from the mix of \nlmthree{} and \nlmfour{}, which achieves
-an accuracy which is higher by \SI{5.8}{\%}. But note that the offline learning
-was run for \num{20} epochs while the online learning simulations made only one
-pass over the training data. Compare the number of steps in
+Overall, the online learning is successful, but still not as effective as
+traditional offline learning from a mix of \nlmthree{} and \nlmfour{}, which
+achieves an accuracy which is higher by \SI{5.8}{\%}. But note that the offline
+learning was run for \num{20} epochs while the online learning simulations made
+only one pass over the training data. Compare the number of steps in
 Figures~\ref{fig:v3-v4-learning-curve} and \ref{fig:online-1-v4-learning-curve}
 for this.
 
+\FloatBarrier
+\section{Qualitative Longitudinal Analysis}
+
 \begin{figure}[h]
   \centering
-  \resizebox{\textwidth}{!}{\input{fig/online_5_arc.pgf}}
-  \caption{Learning curve on development set of \nlmapsfour{} during online
-    simulation with five iterations per instance.}
-  \label{fig:online-5-v4-learning-curve}
+  \resizebox{\textwidth}{!}{\input{fig/online_analysis.pgf}}
+  \caption[Longitudinal analysis]{Longitudinal analysis of predictions for
+    twenty randomly selected tags during the online learning simulation on
+    \nlmfour{}. \textcolor{mplGreen}{Green markers} mean that the model’s
+    prediction is completely correct, \textcolor{mplBlue}{blue markers} mean
+    that the tag in question was predicted but there is some other error with
+    the prediction and \textcolor{mplRed}{red markers} mean that the tag in
+    question is not present in the prediction (implying also that the prediction
+    is incorrect).}
+  \label{fig:online-analysis}
 \end{figure}
 
-diet:pescetarian=only   2
-leisure=horse_riding    2
-cuisine=mexican 22
-amenity=nightclub       8
-sport=handball  6
-material=wood   5
-sport=karate    4
-religion=buddhist       5
-summit:cross=yes        2
-bicycle_parking=wall_loops      2
+In order to analyze what was learned by adapting on \nlmfour{}, we conduct a
+longitudinal analysis by observing the predictions of the model called
+\enquote{\nlmthree{} \textrightarrow{} \nlmthree{}/\nlmfour{} Adam 1-4-5 Iter:
+  1} in Table~\ref{tab:fine-tuned-performance} made during the online learning
+pass \emph{before} each update step. More specifically, we track the performance
+on twenty tags that were randomly sampled from all tags occurring at least twice
+in the \nlmfour{} training set. Figure~\ref{fig:online-analysis} plots the
+success of the predictions for each tag across the pass over \nlmfour{} meaning
+that the instance index on the x axis is the number of instances that have been
+processed at that point. Note that the plotted tags will in general not be the
+only target tags in an MRL. E.g., \osmtag{healthcare=optometrist} usually occurs
+in a union with \osmtag{shop=optician} and \osmtag{sport=cricket} often occurs
+in an intersection with either \osmtag{leisure=stadium} or
+\osmtag{leisure=pitch}.
+
+The results of the longitudinal analysis are mixed: There are several tags like
+\osmtag{shop=tattoo}, \osmtag{sport=cricket}, \osmtag{sport=ice_skating} and
+\osmtag{cuisine=mexican} where the predictions feature a noticeable improvement
+over time, but there are also tags like \osmtag{shop=butcher} where there is no
+clear improvement. This discrepancy can be understood by taking a closer look at
+the difference between queries involving \osmtag{tattoo} and \osmtag{butcher}.
+While the NL queries asking for the former all involve the token \nl{tattoo}
+(\nl{i want a tattoo …}, \nl{… closest tattoo studio …}, etc.) and the MRLs only
+target tag is \osmtag{shop=tattoo}, the situation is more complex for butchers
+on both the NL and the MRL side: As shown in Figure~\ref{fig:butcher-nl}, the NL
+queries may directly ask for butchers, but they may also ask for places to buy
+meat or even sausages. As a further complication, the MRL queries when asking
+for butchers and meat shops will only target the \osmtag{shop=butcher} tag, but
+MRL queries when asking for places to buy meat or sausages will additionally
+target the \osmtag{shop=supermarket} tag.
+
+In the case of \osmtag{amenity=fire_station}, the model fails to correctly use
+the tag for a fourth time after three successes and instead uses the
+non-existent \osmtag{amenity=firestation} (dropping the underscore). This is one
+of several cases that illustrate the brittleness of the character-based model.
+
+\begin{figure}[h]
+  \centering
+  \begin{lstlisting}[style=MyNL]
+(@\textcolor{mplRed}{When is the meat shop next to Residencial Ibirapuera open?}@)
+(@\textcolor{mplRed}{meat shops in Auxerre (canton d'Auxerre-3)}@)
+(@\textcolor{mplGreen}{show me butchers in Marchais-Beton}@)
+(@\textcolor{mplRed}{where can I buy meat in Babiny I?}@)
+(@\textcolor{mplGreen}{Are there any butcher shops in Sommerland that is accessible by wheelchair?}@)
+(@\textcolor{mplBlue}{how many butchers in cukurambar mahallesi in Podgaje}@)
+(@\textcolor{mplRed}{where can I buy sausages in Vlkov u Jaroměře?}@)
+(@\textcolor{mplRed}{where can i buy meat in rennes}@)
+  \end{lstlisting}
+  \caption[NL queries for butchers]{NL queries in the \nlmfour{} training set
+    that features \osmtag{shop=butcher} in the corresponding MRL. Note that the
+    blue instance with butchers in Podgaje is obscured by overlapping in
+    Figure~\ref{fig:online-analysis}.}
+  \label{fig:butcher-nl}
+\end{figure}
+
+
 
 %%% Local Variables:
 %%% coding: utf-8

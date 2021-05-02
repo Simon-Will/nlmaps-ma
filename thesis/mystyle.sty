@@ -16,18 +16,27 @@
 \usepackage{diagbox}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{xcolor}
 
-% In LuaTeX, it is necessary to define some commands
-% for including svg images
-\usepackage{ifluatex}
-\ifluatex
-  \usepackage{pdftexcmds}
-  \makeatletter
-  \let\pdfstrcmp\pdf@strcmp
-  \let\pdffilemoddate\pdf@filemoddate
-  \makeatother
-\fi
-\usepackage{svg}
+% Declare some Unicode codepoints for use in listings. This is needed to display
+% characters such as ž. Cf.:
+% https://tex.stackexchange.com/questions/25391/the-listings-package-and-utf-8
+\makeatletter
+\lst@InputCatcodes
+\def\lst@DefEC{%
+ \lst@CCECUse \lst@ProcessLetter
+  ^^80^^81^^82^^83^^84^^85^^86^^87^^88^^89^^8a^^8b^^8c^^8d^^8e^^8f%
+  ^^90^^91^^92^^93^^94^^95^^96^^97^^98^^99^^9a^^9b^^9c^^9d^^9e^^9f%
+  ^^a0^^a1^^a2^^a3^^a4^^a5^^a6^^a7^^a8^^a9^^aa^^ab^^ac^^ad^^ae^^af%
+  ^^b0^^b1^^b2^^b3^^b4^^b5^^b6^^b7^^b8^^b9^^ba^^bb^^bc^^bd^^be^^bf%
+  ^^c0^^c1^^c2^^c3^^c4^^c5^^c6^^c7^^c8^^c9^^ca^^cb^^cc^^cd^^ce^^cf%
+  ^^d0^^d1^^d2^^d3^^d4^^d5^^d6^^d7^^d8^^d9^^da^^db^^dc^^dd^^de^^df%
+  ^^e0^^e1^^e2^^e3^^e4^^e5^^e6^^e7^^e8^^e9^^ea^^eb^^ec^^ed^^ee^^ef%
+  ^^f0^^f1^^f2^^f3^^f4^^f5^^f6^^f7^^f8^^f9^^fa^^fb^^fc^^fd^^fe^^ff%
+  ^^^^017e^^^^0159% My additions
+  ^^00}
+\lst@RestoreCatcodes
+\makeatother
 
 \setmainfont{Linux Libertine O}
 \setmonofont{Liberation Mono}
@@ -60,6 +69,7 @@
   language=,
   breaklines=true,
   postbreak=\mbox{\textcolor{gray}{$\hookrightarrow$}\space},
+  basicstyle={\footnotesize},
 }
 
 \lstset{
@@ -69,6 +79,8 @@
   showstringspaces=false,
   frame=single,
   escapeinside={(@}{@)},
+  inputencoding=utf8,
+  extendedchars=true
 }
 
 \robustify\bfseries
@@ -76,20 +88,10 @@
 % Allow bold font for numbers
 \sisetup{detect-weight=true,detect-inline-weight=math}
 
-% Boxed minipage
-% From:
-% https://tex.stackexchange.com/questions/88616/fbox-around-type-area
-\newsavebox{\fminipagebox}
-\NewDocumentEnvironment{fminipage}{m O{\fboxsep}}
- {\par\kern#2\noindent\begin{lrbox}{\fminipagebox}
-  \begin{minipage}{#1}\ignorespaces}
- {\end{minipage}\end{lrbox}%
-  \makebox[#1]{%
-    \kern\dimexpr-\fboxsep-\fboxrule\relax
-    \fbox{\usebox{\fminipagebox}}%
-    \kern\dimexpr-\fboxsep-\fboxrule\relax
-  }\par\kern#2
- }
+% Colors matching the matplotlib colors
+\definecolor{mplRed}{rgb}{0.836,0.152,0.156}
+\definecolor{mplGreen}{rgb}{0.172,0.625,0.172}
+\definecolor{mplBlue}{rgb}{0.121,0.465,0.703}
 
 \newcommand{\nl}[1]{\emph{\enquote*{#1}}}
 \newcommand{\mrl}[1]{\lstinline!#1!}
@@ -142,10 +144,6 @@
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
 \newcommand{\bfnum}[1]{\bfseries\num{#1}}
-\newcommand{\devacc}{Dev-Acc}
-\newcommand{\testacc}{Test-Acc}
-\newcommand{\testfone}{$F_1$}
-\newcommand{\model}[1]{#1}
 
 %%% Local Variables:
 %%% coding: utf-8
