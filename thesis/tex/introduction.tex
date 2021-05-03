@@ -37,10 +37,34 @@ various backgrounds who use it to ask new queries and to correct errors. The
 data collected in this way is used to test the online learning setup and is also
 released as a new \nlmaps{} dataset.
 
+The web interface and all datasets published in this work are available at
+{\small\url{https://nlmaps.gorgor.de/}}. The following code repositories are
+associated with this thesis and are tagged with the Git tag
+{\small\texttt{thesis}} to mark the state they are in as of the thesis’s
+publishing date:
+
+\begin{itemize}
+\item {\small\url{https://gitlab.cl.uni-heidelberg.de/will/nlmapsweb/}}: The web
+  interface.
+\item {\small\url{https://gitlab.cl.uni-heidelberg.de/will/joeynmt-server/}}:
+  The backend server handling parsing and training the parser.
+\item {\small\url{https://gitlab.cl.uni-heidelberg.de/will/nlmaps-tools/}}: A
+  package containing various tools for working with \nlmaps{} datasets, for
+  generating the \nlmapsthree{} version and for interpreting an MRL query and
+  retrieving an answer.
+\item {\small\url{https://gitlab.cl.uni-heidelberg.de/will/nlmaps-ma/}}: This
+  thesis along with scripts for data analysis and plotting.
+\item {\small\url{https://github.com/Simon-Will/joeynmt}}: A slightly modified
+  version of Joey NMT \parencite{kreutzer-2019}.
+\item {\small\url{https://github.com/Simon-Will/osm-python-tools}}: A slightly
+  modified version of OSMPythonTools \parencite{mocnik-2017}. A pull request to
+  the upstream repository is still open.
+\end{itemize}
+
 %%% Local Variables:
 %%% coding: utf-8
 %%% mode: latex
-%%% TeX-engine: xetex
+%%% TeX-engine: luatex
 %%% TeX-parse-self: t
 %%% TeX-command-extra-options: "-shell-escape"
 %%% TeX-master: "../thesis"

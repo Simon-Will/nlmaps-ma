@@ -361,7 +361,7 @@ once and \num{65} times each – totalling only \num{81} different areas.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=\textwidth]{fig/nlmaps_v2_area_counts.png}
+  \resizebox{\textwidth}{!}{\input{fig/nlmaps_v2_area_counts.pgf}}
   \caption[Area names in \nlmapstwo{}]{Area names in \nlmapstwo{}.}
   \label{fig:nlmaps-v2-areas}
 \end{figure}
@@ -374,8 +374,9 @@ Figure~\ref{fig:nlmaps-v2-nwrs}.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=\textwidth]{fig/nlmaps_v2_nwr_name_counts.png}
-  \caption[Nwr names in \nlmapstwo{}]{Nwr names in \nlmapstwo{}.}
+  \resizebox{\textwidth}{!}{\input{fig/nlmaps_v2_nwr_name_counts.pgf}}
+  \caption[\mrl{nwr} names in \nlmapstwo{}]{Names in \mrl{nwr} operator in
+    \nlmapstwo{}.}
   \label{fig:nlmaps-v2-nwrs}
 \end{figure}
 
@@ -613,7 +614,7 @@ well-distributed area names. This is in contrast with the situation in
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=\textwidth]{fig/nlmaps_v3a_area_counts.png}
+  \resizebox{\textwidth}{!}{\input{fig/nlmaps_v3a_area_counts.pgf}}
   \caption[Area names in \nlmapsthreea{}]{Area values in \nlmapsthreea{}.}
   \label{fig:nlmaps-v3a-areas}
 \end{figure}
@@ -672,7 +673,7 @@ offers an overview over the datasets.
 %%% Local Variables:
 %%% coding: utf-8
 %%% mode: latex
-%%% TeX-engine: xetex
+%%% TeX-engine: luatex
 %%% TeX-parse-self: t
 %%% TeX-command-extra-options: "-shell-escape"
 %%% TeX-master: "../thesis"

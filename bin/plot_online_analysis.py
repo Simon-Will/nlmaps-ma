@@ -25,6 +25,15 @@ def get_color(class_):
     return (214/256, 39/256, 40/256)
 
 
+def get_marker(class_):
+    if class_ == 'correct':
+        return 'x'
+    if class_ == 'tag_present':
+        return 'o'
+    return '^'
+
+
+
 def main(online_analysis, outfile):
     with open(online_analysis, 'r') as f:
         analysis = json.load(f)
@@ -38,7 +47,7 @@ def main(online_analysis, outfile):
     ind = range(1, len(tags) + 1)
     for i, (_, result) in enumerate(zip(tags, results), 1):
         for step, class_ in result:
-            ax.plot([step], [i], color=get_color(class_), marker='o')
+            ax.plot([step], [i], color=get_color(class_), marker=get_marker(class_))
 
     xmin, xmax = -30, 2400
     ax.hlines(ind, xmin, xmax, colors='lightgray')

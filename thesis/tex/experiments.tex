@@ -80,7 +80,7 @@ well.
 \begin{figure}[h]
   \centering
   \resizebox{\textwidth}{!}{\input{fig/n21_n4_errors.pgf}}
-  \caption[Errors pre-trained on \nlmtwoone{}]{Percentage of queries with an
+  \caption[Errors when pre-trained on \nlmtwoone{}]{Percentage of queries with an
     error in a specific operator. The model was pre-trained on \nlmapstwoone{}
     and tested on \nlmapsfour{}.}
   \label{fig:v21-errors}
@@ -107,7 +107,7 @@ incorrect set of OSM tags in the \mrl{target_nwr} operator.
 \begin{figure}[h]
   \centering
   \resizebox{\textwidth}{!}{\input{fig/n3b_n4_errors.pgf}}
-  \caption[Errors pre-trained on \nlmtwoone{}]{Percentage of queries with an
+  \caption[Errors when pre-trained on \nlmthreeb{}]{Percentage of queries with an
     error in a specific operator. The model was pre-trained on \nlmapsthreeb{}
     and tested on \nlmapsfour{}.}
   \label{fig:v3b-errors}
@@ -134,7 +134,7 @@ model trained on \nlmthreeb{} would prove more robust against typing errors.
 \begin{figure}[h]
   \centering
   \resizebox{\textwidth}{!}{\input{fig/n3_n4_errors.pgf}}
-  \caption[Errors pre-trained on \nlmtwoone{}]{Percentage of queries with an
+  \caption[Errors when pre-trained on \nlmthree{}]{Percentage of queries with an
     error in a specific operator. The model was pre-trained on \nlmapsthree{}
     and tested on \nlmapsfour{}.}
   \label{fig:v3-errors}
@@ -516,12 +516,12 @@ for this.
   \resizebox{\textwidth}{!}{\input{fig/online_analysis.pgf}}
   \caption[Longitudinal analysis]{Longitudinal analysis of predictions for
     twenty randomly selected tags during the online learning simulation on
-    \nlmfour{}. \textcolor{mplGreen}{Green markers} mean that the model’s
-    prediction is completely correct, \textcolor{mplBlue}{blue markers} mean
-    that the tag in question was predicted but there is some other error with
-    the prediction and \textcolor{mplRed}{red markers} mean that the tag in
-    question is not present in the prediction (implying also that the prediction
-    is incorrect).}
+    \nlmfour{}. \textcolor{mplGreen}{Green crosses} mean that the model’s
+    prediction is completely correct, \textcolor{mplBlue}{blue circles} mean
+    that the tag in question was correctly predicted but there is some other
+    error with the prediction and \textcolor{mplRed}{red triangles} mean that
+    the tag in question is not present in the prediction (implying also that the
+    prediction is incorrect).}
   \label{fig:online-analysis}
 \end{figure}
 
@@ -584,7 +584,7 @@ model.
 %%% Local Variables:
 %%% coding: utf-8
 %%% mode: latex
-%%% TeX-engine: xetex
+%%% TeX-engine: luatex
 %%% TeX-parse-self: t
 %%% TeX-command-extra-options: "-shell-escape"
 %%% TeX-master: "../thesis"
