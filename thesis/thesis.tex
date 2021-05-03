@@ -15,6 +15,12 @@ ibidtracker=strict,
 backend=biber,
 dashed=false,
 ]{biblatex}
+\DeclareLabeldate{%
+  \field{date}
+  \field{year}
+  \field{eventdate}
+  \field{origdate}
+}
 \addbibresource{thesis.bib}
 
 \usepackage{mystyle}
@@ -35,7 +41,7 @@ dashed=false,
   \vspace{4em}
   {\Large
     Simon Will\par
-    \today\par}
+    4 May 2021\par}
   \raggedright
   \vfill
   \vspace{4em}
@@ -56,7 +62,7 @@ dashed=false,
 
 \include{tex/abstract-english}
 
-%\include{tex/abstract-german}
+\include{tex/abstract-german}
 
 \mainmatter
 

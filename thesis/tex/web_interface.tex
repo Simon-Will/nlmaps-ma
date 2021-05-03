@@ -1,24 +1,23 @@
 \chapter{Web Interface}
 \label{ch:web-interface}
 
-The model is exposed via a new web
-interface,\footnote{\url{https://nlmaps.gorgor.de/}} which enables a user to
-enter an NL query. The NL query is then parsed into the MRL query, which is
-presented to the user. Additionally, the MRL is interpreted by a newly written
-MRL interpreter, which retrieves the requested information from OSM via queries
-to the Overpass API and Nominatim. The result is then presented on an
-interactive OpenLayers\footcite{openlayers} map and also as a textual answer if
+The model is exposed via a new web interface, which enables a user to enter an
+NL query. The NL query is then parsed into the MRL query, which is presented to
+the user. Additionally, the MRL is interpreted by a newly written MRL
+interpreter, which retrieves the requested information from OSM via queries to
+the Overpass API and Nominatim. The result is then presented on an interactive
+OpenLayers\footciteonline{openlayers} map and also as a textual answer if
 applicable. (It doesn’t make much sense to give coordinates as a textual answer,
 for example.)
 
 If the user notices that the presented MRL is incorrect, they have the option to
 correct it. To facilitate correcting the MRL, the user is supported by automatic
-tag suggestions powered by TagFinder\footcite{tagfinder}
+tag suggestions powered by TagFinder\footciteonline{tagfinder}
 \parencite{gwerder-2014} and also fixed custom suggestions for tricky cases,
 both of which are based on keywords extracted from the NL query. Additionally,
-the MRL is corrected via a form that abstracts away the details of the MRL
-syntax so that the user doesn’t have to understand it and can also not make any
-simple mistakes like not closing parentheses.
+the MRL is corrected via a web form that abstracts away the details of the MRL
+syntax so that the user doesn’t have to understand that and can also not make
+any simple mistakes like not closing parentheses.
 
 Finally, the user can tell the system that an MRL query is correct when they are
 satisfied with it. The new NL-MRL pair is saved and is also directly used for
@@ -84,25 +83,23 @@ correction.
 \section{Architecture}
 
 Instead of being one large system, \nlmapsweb{} is split into two parts: First,
-the web interface the user interacts with, which also handles user management,
+the web interface the user interacts with, which also includes user management,
 giving tag help, displaying answers, logging queries and a tutorial. Second, the
 parsing server that parses NL queries into MRL queries, trains and updates the
 model based on feedback received through the web interface and also stores that
 feedback. They are separated so that the machine that runs the web server is not
 required to also handle running or even training a neural network, which is a
-resource-intensive task that is usually parallelized on a GPU. Because of the
+resource-intensive task that is usually parallelized on a GPU. Due to the
 separation, it is possible to use a small machine for the web interface that
 interacts with the parsing server running on a GPU cluster, which may only be
-accessible by SSH and thus be unreachable through a
-well-known\footnote{\url{https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers\#Well-known_ports}.}
-HTTP port.
+accessible by SSH and thus be unreachable through a well-known HTTP port.
 
 Both systems are implemented as HTTP Servers with the Python web framework
-Flask\footcite{flask} and employ SQLite\footcite{sqlite} as their database. The
-parsing server exposes a JSON-based HTTP API, which is used by the web
-interface. The parsing server wraps the PyTorch\footcite{pytorch}-based
-sequence-to-sequence learning framework Joey NMT\footcite{joeynmt}
-\parencite{kreutzer-2019}.
+Flask\footciteonline{flask} and employ SQLite\footciteonline{sqlite} as their
+database. The parsing server exposes a JSON-based HTTP API, which is used by the
+web interface. For handling the machine translation training and predicting, it
+wraps the PyTorch\footciteonline{pytorch}-based sequence-to-sequence learning
+framework Joey NMT\footciteonline{joeynmt} \parencite{kreutzer-2019}.
 
 Figure~\ref{fig:querying-architecture} shows the basic querying flow through the
 architecture: The user enters their NL query into the web interface, which calls
@@ -114,7 +111,7 @@ along with the retrieved answer in its response to the user.
 \begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{fig/querying_architecture.png}
-  \caption[Querying Architecture]{System Architecture for Querying}
+  \caption[Querying architecture]{System Architecture for Querying.}
   \label{fig:querying-architecture}
 \end{figure}
 
@@ -129,8 +126,8 @@ procedure and to update the model.
 \begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{fig/learning_architecture.png}
-  \caption[Feedback \& Learning Architecture]{System Architecture for Feedback
-    and Learning}
+  \caption[Feedback \& learning architecture]{System Architecture for Feedback
+    and Learning.}
   \label{fig:learning-architecture}
 \end{figure}
 
@@ -138,7 +135,7 @@ procedure and to update the model.
 \label{sec:mrl-interpretation}
 
 In the course of their foundational work, \textcite{haas-2016}
-forked\footcite{online-overpass-nlmaps} the Overpass API and included
+forked\footciteonline{online-overpass-nlmaps} the Overpass API and included
 functionality for reading an MRL query and executing the Overpass QL queries
 necessary to answer it. Unfortunately, there are three problems with this
 approach.
@@ -169,21 +166,19 @@ approach.
   \end{itemize}
 \end{itemize}
 
-Instead of using the forked version for answering MRLs, a Python module is
-developed for that task. In a first step, the area requested in the query is
-looked up in Nominatim, which supports fuzzier search than the Overpass API and
-also ranks the results by an importance score. Second, the named reference
-location is looked up if there is one in the query (e.g. \emph{Eiffel Tower} in
-\nl{bars near Eiffel Tower in Paris}). This is also done via Nominatim and the
-results are restricted to the area that was selected in the previous step.
-Finally, an Overpass QL query is generated where the previously retrieved area
-and reference location are selected by their OSM ID instead of their name. This
-query is then sent to any of the publicly available Overpass API instances for
-retrieving the result, which means that there is no need of running a separate
-instance of the API with all the maintenance work.
-
-% TODO: Link to Repo
-% TODO: Example.
+Instead of using the forked version for answering MRLs, we develop a Python
+module for that task whose manner of operation is explained here. In a first
+step, the area requested in the query is looked up in Nominatim, which supports
+fuzzier search than the Overpass API and also ranks the results by an importance
+score. Second, the named reference location is looked up if there is one in the
+query (e.g. \emph{Eiffel Tower} in \nl{bars near Eiffel Tower in Paris}). This
+is also done via Nominatim and the results are restricted to the area that was
+selected in the previous step. Finally, an Overpass QL query is generated where
+the previously retrieved area and reference location are selected by their OSM
+ID instead of their name. This query is then sent to any of the publicly
+available Overpass API instances for retrieving the result, which means that
+there is no need of running a separate instance of the API with all the
+maintenance work.
 
 \section{NL Query Keyword Extraction}
 \label{sec:keyword-extraction}
@@ -214,9 +209,7 @@ order not to completely disregard terms that occur in every NL query.
 Any terms with a score \(\tfidf(t, d, D) > 0.3\) (the cutoff was determined
 manually) are looked up in TagFinder except if they occur in a separate list of
 stop words or if they are part of a location name, which is determined by using
-the MRL query returned by the parser.
-
-% TODO: Example
+the MRL query predicted by the parser.
 
 \section{Online Learning}
 
@@ -224,8 +217,8 @@ In interactive machine translation or other human-in-the-loop learning
 processes, it is often assumed that there is only one user and the interaction
 process is strictly sequential: The system makes a prediction and then waits for
 the human to make a post-edit or to give some other kind of feedback. As soon as
-it receives the feedback it immediately updates the model parameters and is then
-ready to make another prediction. However, this process breaks down in a
+it receives the feedback, it immediately updates the model parameters and is
+then ready to make another prediction. However, this process breaks down in a
 multi-user setting since a user can send feedback when the model is still in the
 process of updating its parameters on some other user’s feedback. One could
 resolve this by providing one model per user that will only update based on

@@ -14,7 +14,7 @@ evaluating various online learning setups.
 
 For all our experiments, we use the same model architecture: A character-based
 one-layer bidirectional GRU encoder-decoder \parencite{cho-2014} model with
-attention.\parencite{bahdanau-2015} The dimension of both source and target
+attention\parencite{bahdanau-2015}. The dimension of both source and target
 embeddings is \num{620}, the encoder layer size is \num{500}, the decoder layer
 size is \num{1000} and we don’t use dropout. This model configuration is adopted
 from \textcite{staniek-2020}.
@@ -29,7 +29,7 @@ The model on \nlmapstwoone{} is trained for \num{60} epochs (of \num{15113}
 instances each), while the models on variations of \nlmapsthree{} are trained
 for \num{30} epochs (of \num{30226} instances each). All models are trained with
 the Adam optimizer (\(\beta_1 = 0.9\) and \(\beta_2 = 0.999\)) and a learning
-rate of \num{0.0002}
+rate of \num{0.0002}.
 
 Table~\ref{tab:pre-trained-performance} shows the results of testing the models
 on the different variations of \nlmaps{} datasets. Recall: \nlmtwoone{} is the
@@ -58,7 +58,8 @@ these user-supplied queries the most relevant.
     \nlmthree{} & \num{0.787} & \num{0.913} & \num{0.950} & \num{0.834} & \num{0.931} & \bfnum{0.874} & \num{0.281} & \num{0.289}\\
     \bottomrule
   \end{tabular}
-  \caption{Performance of pre-trained parsers}
+  \caption[Performance of pre-trained parsers]{Performance of pre-trained
+    parsers.}
   \label{tab:pre-trained-performance}
 \end{table}
 
@@ -100,8 +101,8 @@ non-noisy counterpart. As shown in Figure~\ref{fig:v3b-errors}, the improvement
 with respect to the model trained on \nlmtwoone{} is mostly due to the greater
 variety of location names (cf. Section~\ref{sec:little-location-variety}), which
 significantly reduces the number of errors in the \mrl{area} and
-\mrl{center_nwr} operators. The main source of errors remains choosing the
-correct OSM tags in the \mrl{target_nwr} operator.
+\mrl{center_nwr} operators. The main source of errors remains choosing an
+incorrect set of OSM tags in the \mrl{target_nwr} operator.
 
 \begin{figure}[h]
   \centering
@@ -151,7 +152,7 @@ very long or contain rare characters.
   \centering
   \resizebox{\textwidth}{!}{\input{fig/n3_learning_curve.pgf}}
   \caption[Pre-training learning curves]{Learning curves on the development set
-    of \nlmapsthree{}}
+    of \nlmapsthree{}.}
   \label{fig:pre-trained-learning-curve}
 \end{figure}
 
@@ -164,22 +165,23 @@ conducted, during which several people use our web interface presented in
 Chapter~\ref{ch:web-interface} to issue new NL queries. They are tasked to
 confirm the model’s predicted MRL query if they deem it correct or to correct it
 if they consider it false. Before beginning the task, the annotators complete a
-tutorial,\footnote{\url{https://nlmaps.gorgor.de/tutorial}.} which explains
-the basics of OSM, the capabilities of the MRL language and the usage of the web
-interface.
+tutorial, which explains the basics of OSM, the capabilities of the MRL language
+and the usage of the web interface.
 
 The call for participation in the annotation study was distributed through
 various OSM-typical channels including the \emph{talk} mailing
-list\footcite{osm-talk} and the OSM subreddit\footcite{osm-subreddit}, which
-yielded the highest response. Albeit slightly eurocentric, the participants stem
-from a reasonably diverse set of countries and have diverse native languages. In
-contrast, all of the acquired annotators report their gender as male, which is
-reflective of the overall OSM demographic since only between \SI{2}{\%} and
-\SI{5}{\%} of OSM contributors are estimated to be female
+list\footciteonline{osm-talk} and the OSM
+subreddit\footciteonline{osm-subreddit}, which yielded the highest response.
+Albeit slightly eurocentric, the participants stem from a reasonably diverse set
+of countries and have diverse native languages. In contrast, all of the acquired
+annotators report their gender as male, which is reflective of the overall OSM
+demographic since only between \SI{2}{\%} and \SI{5}{\%} of OSM contributors are
+estimated to be female
 \parencites{budhathoki-2010}{stark-2010}{lechner-2011}{klettner-2013}{das-2019}.
 This is problematic as it has the potential to lead to a bias in the dataset. In
 future annotation projects, this effect should be mitigated by targeted
-advertising in female mapping communities such as GeoChicas.\footcite{geochicas}
+advertising in female mapping communities such as
+GeoChicas.\footciteonline{geochicas}
 
 \begin{table}[h]
   \centering
@@ -211,8 +213,8 @@ advertising in female mapping communities such as GeoChicas.\footcite{geochicas}
 The annotation guidelines explain to the annotators that their queries should be
 linguistically diverse, cover a large part of OSM tags and cover more useful
 tags in more detail. To ensure that the annotators sufficiently cover the most
-important tags, we choose a set of tags (e.g. \osmtag{amenity=cafe} or
-\osmtag{wheelchair=yes}) and keys (e.g. \osmtag{shop} or \osmtag{leisure}) for
+important tags, we choose a set of tags (e.g.\ \osmtag{amenity=cafe} and
+\osmtag{wheelchair=yes}) and keys (e.g.\ \osmtag{shop} and \osmtag{leisure}) for
 which each annotator must issue a minimum number of queries. See the full
 guidelines in Appendix~\ref{ch:annotation-guidelines} for details. The
 annotators can monitor their annotation progress via an overview page in the web
@@ -222,7 +224,7 @@ interface, which is shown in Figure~\ref{fig:annotation-progress}.
   \centering
   \includegraphics[width=\textwidth]{fig/annotation_progress.png}
   \caption[Annotation progress overview]{Overview of an annotator’s annotation
-    progress}
+    progress.}
   \label{fig:annotation-progress}
 \end{figure}
 
@@ -233,40 +235,41 @@ happened throughout the annotation experiment because of various crashes. The
 result is a dataset where the annotators made their corrections based on
 predictions made by a model that had learned from some, but not all annotations.
 
-In total, the annotators issued \num{4152} NL queries. For \num{92} of those
+In total, the annotators issued \num{4152} NL queries. For \num{92} of those,
 they could not give an MRL, mostly because the queries were not expressible by
-an MRL query (e.g. \nl{cities without hospitals in Poland}), leaving \num{4060}
-NL-MRL pairs. Since \textcite{staniek-2020} correctly criticised that
+an MRL query (e.g.\ \nl{cities without hospitals in Poland}), leaving \num{4060}
+NL-MRL pairs. Since \textcite{staniek-2020} correctly criticized that
 \nlmapstwo{} has queries in its development and test sets that appear
-identically in the training set if location names are masked,\footnote{Cf.
-  Section~\ref{sec:train-test-resemblance}}, we identify such sets of identical
+identically in the training set if location names are masked (cf.\
+Section~\ref{sec:train-test-resemblance}), we identify such sets of identical
 queries in the remaining \num{4060} NL-MRL pairs and delete all but one in each
 set, which leaves \num{3773} NL-MRL pairs.
 
-Furthermore, we observe that users tend to reuse the same areas many times. E.g.
-a user from Istanbul will ask lots of questions about Istanbul, which leads to
-the problem of lacking variety in location names that was already identified as
-a problem in Section~\ref{sec:little-location-variety}. In order to avoid this
-problem in our new dataset, the web interface automatically replaces a location
-name (anything with OSM tag \osmtag{name=*}) if it has occurred three or more
-times in that user’s queries already. The original query is of course saved
-separately, as well. The location names used for replacement are selected from
-the same large list of areas and point of interest that is also used for
-generating the \nlmapsthree{} dataset. The resulting dataset of \num{3773} NL
--MRL pairs with replacement of some location names is called \nlmapsfourraw{}.
+Furthermore, we observe that users tend to reuse the same areas many times.
+E.g., a user from Istanbul will ask lots of questions about Istanbul, which
+leads to the problem of lacking variety in location names that was already
+identified as a problem in Section~\ref{sec:little-location-variety}. In order
+to avoid this problem in our new dataset, the web interface automatically
+replaces a location name (anything with OSM tag \osmtag{name=*}) if it has
+occurred three or more times in that user’s queries already. The original query
+is of course saved separately, as well. The location names used for replacement
+are selected from the same large list of areas and points of interest that is
+also used for generating the \nlmapsthree{} dataset. The resulting dataset of
+\num{3773} NL-MRL pairs with replacement of some location names is called
+\nlmapsfourraw{}.
 
 Finally, we notice some errors in the MRLs the annotators created. E.g., for the
 NL query \nl{show me restaurants with limited wheelchair access in gmina
-  Piaseczno}, the annotated MRL query erroneously uses
-\mrl{qtype(findkey('wheelchair'))} (which informs about the wheelchair
-accessibility status of returned objects) instead of actually \emph{selecting}
-for wheelchair status by using \mrl{keyval('wheelchair','limited')} in the
-\mrl{nwr} operator. Similar queries by the same annotator where they didn’t make
-that mistake show that they understood the issue and may just have been
-unconcentrated in this case. Other examples include using 
-\osmtag{diet=chinese} instead of \osmtag{cuisine=chinese} or \osmtag{shop=fuel}
-instead of \osmtag{amenity=fuel}, both of which can be attributed to a lack of
-concentration, which is not surprising in a repetitive annotation task.
+  Piaseczno}, the annotated MRL query erroneously uses \mrl{qtype(findkey(}
+\mrl{'wheelchair'))} (which informs about the wheelchair accessibility status of
+returned objects) instead of actually \emph{selecting} for wheelchair status by
+using \mrl{keyval('wheelchair',} \mrl{'limited')} in the \mrl{nwr} operator.
+Similar queries by the same annotator where they didn’t make that mistake show
+that they understood the issue and may just have been unconcentrated in this
+case. Other examples include using \osmtag{diet=chinese} instead of
+\osmtag{cuisine=chinese} or \osmtag{shop=fuel} instead of \osmtag{amenity=fuel},
+both of which can be attributed to a lack of concentration, which is not
+surprising in a repetitive annotation task.
 
 Besides these obvious errors, there is a separate and more frequent issue with
 ambiguous NL queries. E.g., the NL query \nl{count the fireplaces in the
@@ -307,16 +310,17 @@ smaller entropy rate than the queries generated by our probabilistic templates.
     Avg. Tokens per NL & \num{6.98} & \num{10.69} & \num{8.37}\\
     \bottomrule
   \end{tabular}
-  \caption[Dataset statistics]{Comparison of dataset statistics. Entropy rates
-    are estimated by the conditional entropy trigrams.}
+  \caption[Dataset statistics with \nlmapsfour{}]{Comparison of dataset
+    statistics. Entropy rates are estimated by the conditional entropy
+    trigrams.}
   \label{tab:v2-v3-v4-overview}
 \end{table}
 
 Probably due to the influence of the annotation guidelines, the most common tags
 in \nlmapsfour{} are \osmtag{wheelchair=yes}, \osmtag{amenity=restaurant} and
 \osmtag{amenity=cafe}, which are used in over \num{100} queries each. What makes
-the dataset especially changing, is the long tail of rarely used tags: \num{310}
-tags are used only once and \num{489} are used at most three times.
+the dataset especially challenging, is the long tail of rarely used tags:
+\num{310} tags are used only once and \num{489} are used at most three times.
 Figure~\ref{fig:tag-distribution} reveals two insights about how the tag
 distribution in \nlmapsfour{} compares to that of the previous datasets: The
 synthetic nature of \nlmapsthreeb{} and the larger part of \nlmapstwoone{} makes
@@ -449,9 +453,12 @@ offline experiment. Another variation of the experiment is iterating five times
 instead of once for each instance in \nlmfour{}, which is indicated by the
 \enquote{Iter: 5} in Table~\ref{tab:fine-tuned-performance}. Note that while the
 one instance is used in all five iterations in this case, the other samples
-change with each minibatch.
+change with each minibatch. The exact meaning of these four parameters \(n_F\),
+\(n_M\), \(n_T\) and \(I\) is described more formally in
+Algorithm~\ref{alg:async-online-learning} at the end of
+Chapter~\ref{ch:web-interface}.
 
-Since previous work suggests that Adadelta performs as good as
+Since previous work suggests that Adadelta performs as well as
 \parencite{peris-2017} or even better than \parencites{turchi-2017}{peris-2019}
 Adam for online learning on single instances, the first experiments are
 conducted using Adadelta with the learning rate set to \num{0.01} as done by
@@ -478,8 +485,8 @@ accuracy to \SI{51.0}{\%}. Performing 5 iterations per instance yields
 another accuracy increase of \SI{2}{\%}, but in the case of Adam this comes with
 a \SI{7}{\%} decrease on \nlmthree{}.
 
-While all of the online learning setups were able to increase the accuracy on
-the new \nlmapsfour{} dataset, it is a challenge not to degrade the model on the
+While all of the online learning setups are able to increase the accuracy on the
+new \nlmapsfour{} dataset, it is a challenge not to degrade the model on the
 original data. It proves beneficial to include instances from the original data
 as well as from memorized new instances in each update in order to make the
 largest gains in accuracy on the new data while preserving old performance as
@@ -490,8 +497,8 @@ data when not provided with original data. It also turns out not to have any
 advantage over Adadelta when the minibatch consists only of the one new
 instance, which is in line with findings in previous work. Furthermore, using a
 single instance in five consecutive batches leads to overfitting even when
-original data is added. Most likely, this is due to the Adam’s first-order
-momentum which builds up over these batches.
+original data is added. Most likely, this is due to Adam’s first-order momentum
+which builds up over these batches.
 
 Overall, the online learning is successful, but still not as effective as
 traditional offline learning from a mix of \nlmthree{} and \nlmfour{}, which
@@ -540,19 +547,20 @@ over time, but there are also tags like \osmtag{shop=butcher} where there is no
 clear improvement. This discrepancy can be understood by taking a closer look at
 the difference between queries involving \osmtag{tattoo} and \osmtag{butcher}.
 While the NL queries asking for the former all involve the token \nl{tattoo}
-(\nl{i want a tattoo …}, \nl{… closest tattoo studio …}, etc.) and the MRLs only
-target tag is \osmtag{shop=tattoo}, the situation is more complex for butchers
-on both the NL and the MRL side: As shown in Figure~\ref{fig:butcher-nl}, the NL
-queries may directly ask for butchers, but they may also ask for places to buy
-meat or even sausages. As a further complication, the MRL queries when asking
-for butchers and meat shops will only target the \osmtag{shop=butcher} tag, but
-MRL queries when asking for places to buy meat or sausages will additionally
-target the \osmtag{shop=supermarket} tag.
+(\nl{i want a tattoo …}, \nl{… closest tattoo studio …}, etc.) and the MRL
+queries’ only target tag is \osmtag{shop=tattoo}, the situation is more complex
+for butchers on both the NL and the MRL side: As shown in
+Figure~\ref{fig:butcher-nl}, the NL queries may directly ask for butchers, but
+they may also ask for places to buy meat or even sausages. As a further
+complication, the MRL queries when asking for butchers and meat shops will only
+target the \osmtag{shop=butcher} tag, but MRL queries when asking for places to
+buy meat or sausages will additionally target the \osmtag{shop=supermarket} tag.
 
 In the case of \osmtag{amenity=fire_station}, the model fails to correctly use
 the tag for a fourth time after three successes and instead uses the
-non-existent \osmtag{amenity=firestation} (dropping the underscore). This is one
-of several cases that illustrate the brittleness of the character-based model.
+non-existent \osmtag{amenity=} \mrl{firestation} (dropping the underscore). This
+is one of several cases that illustrate the brittleness of the character-based
+model.
 
 \begin{figure}[h]
   \centering

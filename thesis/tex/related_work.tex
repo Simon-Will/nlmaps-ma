@@ -5,15 +5,15 @@
 
 With the advent of the computer age, there also arose interest in leveraging the
 digitally stored information for automatically answering natural language
-questions with systems being developed as early as the 1960s
-\parencite[e.g.]{green-1961}. The field of question answering (QA) can be
+questions with first systems being developed as early as the 1960s
+\parencite[e.g.][]{green-1961}. The field of question answering (QA) can be
 genereally divided into \emph{open-domain QA}, which concerns itself with
 answering arbitrary questions based on large quantities of natural language text
-or other unstructured information using information retrieval techniques, and
-\emph{knowledge-based QA}, which takes advantage of structured information in
-order to answer questions about specific information that is stored in that
-knowledge base \parencites[cf.]{molla-2007}{jurafsky-2021}. The work in this
-thesis is an instance of the latter.
+or other unstructured information by employing techniques from information
+retrieval, and \emph{knowledge-based QA}, which takes advantage of structured
+information in order to answer questions about specific information that is
+stored in that knowledge base \parencites[cf.][]{molla-2007}{jurafsky-2021}. The
+work in this thesis is an instance of the latter.
 
 In the most common variant of knowledge-based QA, a natural language query is
 parsed into a machine-readable logical form for representing the meaning
@@ -28,28 +28,29 @@ introduced by \textcite{zhong-2017} comprises \num{80654} questions on numerous
 different databases, but all of their queries are very simple and include no
 advanced SQL operators.
 
-With Spider, \textcite{yu-2018} introduced the first Text-to-SQL dataset that
-features a large number of different tables as well as complex SQL queries.
-They present initial results on their dataset using Seq2Seq models like
-attention-based RNNs as well as more rigid slot-filling models based on SQLNet
-\parencite{xu-2017}, which fill pre-defined places in the SQL query. The latter
-perform better in their experiments.
+With their dataset called Spider, \textcite{yu-2018} introduced the first
+text-to-SQL dataset that features a large number of different tables as well as
+complex SQL queries. They present initial results on their dataset using
+sequence-to-sequence models like attention-based RNNs as well as more rigid
+slot-filling models based on SQLNet \parencite{xu-2017}, which fill pre-defined
+places in the SQL query. The latter perform better in their experiments.
 
 Since \textcite{hwang-2019} showed that using BERT \parencite{devlin-2019} for
-encoding query and database schema in Text-to-SQL task is highly effective on
+encoding query and database schema in text-to-SQL task is highly effective on
 WikiSQL, most recent systems use models based on BERT also on the Spider task
 \parencites{shaw-2020}{wang-2020}{lin-2020} with some even taking advantage of
-the content of the database \parencites{wang-2020}{lin-2020} further improve
+the content of the database \parencites{wang-2020}{lin-2020} to further improve
 performance.
 
 \section{Online Learning and Domain Adaptation}
 
 \subsection{Online Learning}
 
-Neural machine translation models \(p_{\theta}\) are usually trained with the
-goal of minimizing the expected cross-entropy loss on the training set
-\parencite[376]{stahlberg-2020} by taking steps \(\Delta \theta\) in the opposite
-direction of the gradient:
+Neural machine translation models \(p_{\theta}\) are usually
+\parencite[376]{stahlberg-2020} trained with the goal of minimizing the expected
+cross-entropy loss on the training set \((X, Y)_{\text{train}}\) consisting of a
+set of source sentences \(X\) and a set of target sentences \(Y\) by taking
+steps \(\Delta \theta\) in the opposite direction of the gradient:
 
 \begin{align}
   \theta^* &= \argmin_{\theta} \E_{(x, y) \sim (X, Y)_{\text{train}}} -\log p_{\theta}(y|x)\\
@@ -67,7 +68,7 @@ by sampling a single instance \((x,y)\) from the training set and updating the
 parameters based on this instance:
 
 \begin{align}
-  (x,y) &\sim (X,Y)\\
+  (x,y) &\sim (X,Y)_{\text{train}}\\
   \Delta \theta &\propto -\nabla \log p_{\theta}(y|x)\\
 \end{align}
 
@@ -76,7 +77,7 @@ of the gradient is also larger. In practice, minibatches are used as a
 compromise when training a model on an already-prepared dataset. However, in the
 case where the dataset becomes available only one instance at a time, the online
 learning setup is still useful. A prominent usecase is post-editing of machine
-translation outputs. Following the defintion of \textcite{ortiz-martinez-2016},
+translation outputs. Following the definition of \textcite{ortiz-martinez-2016},
 online learning from post-editing can be operationalized like this:
 
 \begin{enumerate}
@@ -100,10 +101,10 @@ For NMT, \textcite{turchi-2017} simulated online learning with an attentional
 encoder-decoder network finding that simply updating by doing an SGD step with
 the post-edited instance is superior to a more complicated approach in which
 they added an additional training step after receiving each source sentence but
-\emph{before} predicting the target sequence. They also found that doing five
+\emph{before} predicting the target sentence. They also found that doing five
 training iterations per post-edited instance is actually worse than doing only
 one iteration. Very interestingly, vanilla SGD outperforms Adagrad, Adadelta and
-Adagrad in their experiments.  % TODO: Cite Ada*
+Adam in their experiments. % TODO: Cite Ada*
 
 At the same time, \textcite{peris-2017} performed very similar work, in which
 they compared gradient descent optimization algorithms with more complicated
@@ -128,14 +129,14 @@ mouse-action ratio \parencite[for KSMR cf.][]{barrachina-2009}.
 A related line of NMT research attempts to improve a pre-trained system with a
 weaker form of user feedback: Instead of a user post-editing a target sentence,
 they can give feedback in the form of scalar rewards about the quality of a
-translatio or even specific parts of it, e.g. by rating it from 0 to 10. This
+translation or even specific parts of it, e.g.\ by rating it from 0 to 10. This
 has the advantage of requiring less user effort and skill, but it is more
-difficult to correct a translation due to the lack of a gold translation.
-This poses a particular challenge in tasks with a very large output space like
-machine translation.
+difficult for a model to correct its predicted translation due to the lack of a
+gold translation. This poses a particular challenge in tasks with a very large
+output space like machine translation.
 
-This scalar feedback can be leveraged with reinforcement learning techniques,
-which was done by \textcite{kreutzer-2017}, who simulated user feedback with
+Scalar feedback can be leveraged with reinforcement learning techniques, which
+was done by \textcite{kreutzer-2017}, who simulated user feedback with
 sentence-level gGLEU \parencite{wu-2016} obtained from out-of-domain reference
 translations. In their comparison of domain adaptation via fully-supervised
 fine-tuning and learning from gGLEU \enquote{rewards} using expected loss
@@ -164,7 +165,7 @@ learning, which is unproblematic for post-edits since they can serve as
 self-contained training instances not much different from reference translations
 in specially-prepared training sets. However, weaker user feedback in the form
 of ratings is tied to the system’s original prediction, which complicates
-learning from it with another system. \textcite{lawrence-2017} used
+learning from it with another system. \textcite{lawrence-2017} used a
 control-variate-based smoothing technique called \emph{deterministic propensity
   matching} to leverage this kind of logged feedback for offline learning with
 an SMT system. Later, \textcite{lawrence-2018} applied this approach also to
@@ -191,7 +192,7 @@ a model on a larger dataset that is similar to the custom one in order to reduce
 the needed size of the custom dataset or to simply improve performance.
 \textcite{kennardi-2019} pre-trained an attention-based RNN on the ATIS dataset
 and then fine-tuned the pre-trained model on subsets of the GeoQuery dataset
-showing that especially for small subsets (i.e. small target domain datasets)
+showing that especially for small subsets (i.e.\ small target domain datasets)
 pre-training on ATIS improved the performance.
 
 Instead of pre-training a semantic parsing model on a larger semantic parsing
@@ -209,21 +210,21 @@ a subset of the data from the target domain is used.
 \label{sec:osm}
 
 In a crowd-sourcing approach similar to Wikipedia’s, the
-OpenStreetMap\footcite{openstreetmap} (OSM) project aims to create a map of the
-world by letting users contribute missing data, ranging from low-granular
+OpenStreetMap\footciteonline{openstreetmap} (OSM) project aims to create a map
+of the world by letting users contribute missing data, ranging from low-granular
 objects like forests or streets to high-granular objects like benches or
 information boards and even including non-geographical information like opening
 hours of stores or the types of cuisine available in restaurants. The
 OpenStreetMap Foundation makes the map data available under the Open Data
-Commons Open Database License\footcite{odbl} effectively allowing the usage of
-the data for any project but requiring that any extensions of the data are
-shared under the same license again.
+Commons Open Database License\footciteonline{odbl} effectively allowing the
+usage of the data for any project but requiring that any extensions of the data
+are shared under the same license again.
 
 OpenStreetMap data is made up of three different elements: Nodes, ways (ordered
 lists of nodes) and relations (groups of elements). The elements’ meaning is
-derived from the tags that are added to them. For instance an Italian restaurant
-that has vegan options and is wheelchair-accessible may be tagged as a node with
-the following tags:
+derived from the tags that are added to them. For instance, an Italian
+restaurant that has vegan options and is wheelchair-accessible may be tagged as
+a node with the following tags:
 
 \begin{itemize}
 \item \osmtag{amenity=restaurant}
@@ -236,19 +237,20 @@ the following tags:
 \end{itemize}
 
 The OpenStreetMap database can be queried in a number of ways, the most
-prevalent one of which is via Geocoders such as Nominatim \footcite{nominatim}.
-They allow the database being queried by the name or address of an object in
-\emph{forward geocoding} or by its geographic coordinates in \emph{reverse
-  geocoding}.
+prevalent one of which is via Geocoders such as
+Nominatim\footciteonline{nominatim}. They allow the database being queried by
+the name or address of an object in \emph{forward geocoding} or by its
+geographic coordinates in \emph{reverse geocoding}.
 
 For querying by more than name or address, there are two specialized systems:
-Sophox\footcite[The official website at \url{https://sophox.org} is offline as
-of December 2020]{sophox} and the Overpass API \footcite{overpass-api}, which
-can be used most conveniently via the Overpass Turbo \footcite{overpass-turbo}
-interface. The Overpass API allows queries using an XML-like language or – more
-prominently – its custom Overpass Query Language (Overpass QL). The question
-\nl{Which Italian restaurants in Berlin are wheelchair-accessible?} could be
-expressed with the following Overpass Query
+Sophox\footciteonlinetwo{sophox}{The official website at
+  \url{https://sophox.org} is offline as of December 2020.} and the Overpass API
+\footciteonline{overpass-api}, which can be used most conveniently via the
+Overpass Turbo \footciteonline{overpass-turbo} interface. The Overpass API
+allows queries using an XML-like language or – more prominently – its custom
+Overpass Query Language (Overpass QL). The question \nl{Which Italian
+  restaurants in Berlin are wheelchair-accessible?} could be expressed with the
+following Overpass Query
 
 \begin{lstlisting}[style=MyOverpassQL,title={Overpass QL for wheelchair-accessible restaurants in Heidelberg}]
 (area[name=Heidelberg];) -> .a;
@@ -265,8 +267,8 @@ retrieval system about geo-related questions. The first step in this direction
 was made by \textcite{haas-2016}, when they released the first version of the
 \nlmaps{} dataset a \textquote[][.]{corpus consisting of 2,380 questions about
   geographical facts that can be answered with the [OSM]
-  database}\footcite{nlmaps} Each question is provided as a natural language
-(NL) query in English and in German and as its rendering in a custom
+  database}\footciteonline{nlmaps} Each question is provided as a natural
+language (NL) query in English and in German and as its rendering in a custom
 machine-readable language (MRL). The dataset can be used to develop a parser for
 parsing an NL query into its corresponding MRL query, which can then be used to
 extract the answer to the question from the OSM database.
@@ -280,10 +282,10 @@ Table~\ref{tab:nlmaps-v1-v2-stats} shows key data about the size of the extended
 dataset. Table~\ref{tab:nlmapsv2-splits} shows the size of the dataset splits.
 In contrast to the first version, the NL-MRL pairs in this extended version were
 created with a templating approach, which made use of a
-table\footnote{\url{https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrases/EN}.
-  It is not known which version of the table was used for generating the
-  \nlmapstwo{} dataset.} mapping natural language expressions (such as
-\emph{restaurant}) to OSM tags (such as \osmtag{amenity=restaurant}).
+table\footciteonlinetwo{special-phrases}{It is not known which version of the
+  table was used for generating the \nlmapstwo{} dataset.} mapping natural
+language expressions (such as \emph{restaurant}) to OSM tags (such as
+\osmtag{amenity=restaurant}).
 
 \begin{table}[ht!]
   \centering
@@ -314,7 +316,7 @@ table\footnote{\url{https://wiki.openstreetmap.org/wiki/Nominatim/Special_Phrase
     test & \num{10594}\\
     \bottomrule
   \end{tabular}
-  \caption[\nlmapstwo{} splits]{Split sizes in the \nlmapstwo{} dataset}
+  \caption[\nlmapstwo{} splits]{Split sizes in the \nlmapstwo{} dataset.}
   \label{tab:nlmapsv2-splits}
 \end{table}
 
@@ -429,11 +431,11 @@ method unsuitable for validation during training.
 Therefore, the models in this thesis are compared using exact match accuracy on
 MRLs. Theoretically, this method has the problem that MRLs can be semantically
 equivalent but syntactically different by switching the order of OSM tags or
-values (e.g. \mrl{keyval('diet:vegetarian',or('yes','only'))} vs.
-\mrl{keyval('diet:vegetarian',or('only,'yes))}). In practice however, we ensure
-that all MRLs used for training are in a canonical form by sorting tags and
-values alphabetically. This way, switched order doesn’t occur in the models of
-this thesis.
+values (e.g. \mrl{keyval('diet:vegetarian',} \mrl{or('yes','only'))} vs.
+\mrl{keyval('diet:} \mrl{vegetarian',} \mrl{or('only,'yes))}). In practice
+however, we ensure that all MRLs used for training are in a canonical form by
+sorting tags and values alphabetically. This way, switched order does virtually
+not occur in the models of this thesis.
 
 \begin{align*}
   \text{accuracy} &= \frac{\text{number of system MRLs perfectly matching the gold MRL}}{\text{number of all NL-MRL pairs}}

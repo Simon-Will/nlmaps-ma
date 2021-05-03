@@ -2,7 +2,7 @@
 \label{ch:discussion}
 
 We spent significant work on analyzing the original \nlmapstwo{} dataset and on
-fixing any of its shortcomings as well as possible. The insight gained by this,
+fixing any of its shortcomings as well as possible. The insight gained by this
 we also used for generating new synthetic queries. By combining the fixed old
 data with the new synthetic data into the \nlmapsthree{} dataset the data
 available for pre-training an \nlmaps{} model is vastly improved as shown in the
@@ -18,13 +18,13 @@ natural dataset on which new \nlmaps{} models can be evaluated in a more
 sensible way than on the flawed and synthetic previous datasets. However, it
 must be acknowledged that the MRL queries the annotators produced reintroduce
 some inconsistencies in tag usage that were already observed in \nlmapstwo{}.
-This is partly due to simple user error (e.g. when an annotator does not know of
-or does not think of a similar tag for the same thing, like using only
+This is partly due to simple user error (e.g.\ when an annotator does not know
+of or does not think of a similar tag for the same thing, like using only
 \osmtag{shop=tailor} and forgetting \osmtag{craft=tailor}), but is partly also
-rooted in real vagueness of the NL queries. E.g., what should really be selected
-when asking for a place to buy cigarettes? Only tobacco shops or also cigarette
-vending machines or even all kinds of places that might sell cigarettes like
-supermarkets or kiosks?
+rooted in actual vagueness of the NL queries. E.g., what should really be
+selected when asking for a place to buy cigarettes? Only tobacco shops or also
+cigarette vending machines or even all kinds of places that might sell
+cigarettes like supermarkets or kiosks?
 
 Two different approaches for handling this tag inconsistency come to mind: In a
 more \enquote{authoritarian} approach, an abstraction layer between OSM and MRL
@@ -34,7 +34,7 @@ MRL – to a manually maintained OSM meaning like \mrl{or(shop=tailor,}
 \mrl{craft=tailor)} or \mrl{or(shop=tobacco,} \mrl{vending=cigarettes)},
 respectively. But maintaining this mapping would amount to a lot of
 (semi-)manual work and it would mean losing the advantage of directly using OSM
-tags, which OSM users should be somewhat familiar with.
+tags, which most OSM users are somewhat familiar with.
 
 In contrast, the second approach is guided by thr MRL queries’ denotation: When
 several users issue queries with some minimum amount of overlap in their result
@@ -64,27 +64,27 @@ from the OSM wiki or even the whole wiki pages could be used as a knowledge
 source for learning about the meaning of tags, perhaps in a similar approach as
 in CLIP \parencite{radford-2021}.
 
-Part of the reason that the tags pose the main challenge is that the MRL
-structure is actually very simple. In fact, it is too simplistic for
-representing some queries that OSM could answer. For example, it is not possible
-to ask for places whose name (or description or any other tag) includes a
-certain substring nor it is possible to query places which are \emph{not} tagged
-with a certain tag. And also referring to one’s own geographical position isn’t
-possible resulting resulting in the situation NL queries like \nl{closest bus
-  stop near me} have no MRL equivalent. These issues serve as pointers on how to
-extend the current MRL.
+Part of the reason for the fact that selecting the correct tags poses the main
+challenge is that the MRL structure is actually very simple. In fact, it is too
+simplistic for representing some queries that OSM could answer. For example, it
+is not possible to ask for places whose name (or description or any other tag)
+includes a certain substring nor is it possible to query places which are
+\emph{not} tagged with a certain tag. And also referring to one’s own
+geographical position isn’t possible resulting in the situation that trivial NL
+queries like \nl{closest bus stop near me} have no MRL equivalent. These issues
+serve as pointers on how to extend the current MRL.
 
 Due to its success in previous work, a character-based model was used for all
 work in this thesis, which has the advantages that no NER system is necessary
 for recognizing named entities and copying them to the MRL and that new tags can
-easily be accomodated without the need to add them to the target vocabulary. The
-downside of the character-based model is that it is fairly sensitive to spelling
-variations on the NL side. As observed in the experiments, the spelling \nl{fire
-  station} was correctly mapped to \osmtag{amenity=fire_station}, but the
+easily be accommodated without the need to add them to the target vocabulary.
+The downside of the character-based model is that it is fairly sensitive to
+spelling variations on the NL side. As observed in the experiments, the spelling
+\nl{fire station} was correctly mapped to \osmtag{amenity=fire_station}, but the
 spelling variation \nl{firestation} led to the model hallucinating the tag
 \osmtag{amenity=firestation}. A related problem is that the character-based
 model will probably not be able to take advantage of semantic similarity of NL
-queries or even singular words. The time is ripe for a modern seq-to-seq model
+queries or even single words. The time is ripe for a modern seq-to-seq model
 operating on subword units like BPE at least on the NL side with a pointer
 mechanism \parencite{see-2017} for copying the location names from NL to MRL. To
 leverage semantic similarity between terms and even whole NL queries,

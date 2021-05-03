@@ -1,16 +1,17 @@
 \chapter{Abstract}
 \label{ch:abstract-english}
 
-OpenStreetMap (OSM) stores a huge amount of data useful for everyday tasks as
-well as informational queries, but it is difficult to query without specialized
-applications or knowledge of special OSM query languages. The existing
-\nlmapstwo{} dataset can be used for building a question answering system that
-translates a natural language query into a machine-readable query used for
-extracting the answer from the OSM database, but the performance of parsers
-trained on that dataset is very limited.
+OpenStreetMap (OSM) stores a large amount of data useful for everyday tasks as
+well as for informational queries, but it is difficult to query without using
+specialized applications or being versed in special OSM query languages. The
+existing \nlmapstwo{} dataset can be used for building a question answering
+system that translates a natural language query into a machine-readable query
+used for extracting the answer from the OSM database, but the performance of
+parsers trained on that dataset has been very limited when tested on new
+queries.
 
-In this thesis, we analzye \nlmapstwo{} and find several shortcomings. After
-fixing them, we extend the dataset by generating new and linguistically diverse
+In this thesis, we analyze \nlmapstwo{} and find several shortcomings. After
+fixing them, we extend the dataset by generating new, linguistically diverse
 queries with a probabilistic templating approach, which we then use to train a
 new parser that significantly outperforms parsers presented in previous work.
 
